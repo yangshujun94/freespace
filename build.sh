@@ -6,10 +6,10 @@ if [ -d "install" ]; then
 fi
 
 help() {
-  echo "please check param 1(required),   project_name: hdt|dt|bt|aiv3lcm|aiv3ros|aiv5lcm|aiv5ros..."
-  echo "please check param 2(not required), build_type: debug/d | release/r , default: release      "
-  echo "please check param 3(not required), vis_enable: 0|1                 , default: 1            "
-  echo "please check param 4(not required), load_log  : 0|1                 , default: 0            "
+  echo "please check param 1(required),     project_name: hdt|aiv3|aiv5...                 "
+  echo "please check param 2(not required), build_type: debug/d/release/r, default: release"
+  echo "please check param 3(not required), vis_enable: 0|1              , default: 1      "
+  echo "please check param 4(not required), load_log  : 0|1              , default: 0      "
 }
 
 if [ -z $1 ] || [[ $1 = "--help" ]] || [[ $1 = "-h" ]]; then
@@ -17,20 +17,12 @@ if [ -z $1 ] || [[ $1 = "--help" ]] || [[ $1 = "-h" ]]; then
   exit 1
 elif [ "hdt" == $1 ]; then
   project_name="HDT"
-elif [ "dt" == $1 ]; then
-  project_name="DT"
-elif [ "bt" == $1 ]; then
-  project_name="BT"
-elif [ "aiv3lcm" == $1 ]; then
-  project_name="AIV3_LCM"
-elif [ "aiv3ros" == $1 ]; then
-  project_name="AIV3_ROS"
-elif [ "aiv5lcm" == $1 ]; then
-  project_name="AIV5_LCM"
-elif [ "aiv5ros" == $1 ]; then
-  project_name="AIV5_ROS"
+elif [ "aiv3" == $1 ]; then
+  project_name="AIV3"
+elif [ "aiv5" == $1 ]; then
+  project_name="AIV5"
 else
-  echo "please check param 1, project_name: hdt|dt|bt|aiv3lcm|aiv3ros|aiv5lcm|aiv5ros"
+  echo "please check param 1, project_name: hdt|aiv3|aiv5"
   echo "exit"
   exit 1
 fi

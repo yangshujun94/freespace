@@ -1,0 +1,39 @@
+[35m[1mScanning dependencies of target uto_per_fs[0m
+[  6%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/core/freespace_manager.cpp.o[0m
+[ 12%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/core/grid_map.cpp.o[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/debug/vis.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/debug/vis_helper.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/core/object.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/camera.cpp.o[0m
+[ 43%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/diagnoser.cpp.o[0m
+[ 56%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/fs_node.cpp.o[0m
+[ 56%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/camera_manager.cpp.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/vehicle.cpp.o[0m
+[ 68%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/fisheye.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/main.cpp.o[0m
+[ 81%] [32m[1mLinking CXX executable uto_per_fs[0m
+[100%] Built target uto_per_fs
+-- Install configuration: "Release"
+-- Installing: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/lib/uto_per_fs/uto_per_fs
+-- Set runtime path of "/home/yang/project/freespace/freespace-fusion/install/uto_per_fs/lib/uto_per_fs/uto_per_fs" to ""
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/launch
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/launch/uto_per_fs.launch.xml
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/param
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/param/.gitkeep
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/lib/uto_per_fs/uto_per_fs
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/ament_index/resource_index/package_run_dependencies/uto_per_fs
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/ament_index/resource_index/parent_prefix_path/uto_per_fs
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/environment/ament_prefix_path.sh
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/environment/path.sh
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/environment/path.dsv
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/local_setup.bash
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/local_setup.sh
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/local_setup.zsh
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/local_setup.dsv
+-- Installing: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/package.dsv
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/ament_index/resource_index/packages/uto_per_fs
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/cmake/uto_per_fsConfig.cmake
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/cmake/uto_per_fsConfig-version.cmake
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/package.xml

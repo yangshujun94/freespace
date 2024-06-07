@@ -23,19 +23,3 @@ if [ -d "install" ]; then
 else
 	echo "no install"
 fi
-
-# clean build-arm
-if [ -d "build-arm" ]; then
-	echo "clean build-arm "
-	rm -r build-arm/
-else
-	echo "no build-arm"
-fi
-
-# clean bin-arm
-if [ -d "bin-arm" ]; then
-	echo "clean bin-arm "
-	rm -r bin-arm/
-else
-	echo "no bin-arm"
-fi

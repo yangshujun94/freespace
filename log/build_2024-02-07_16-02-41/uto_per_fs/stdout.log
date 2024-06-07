@@ -1,0 +1,117 @@
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_introspection_c;rosidl_typesupport_fastrtps_c
+-- Found rosidl_adapter: 2.2.2 (/opt/uto/pilot/rosidl_adapter/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp;rosidl_typesupport_fastrtps_cpp
+-- Found rmw_implementation_cmake: 3.3.1 (/opt/uto/pilot/rmw_implementation_cmake/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 0.22.5 (/opt/uto/pilot/rmw_cyclonedds_cpp/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Found ament_cmake_auto: 1.1.5 (/opt/uto/pilot/ament_cmake_auto/share/ament_cmake_auto/cmake)
+-- Eigen found (include: /usr/include/eigen3, version: 3.3.7)
+-- The imported target "vtkParseOGLExt" references the file
+   "/usr/bin/vtkParseOGLExt-7.1"
+but this file does not exist.  Possible reasons include:
+* The file was deleted, renamed, or moved to another location.
+* An install or uninstall procedure did not complete successfully.
+* The installation package was faulty and contained
+   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"
+but not all the files it references.
+
+-- The imported target "vtkRenderingPythonTkWidgets" references the file
+   "/usr/lib/x86_64-linux-gnu/libvtkRenderingPythonTkWidgets.so"
+but this file does not exist.  Possible reasons include:
+* The file was deleted, renamed, or moved to another location.
+* An install or uninstall procedure did not complete successfully.
+* The installation package was faulty and contained
+   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"
+but not all the files it references.
+
+-- The imported target "vtk" references the file
+   "/usr/bin/vtk"
+but this file does not exist.  Possible reasons include:
+* The file was deleted, renamed, or moved to another location.
+* An install or uninstall procedure did not complete successfully.
+* The installation package was faulty and contained
+   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"
+but not all the files it references.
+
+-- The imported target "pvtk" references the file
+   "/usr/bin/pvtk"
+but this file does not exist.  Possible reasons include:
+* The file was deleted, renamed, or moved to another location.
+* An install or uninstall procedure did not complete successfully.
+* The installation package was faulty and contained
+   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"
+but not all the files it references.
+
+-- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)
+-- OpenNI2 found (include: /usr/include/openni2, lib: /usr/lib/libOpenNI2.so)
+-- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)
+-- OpenNI2 found (include: /usr/include/openni2, lib: /usr/lib/libOpenNI2.so)
+-- QHULL found (include: /usr/include, lib: optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so)
+-- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)
+-- Found ament_lint_auto: 0.10.7 (/opt/uto/pilot/ament_lint_auto/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/yang/project/freespace/freespace-fusion/src/project/aiv5_ros;/home/yang/project/freespace/freespace-fusion/src;/home/yang/project/freespace/freespace-fusion/msgs;/home/yang/project/freespace/freespace-fusion/msgs/protobuf/3.6.1
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/yang/project/freespace/freespace-fusion/build/uto_per_fs
+[35m[1mScanning dependencies of target uto_per_fs[0m
+[  4%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/core/expand/quads_intersect.cpp.o[0m
+[ 17%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/core/freespace_manager.cpp.o[0m
+[ 17%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/debug/vis.cpp.o[0m
+[ 17%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/core/expand/expand.cpp.o[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/core/grid_map.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/debug/vis_helper.cpp.o[0m
+[ 34%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/camera_manager.cpp.o[0m
+[ 34%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/diagnoser.cpp.o[0m
+[ 47%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/camera.cpp.o[0m
+[ 47%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/fs_node.cpp.o[0m
+[ 47%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider.cpp.o[0m
+[ 52%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_dx.cpp.o[0m
+[ 56%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/main.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_lj.cpp.o[0m
+[ 65%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_qz.cpp.o[0m
+[ 69%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_la.cpp.o[0m
+[ 73%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_tc.cpp.o[0m
+[ 78%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_ws.cpp.o[0m
+[ 82%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/rwlock.cpp.o[0m
+[ 86%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/utils.cpp.o[0m
+[ 91%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/vehicle.cpp.o[0m
+[ 95%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/fs_version.cpp.o[0m
+[100%] [32m[1mLinking CXX executable uto_per_fs[0m
+[100%] Built target uto_per_fs
+-- Install configuration: "Release"
+-- Installing: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/lib/uto_per_fs/uto_per_fs
+-- Set runtime path of "/home/yang/project/freespace/freespace-fusion/install/uto_per_fs/lib/uto_per_fs/uto_per_fs" to ""
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/launch
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/launch/uto_per_fs.launch.xml
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/launch/run_node.py
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/param
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/param/.gitkeep
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/lib/uto_per_fs/uto_per_fs
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/ament_index/resource_index/package_run_dependencies/uto_per_fs
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/ament_index/resource_index/parent_prefix_path/uto_per_fs
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/environment/ament_prefix_path.sh
+-- Installing: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/environment/path.sh
+-- Installing: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/environment/path.dsv
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/local_setup.bash
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/local_setup.sh
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/local_setup.zsh
+-- Installing: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/local_setup.dsv
+-- Installing: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/package.dsv
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/ament_index/resource_index/packages/uto_per_fs
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/cmake/uto_per_fsConfig.cmake
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/cmake/uto_per_fsConfig-version.cmake
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/package.xml

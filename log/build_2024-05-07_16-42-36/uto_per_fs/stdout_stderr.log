@@ -1,0 +1,1297 @@
+==== update git commit SHA    : 5b207cf464  feature/fisheye
+==== update git commit date   : 2024-02-23 09:53:44 +0800
+==== update git commit message: fix grid class
+**** get cicd vehicle_type: 
+**** get cicd target_board: 
+**** get cicd middleware  : 
+++++ this build project : AIV5
+++++ this build type    : Release
+++++ this build vis     : ON
+++++ this build load_log: OFF
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_introspection_c;rosidl_typesupport_fastrtps_c
+-- Found rosidl_adapter: 2.2.2 (/opt/uto/pilot/rosidl_adapter/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp;rosidl_typesupport_fastrtps_cpp
+-- Found rmw_implementation_cmake: 3.3.1 (/opt/uto/pilot/rmw_implementation_cmake/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 0.22.5 (/opt/uto/pilot/rmw_cyclonedds_cpp/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Found ament_cmake_auto: 1.1.5 (/opt/uto/pilot/ament_cmake_auto/share/ament_cmake_auto/cmake)
+[UTO_OPTIMIZE_RELEASE] UTO_OPTIMIZE_MARCH_OP is -march=native.
+[UTO_OPTIMIZE_RELEASE] Release mode optimize options ON.
+-- Found ament_lint_auto: 0.10.7 (/opt/uto/pilot/ament_lint_auto/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/yang/project/freespace/freespace-fusion/src/project/aiv5;/home/yang/project/freespace/freespace-fusion/src
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/yang/project/freespace/freespace-fusion/build/uto_per_fs
+[35m[1mScanning dependencies of target uto_per_fs[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/core/grid_line_traversal.cpp.o[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/core/freespace_manager.cpp.o[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/core/grid_map.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/core/object.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/debug/vis.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/diagnoser.cpp.o[0m
+[ 43%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/fisheye.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/debug/vis_helper.cpp.o[0m
+[ 56%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/camera_manager.cpp.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/camera.cpp.o[0m
+[ 68%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/fs_node.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/vehicle.cpp.o[0m
+[ 81%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/main.cpp.o[0m
+[ 87%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/fs_version.cpp.o[0m
+[ 93%] [32mBuilding CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/rwlock.cpp.o[0m
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:5[m[K:
+[01m[K/opt/uto/pilot/sensor_msgs/include/sensor_msgs/point_cloud_conversion.hpp:51:6:[m[K [01;35m[Kwarning: [m[K#warning POINT_CLOUD_DEPRECATION_MESSAGE [[01;35m[K-Wcpp[m[K]
+   51 | #    [01;35m[Kwarning[m[K POINT_CLOUD_DEPRECATION_MESSAGE
+      |      [01;35m[K^~~~~~~[m[K
+In file included from [01m[K/opt/uto/pilot/uto_common_proto/include/perception_obstacles.pb.h:24[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/defs.h:5[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/diagnoser.h:5[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/diagnoser.cpp:1[m[K:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::ArenaStringPtr::Swap(google::protobuf::internal::ArenaStringPtr*, const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:175:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |       ArenaStringPtr* other, [01;35m[Kconst ::std::string* default_value[m[K, Arena* arena) {
+      |                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:175:73:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |       ArenaStringPtr* other, const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                                  [01;35m[K~~~~~~~^~~~~[m[K
+In file included from [01m[K/opt/uto/pilot/uto_common_proto/include/perception_obstacles.pb.h:27[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/defs.h:5[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/diagnoser.h:5[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/diagnoser.cpp:1[m[K:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToEmpty(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:64:64:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   64 |   void ClearToEmpty(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                         [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToEmptyNoArena(const string*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:71:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   71 |   void ClearToEmptyNoArena([01;35m[Kconst ::std::string* default_value[m[K)
+      |                            [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToDefault(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:78:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   78 |   void ClearToDefault(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                           [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Destroy(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:85:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   85 |   void Destroy(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                    [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::Mutable(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:97:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   97 |   ::std::string* Mutable(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                              [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::Release(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:104:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  104 |   ::std::string* Release(const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                              [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::ReleaseNonDefault(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:107:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  107 |   ::std::string* ReleaseNonDefault(const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                                        [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Set(const string*, google::protobuf::StringPiece, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:117:19:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  117 |            [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |            [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetLite(const string*, google::protobuf::StringPiece, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:122:23:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  122 |                [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |                [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Set(const string*, const string&, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:130:19:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  130 |            [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |            [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetLite(const string*, const string&, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:135:23:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  135 |                [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |                [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetAllocated(const string*, std::string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:149:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  149 |                     [01;35m[KArena* arena[m[K) {
+      |                     [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kbool google::protobuf::internal::InlinedStringField::IsDefault(const string*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:162:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  162 |   bool IsDefault([01;35m[Kconst ::std::string* default_value[m[K) {
+      |                  [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::AssignWithDefault(const string*, const google::protobuf::internal::InlinedStringField&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:175:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |     [01;35m[Kconst ::std::string* default_value[m[K, const InlinedStringField& from) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, google::protobuf::StringPiece)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:224:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  224 |     [01;35m[Kconst ::std::string* default_value[m[K, StringPiece value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, const string&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:229:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  229 |     [01;35m[Kconst ::std::string* default_value[m[K, const ::std::string& value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, std::string&&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:235:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  235 |     [01;35m[Kconst ::std::string* default_value[m[K, ::std::string&& value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::UnsafeArenaRelease(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:254:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  254 |     const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                         [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::UnsafeArenaSetAllocated(const string*, std::string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:259:70:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  259 |     const ::std::string* default_value, ::std::string* value, [01;35m[KArena* arena[m[K) {
+      |                                                               [01;35m[K~~~~~~~^~~~~[m[K
+In file included from [01m[K/opt/uto/pilot/uto_common_proto/include/camera_calib.pb.h:24[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/camera.h:4[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/camera_manager.h:4[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/camera_manager.cpp:1[m[K:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::ArenaStringPtr::Swap(google::protobuf::internal::ArenaStringPtr*, const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:175:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |       ArenaStringPtr* other, [01;35m[Kconst ::std::string* default_value[m[K, Arena* arena) {
+      |                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:175:73:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |       ArenaStringPtr* other, const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                                  [01;35m[K~~~~~~~^~~~~[m[K
+In file included from [01m[K/opt/uto/pilot/uto_common_proto/include/perception_obstacles.pb.h:24[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/core/object.h:5[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/core/object.cpp:1[m[K:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::ArenaStringPtr::Swap(google::protobuf::internal::ArenaStringPtr*, const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:175:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |       ArenaStringPtr* other, [01;35m[Kconst ::std::string* default_value[m[K, Arena* arena) {
+      |                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:175:73:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |       ArenaStringPtr* other, const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                                  [01;35m[K~~~~~~~^~~~~[m[K
+In file included from [01m[K/opt/uto/pilot/uto_common_proto/include/perception_obstacles.pb.h:24[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/defs.h:5[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/core/grid_map.h:7[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/core/grid_map.cpp:1[m[K:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::ArenaStringPtr::Swap(google::protobuf::internal::ArenaStringPtr*, const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:175:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |       ArenaStringPtr* other, [01;35m[Kconst ::std::string* default_value[m[K, Arena* arena) {
+      |                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:175:73:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |       ArenaStringPtr* other, const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                                  [01;35m[K~~~~~~~^~~~~[m[K
+In file included from [01m[K/opt/uto/pilot/uto_common_proto/include/camera_calib.pb.h:27[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/camera.h:4[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/camera_manager.h:4[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/camera_manager.cpp:1[m[K:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToEmpty(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:64:64:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   64 |   void ClearToEmpty(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                         [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToEmptyNoArena(const string*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:71:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   71 |   void ClearToEmptyNoArena([01;35m[Kconst ::std::string* default_value[m[K)
+      |                            [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToDefault(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:78:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   78 |   void ClearToDefault(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                           [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Destroy(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:85:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   85 |   void Destroy(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                    [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::Mutable(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:97:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   97 |   ::std::string* Mutable(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                              [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::Release(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:104:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  104 |   ::std::string* Release(const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                              [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::ReleaseNonDefault(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:107:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  107 |   ::std::string* ReleaseNonDefault(const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                                        [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Set(const string*, google::protobuf::StringPiece, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:117:19:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  117 |            [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |            [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetLite(const string*, google::protobuf::StringPiece, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:122:23:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  122 |                [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |                [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Set(const string*, const string&, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:130:19:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  130 |            [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |            [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetLite(const string*, const string&, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:135:23:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  135 |                [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |                [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetAllocated(const string*, std::string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:149:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  149 |                     [01;35m[KArena* arena[m[K) {
+      |                     [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kbool google::protobuf::internal::InlinedStringField::IsDefault(const string*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:162:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  162 |   bool IsDefault([01;35m[Kconst ::std::string* default_value[m[K) {
+      |                  [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::AssignWithDefault(const string*, const google::protobuf::internal::InlinedStringField&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:175:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |     [01;35m[Kconst ::std::string* default_value[m[K, const InlinedStringField& from) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, google::protobuf::StringPiece)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:224:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  224 |     [01;35m[Kconst ::std::string* default_value[m[K, StringPiece value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, const string&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:229:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  229 |     [01;35m[Kconst ::std::string* default_value[m[K, const ::std::string& value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, std::string&&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:235:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  235 |     [01;35m[Kconst ::std::string* default_value[m[K, ::std::string&& value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::UnsafeArenaRelease(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:254:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  254 |     const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                         [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::UnsafeArenaSetAllocated(const string*, std::string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:259:70:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  259 |     const ::std::string* default_value, ::std::string* value, [01;35m[KArena* arena[m[K) {
+      |                                                               [01;35m[K~~~~~~~^~~~~[m[K
+In file included from [01m[K/opt/uto/pilot/uto_common_proto/include/perception_obstacles.pb.h:27[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/core/object.h:5[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/core/object.cpp:1[m[K:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToEmpty(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:64:64:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   64 |   void ClearToEmpty(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                         [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToEmptyNoArena(const string*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:71:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   71 |   void ClearToEmptyNoArena([01;35m[Kconst ::std::string* default_value[m[K)
+      |                            [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToDefault(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:78:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   78 |   void ClearToDefault(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                           [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Destroy(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:85:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   85 |   void Destroy(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                    [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::Mutable(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:97:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   97 |   ::std::string* Mutable(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                              [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::Release(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:104:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  104 |   ::std::string* Release(const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                              [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::ReleaseNonDefault(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:107:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  107 |   ::std::string* ReleaseNonDefault(const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                                        [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Set(const string*, google::protobuf::StringPiece, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:117:19:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  117 |            [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |            [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetLite(const string*, google::protobuf::StringPiece, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:122:23:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  122 |                [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |                [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Set(const string*, const string&, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:130:19:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  130 |            [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |            [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetLite(const string*, const string&, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:135:23:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  135 |                [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |                [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetAllocated(const string*, std::string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:149:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  149 |                     [01;35m[KArena* arena[m[K) {
+      |                     [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kbool google::protobuf::internal::InlinedStringField::IsDefault(const string*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:162:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  162 |   bool IsDefault([01;35m[Kconst ::std::string* default_value[m[K) {
+      |                  [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::AssignWithDefault(const string*, const google::protobuf::internal::InlinedStringField&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:175:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |     [01;35m[Kconst ::std::string* default_value[m[K, const InlinedStringField& from) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, google::protobuf::StringPiece)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:224:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  224 |     [01;35m[Kconst ::std::string* default_value[m[K, StringPiece value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, const string&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:229:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  229 |     [01;35m[Kconst ::std::string* default_value[m[K, const ::std::string& value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, std::string&&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:235:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  235 |     [01;35m[Kconst ::std::string* default_value[m[K, ::std::string&& value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::UnsafeArenaRelease(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:254:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  254 |     const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                         [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::UnsafeArenaSetAllocated(const string*, std::string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:259:70:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  259 |     const ::std::string* default_value, ::std::string* value, [01;35m[KArena* arena[m[K) {
+      |                                                               [01;35m[K~~~~~~~^~~~~[m[K
+In file included from [01m[K/opt/uto/pilot/uto_common_proto/include/perception_freespace.pb.h:24[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/core/freespace_manager.h:4[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/core/freespace_manager.cpp:1[m[K:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::ArenaStringPtr::Swap(google::protobuf::internal::ArenaStringPtr*, const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:175:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |       ArenaStringPtr* other, [01;35m[Kconst ::std::string* default_value[m[K, Arena* arena) {
+      |                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:175:73:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |       ArenaStringPtr* other, const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                                  [01;35m[K~~~~~~~^~~~~[m[K
+In file included from [01m[K/opt/uto/pilot/uto_common_proto/include/perception_obstacles.pb.h:27[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/defs.h:5[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/core/grid_map.h:7[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/core/grid_map.cpp:1[m[K:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToEmpty(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:64:64:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   64 |   void ClearToEmpty(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                         [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToEmptyNoArena(const string*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:71:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   71 |   void ClearToEmptyNoArena([01;35m[Kconst ::std::string* default_value[m[K)
+      |                            [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToDefault(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:78:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   78 |   void ClearToDefault(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                           [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Destroy(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:85:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   85 |   void Destroy(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                    [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::Mutable(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:97:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   97 |   ::std::string* Mutable(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                              [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::Release(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:104:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  104 |   ::std::string* Release(const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                              [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::ReleaseNonDefault(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:107:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  107 |   ::std::string* ReleaseNonDefault(const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                                        [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Set(const string*, google::protobuf::StringPiece, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:117:19:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  117 |            [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |            [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetLite(const string*, google::protobuf::StringPiece, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:122:23:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  122 |                [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |                [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Set(const string*, const string&, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:130:19:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  130 |            [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |            [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetLite(const string*, const string&, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:135:23:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  135 |                [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |                [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetAllocated(const string*, std::string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:149:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  149 |                     [01;35m[KArena* arena[m[K) {
+      |                     [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kbool google::protobuf::internal::InlinedStringField::IsDefault(const string*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:162:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  162 |   bool IsDefault([01;35m[Kconst ::std::string* default_value[m[K) {
+      |                  [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::AssignWithDefault(const string*, const google::protobuf::internal::InlinedStringField&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:175:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |     [01;35m[Kconst ::std::string* default_value[m[K, const InlinedStringField& from) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/uto/pilot/uto_common_proto/include/vehicle_config.pb.h:24[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/vehicle.h:5[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/vehicle.cpp:1[m[K:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::ArenaStringPtr::Swap(google::protobuf::internal::ArenaStringPtr*, const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:175:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |       ArenaStringPtr* other, [01;35m[Kconst ::std::string* default_value[m[K, Arena* arena) {
+      |                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:175:73:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |       ArenaStringPtr* other, const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                                  [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, google::protobuf::StringPiece)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:224:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  224 |     [01;35m[Kconst ::std::string* default_value[m[K, StringPiece value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, const string&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:229:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  229 |     [01;35m[Kconst ::std::string* default_value[m[K, const ::std::string& value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, std::string&&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:235:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  235 |     [01;35m[Kconst ::std::string* default_value[m[K, ::std::string&& value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::UnsafeArenaRelease(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:254:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  254 |     const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                         [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::UnsafeArenaSetAllocated(const string*, std::string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:259:70:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  259 |     const ::std::string* default_value, ::std::string* value, [01;35m[KArena* arena[m[K) {
+      |                                                               [01;35m[K~~~~~~~^~~~~[m[K
+In file included from [01m[K/opt/uto/pilot/uto_common_proto/include/perception_freespace.pb.h:27[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/core/freespace_manager.h:4[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/core/freespace_manager.cpp:1[m[K:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToEmpty(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:64:64:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   64 |   void ClearToEmpty(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                         [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToEmptyNoArena(const string*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:71:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   71 |   void ClearToEmptyNoArena([01;35m[Kconst ::std::string* default_value[m[K)
+      |                            [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToDefault(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:78:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   78 |   void ClearToDefault(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                           [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Destroy(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:85:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   85 |   void Destroy(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                    [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::Mutable(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:97:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   97 |   ::std::string* Mutable(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                              [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::Release(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:104:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  104 |   ::std::string* Release(const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                              [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::ReleaseNonDefault(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:107:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  107 |   ::std::string* ReleaseNonDefault(const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                                        [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Set(const string*, google::protobuf::StringPiece, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:117:19:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  117 |            [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |            [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetLite(const string*, google::protobuf::StringPiece, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:122:23:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  122 |                [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |                [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Set(const string*, const string&, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:130:19:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  130 |            [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |            [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetLite(const string*, const string&, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:135:23:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  135 |                [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |                [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetAllocated(const string*, std::string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:149:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  149 |                     [01;35m[KArena* arena[m[K) {
+      |                     [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kbool google::protobuf::internal::InlinedStringField::IsDefault(const string*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:162:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  162 |   bool IsDefault([01;35m[Kconst ::std::string* default_value[m[K) {
+      |                  [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::AssignWithDefault(const string*, const google::protobuf::internal::InlinedStringField&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:175:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |     [01;35m[Kconst ::std::string* default_value[m[K, const InlinedStringField& from) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, google::protobuf::StringPiece)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:224:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  224 |     [01;35m[Kconst ::std::string* default_value[m[K, StringPiece value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, const string&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:229:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  229 |     [01;35m[Kconst ::std::string* default_value[m[K, const ::std::string& value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, std::string&&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:235:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  235 |     [01;35m[Kconst ::std::string* default_value[m[K, ::std::string&& value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::UnsafeArenaRelease(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:254:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  254 |     const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                         [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::UnsafeArenaSetAllocated(const string*, std::string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:259:70:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  259 |     const ::std::string* default_value, ::std::string* value, [01;35m[KArena* arena[m[K) {
+      |                                                               [01;35m[K~~~~~~~^~~~~[m[K
+In file included from [01m[K/opt/uto/pilot/uto_common_proto/include/vehicle_config.pb.h:27[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/vehicle.h:5[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/vehicle.cpp:1[m[K:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToEmpty(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:64:64:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   64 |   void ClearToEmpty(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                         [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToEmptyNoArena(const string*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:71:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   71 |   void ClearToEmptyNoArena([01;35m[Kconst ::std::string* default_value[m[K)
+      |                            [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToDefault(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:78:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   78 |   void ClearToDefault(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                           [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Destroy(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:85:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   85 |   void Destroy(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                    [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::Mutable(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:97:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   97 |   ::std::string* Mutable(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                              [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::Release(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:104:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  104 |   ::std::string* Release(const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                              [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::ReleaseNonDefault(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:107:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  107 |   ::std::string* ReleaseNonDefault(const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                                        [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Set(const string*, google::protobuf::StringPiece, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:117:19:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  117 |            [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |            [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetLite(const string*, google::protobuf::StringPiece, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:122:23:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  122 |                [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |                [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Set(const string*, const string&, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:130:19:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  130 |            [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |            [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetLite(const string*, const string&, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:135:23:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  135 |                [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |                [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetAllocated(const string*, std::string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:149:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  149 |                     [01;35m[KArena* arena[m[K) {
+      |                     [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kbool google::protobuf::internal::InlinedStringField::IsDefault(const string*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:162:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  162 |   bool IsDefault([01;35m[Kconst ::std::string* default_value[m[K) {
+      |                  [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::AssignWithDefault(const string*, const google::protobuf::internal::InlinedStringField&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:175:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |     [01;35m[Kconst ::std::string* default_value[m[K, const InlinedStringField& from) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, google::protobuf::StringPiece)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:224:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  224 |     [01;35m[Kconst ::std::string* default_value[m[K, StringPiece value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, const string&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:229:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  229 |     [01;35m[Kconst ::std::string* default_value[m[K, const ::std::string& value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, std::string&&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:235:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  235 |     [01;35m[Kconst ::std::string* default_value[m[K, ::std::string&& value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::UnsafeArenaRelease(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:254:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  254 |     const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                         [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::UnsafeArenaSetAllocated(const string*, std::string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:259:70:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  259 |     const ::std::string* default_value, ::std::string* value, [01;35m[KArena* arena[m[K) {
+      |                                                               [01;35m[K~~~~~~~^~~~~[m[K
+In file included from [01m[K/opt/uto/pilot/uto_common_proto/include/camera_calib.pb.h:24[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/camera.h:4[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/camera.cpp:2[m[K:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::ArenaStringPtr::Swap(google::protobuf::internal::ArenaStringPtr*, const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:175:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |       ArenaStringPtr* other, [01;35m[Kconst ::std::string* default_value[m[K, Arena* arena) {
+      |                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:175:73:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |       ArenaStringPtr* other, const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                                  [01;35m[K~~~~~~~^~~~~[m[K
+In file included from [01m[K/opt/uto/pilot/uto_common_proto/include/camera_calib.pb.h:27[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/camera.h:4[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/camera.cpp:2[m[K:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToEmpty(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:64:64:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   64 |   void ClearToEmpty(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                         [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToEmptyNoArena(const string*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:71:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   71 |   void ClearToEmptyNoArena([01;35m[Kconst ::std::string* default_value[m[K)
+      |                            [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToDefault(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:78:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   78 |   void ClearToDefault(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                           [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Destroy(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:85:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   85 |   void Destroy(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                    [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::Mutable(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:97:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   97 |   ::std::string* Mutable(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                              [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::Release(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:104:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  104 |   ::std::string* Release(const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                              [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::ReleaseNonDefault(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:107:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  107 |   ::std::string* ReleaseNonDefault(const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                                        [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Set(const string*, google::protobuf::StringPiece, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:117:19:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  117 |            [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |            [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetLite(const string*, google::protobuf::StringPiece, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:122:23:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  122 |                [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |                [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Set(const string*, const string&, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:130:19:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  130 |            [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |            [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetLite(const string*, const string&, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:135:23:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  135 |                [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |                [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetAllocated(const string*, std::string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:149:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  149 |                     [01;35m[KArena* arena[m[K) {
+      |                     [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kbool google::protobuf::internal::InlinedStringField::IsDefault(const string*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:162:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  162 |   bool IsDefault([01;35m[Kconst ::std::string* default_value[m[K) {
+      |                  [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::AssignWithDefault(const string*, const google::protobuf::internal::InlinedStringField&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:175:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |     [01;35m[Kconst ::std::string* default_value[m[K, const InlinedStringField& from) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, google::protobuf::StringPiece)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:224:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  224 |     [01;35m[Kconst ::std::string* default_value[m[K, StringPiece value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, const string&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:229:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  229 |     [01;35m[Kconst ::std::string* default_value[m[K, const ::std::string& value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, std::string&&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:235:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  235 |     [01;35m[Kconst ::std::string* default_value[m[K, ::std::string&& value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::UnsafeArenaRelease(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:254:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  254 |     const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                         [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::UnsafeArenaSetAllocated(const string*, std::string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:259:70:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  259 |     const ::std::string* default_value, ::std::string* value, [01;35m[KArena* arena[m[K) {
+      |                                                               [01;35m[K~~~~~~~^~~~~[m[K
+In file included from [01m[K/opt/uto/pilot/uto_common_proto/include/camera_calib.pb.h:24[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fisheye.h:4[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fisheye.cpp:3[m[K:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::ArenaStringPtr::Swap(google::protobuf::internal::ArenaStringPtr*, const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:175:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |       ArenaStringPtr* other, [01;35m[Kconst ::std::string* default_value[m[K, Arena* arena) {
+      |                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:175:73:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |       ArenaStringPtr* other, const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                                  [01;35m[K~~~~~~~^~~~~[m[K
+In file included from [01m[K/opt/uto/pilot/uto_common_proto/include/camera_calib.pb.h:27[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fisheye.h:4[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fisheye.cpp:3[m[K:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToEmpty(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:64:64:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   64 |   void ClearToEmpty(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                         [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToEmptyNoArena(const string*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:71:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   71 |   void ClearToEmptyNoArena([01;35m[Kconst ::std::string* default_value[m[K)
+      |                            [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToDefault(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:78:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   78 |   void ClearToDefault(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                           [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Destroy(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:85:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   85 |   void Destroy(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                    [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::Mutable(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:97:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   97 |   ::std::string* Mutable(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                              [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::Release(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:104:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  104 |   ::std::string* Release(const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                              [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::ReleaseNonDefault(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:107:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  107 |   ::std::string* ReleaseNonDefault(const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                                        [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Set(const string*, google::protobuf::StringPiece, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:117:19:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  117 |            [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |            [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetLite(const string*, google::protobuf::StringPiece, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:122:23:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  122 |                [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |                [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Set(const string*, const string&, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:130:19:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  130 |            [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |            [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetLite(const string*, const string&, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:135:23:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  135 |                [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |                [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetAllocated(const string*, std::string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:149:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  149 |                     [01;35m[KArena* arena[m[K) {
+      |                     [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kbool google::protobuf::internal::InlinedStringField::IsDefault(const string*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:162:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  162 |   bool IsDefault([01;35m[Kconst ::std::string* default_value[m[K) {
+      |                  [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::AssignWithDefault(const string*, const google::protobuf::internal::InlinedStringField&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:175:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |     [01;35m[Kconst ::std::string* default_value[m[K, const InlinedStringField& from) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, google::protobuf::StringPiece)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:224:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  224 |     [01;35m[Kconst ::std::string* default_value[m[K, StringPiece value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, const string&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:229:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  229 |     [01;35m[Kconst ::std::string* default_value[m[K, const ::std::string& value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, std::string&&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:235:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  235 |     [01;35m[Kconst ::std::string* default_value[m[K, ::std::string&& value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::UnsafeArenaRelease(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:254:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  254 |     const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                         [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::UnsafeArenaSetAllocated(const string*, std::string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:259:70:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  259 |     const ::std::string* default_value, ::std::string* value, [01;35m[KArena* arena[m[K) {
+      |                                                               [01;35m[K~~~~~~~^~~~~[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/core/object.cpp:3[m[K:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_math.h:[m[K In function ‘[01m[Kstd::vector<Eigen::Matrix<float, 2, 1> > fs::convexHull(std::vector<Eigen::Matrix<float, 2, 1> >&)[m[K’:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_math.h:48:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::vector<Eigen::Matrix<float, 2, 1> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kconst int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+   48 |         while([01;35m[Khull.size() > t[m[K && (Eigen::Vector3f{hull[hull.size() - 2].x(), hull[hull.size() - 2].y(), 0.0f} - Eigen::Vector3f{hull[hull.size() - 1].x(), hull[hull.size() - 1].y(), 0.0f}).cross(point - Eigen::Vector3f{hull[hull.size() - 1].x(), hull[hull.size() - 1].y(), 0.0f}).z() <= 0.f)
+      |               [01;35m[K~~~~~~~~~~~~^~~[m[K
+In file included from [01m[K/opt/uto/pilot/uto_common_proto/include/perception_freespace.pb.h:24[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/debug/vis.h:8[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/debug/vis.cpp:1[m[K:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::ArenaStringPtr::Swap(google::protobuf::internal::ArenaStringPtr*, const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:175:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |       ArenaStringPtr* other, [01;35m[Kconst ::std::string* default_value[m[K, Arena* arena) {
+      |                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:175:73:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |       ArenaStringPtr* other, const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                                  [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/vehicle.cpp:[m[K In member function ‘[01m[Kstd::tuple<Eigen::Matrix<float, 3, 3, 0, 3, 3>, Eigen::Matrix<float, 3, 1, 0, 3, 1> > fs::Vehicle::calcRotAndVecTitoT0(int64_t) const[m[K’:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/vehicle.cpp:91:19:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kstatus[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   91 |   const EgoStatus [01;35m[Kstatus[m[K = getEgoMotion(egoMotion, timestampUs);
+      |                   [01;35m[K^~~~~~[m[K
+In file included from [01m[K/opt/uto/pilot/uto_common_proto/include/perception_freespace.pb.h:27[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/debug/vis.h:8[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/debug/vis.cpp:1[m[K:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToEmpty(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:64:64:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   64 |   void ClearToEmpty(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                         [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToEmptyNoArena(const string*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:71:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   71 |   void ClearToEmptyNoArena([01;35m[Kconst ::std::string* default_value[m[K)
+      |                            [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToDefault(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:78:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   78 |   void ClearToDefault(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                           [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Destroy(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:85:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   85 |   void Destroy(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                    [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::Mutable(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:97:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   97 |   ::std::string* Mutable(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                              [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::Release(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:104:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  104 |   ::std::string* Release(const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                              [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::ReleaseNonDefault(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:107:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  107 |   ::std::string* ReleaseNonDefault(const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                                        [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Set(const string*, google::protobuf::StringPiece, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:117:19:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  117 |            [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |            [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetLite(const string*, google::protobuf::StringPiece, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:122:23:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  122 |                [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |                [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Set(const string*, const string&, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:130:19:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  130 |            [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |            [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetLite(const string*, const string&, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:135:23:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  135 |                [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |                [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetAllocated(const string*, std::string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:149:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  149 |                     [01;35m[KArena* arena[m[K) {
+      |                     [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kbool google::protobuf::internal::InlinedStringField::IsDefault(const string*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:162:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  162 |   bool IsDefault([01;35m[Kconst ::std::string* default_value[m[K) {
+      |                  [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::AssignWithDefault(const string*, const google::protobuf::internal::InlinedStringField&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:175:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |     [01;35m[Kconst ::std::string* default_value[m[K, const InlinedStringField& from) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, google::protobuf::StringPiece)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:224:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  224 |     [01;35m[Kconst ::std::string* default_value[m[K, StringPiece value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, const string&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:229:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  229 |     [01;35m[Kconst ::std::string* default_value[m[K, const ::std::string& value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, std::string&&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:235:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  235 |     [01;35m[Kconst ::std::string* default_value[m[K, ::std::string&& value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::UnsafeArenaRelease(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:254:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  254 |     const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                         [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::UnsafeArenaSetAllocated(const string*, std::string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:259:70:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  259 |     const ::std::string* default_value, ::std::string* value, [01;35m[KArena* arena[m[K) {
+      |                                                               [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/home/yang/project/freespace/freespace-fusion/src/core/grid_map.cpp:[m[K In member function ‘[01m[Kvoid fs::GridMap::extractBorders()[m[K’:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/core/grid_map.cpp:131:17:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KiCell[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  131 |       const int [01;35m[KiCell[m[K      = i * CELL_SCALE_INV;
+      |                 [01;35m[K^~~~~[m[K
+[01m[K/home/yang/project/freespace/freespace-fusion/src/core/grid_map.cpp:128:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KjCell[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  128 |     const int [01;35m[KjCell[m[K = j * CELL_SCALE_INV;
+      |               [01;35m[K^~~~~[m[K
+In file included from [01m[K/opt/uto/pilot/uto_common_proto/include/camera_calib.pb.h:24[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:9[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/main.cpp:4[m[K:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::ArenaStringPtr::Swap(google::protobuf::internal::ArenaStringPtr*, const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:175:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |       ArenaStringPtr* other, [01;35m[Kconst ::std::string* default_value[m[K, Arena* arena) {
+      |                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:175:73:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |       ArenaStringPtr* other, const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                                  [01;35m[K~~~~~~~^~~~~[m[K
+In file included from [01m[K/opt/uto/pilot/uto_common_proto/include/camera_calib.pb.h:27[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:9[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/main.cpp:4[m[K:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToEmpty(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:64:64:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   64 |   void ClearToEmpty(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                         [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToEmptyNoArena(const string*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:71:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   71 |   void ClearToEmptyNoArena([01;35m[Kconst ::std::string* default_value[m[K)
+      |                            [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToDefault(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:78:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   78 |   void ClearToDefault(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                           [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Destroy(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:85:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   85 |   void Destroy(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                    [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::Mutable(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:97:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   97 |   ::std::string* Mutable(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                              [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::Release(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:104:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  104 |   ::std::string* Release(const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                              [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::ReleaseNonDefault(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:107:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  107 |   ::std::string* ReleaseNonDefault(const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                                        [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Set(const string*, google::protobuf::StringPiece, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:117:19:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  117 |            [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |            [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetLite(const string*, google::protobuf::StringPiece, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:122:23:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  122 |                [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |                [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Set(const string*, const string&, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:130:19:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  130 |            [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |            [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetLite(const string*, const string&, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:135:23:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  135 |                [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |                [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetAllocated(const string*, std::string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:149:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  149 |                     [01;35m[KArena* arena[m[K) {
+      |                     [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kbool google::protobuf::internal::InlinedStringField::IsDefault(const string*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:162:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  162 |   bool IsDefault([01;35m[Kconst ::std::string* default_value[m[K) {
+      |                  [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::AssignWithDefault(const string*, const google::protobuf::internal::InlinedStringField&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:175:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |     [01;35m[Kconst ::std::string* default_value[m[K, const InlinedStringField& from) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, google::protobuf::StringPiece)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:224:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  224 |     [01;35m[Kconst ::std::string* default_value[m[K, StringPiece value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, const string&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:229:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  229 |     [01;35m[Kconst ::std::string* default_value[m[K, const ::std::string& value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, std::string&&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:235:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  235 |     [01;35m[Kconst ::std::string* default_value[m[K, ::std::string&& value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::UnsafeArenaRelease(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:254:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  254 |     const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                         [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::UnsafeArenaSetAllocated(const string*, std::string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:259:70:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  259 |     const ::std::string* default_value, ::std::string* value, [01;35m[KArena* arena[m[K) {
+      |                                                               [01;35m[K~~~~~~~^~~~~[m[K
+In file included from [01m[K/opt/uto/pilot/uto_common_proto/include/camera_calib.pb.h:24[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:9[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:1[m[K:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::ArenaStringPtr::Swap(google::protobuf::internal::ArenaStringPtr*, const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:175:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |       ArenaStringPtr* other, [01;35m[Kconst ::std::string* default_value[m[K, Arena* arena) {
+      |                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/arenastring.h:175:73:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |       ArenaStringPtr* other, const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                                  [01;35m[K~~~~~~~^~~~~[m[K
+In file included from [01m[K/opt/uto/pilot/uto_common_proto/include/camera_calib.pb.h:27[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:9[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:1[m[K:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToEmpty(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:64:64:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   64 |   void ClearToEmpty(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                         [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToEmptyNoArena(const string*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:71:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   71 |   void ClearToEmptyNoArena([01;35m[Kconst ::std::string* default_value[m[K)
+      |                            [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::ClearToDefault(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:78:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   78 |   void ClearToDefault(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                           [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Destroy(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:85:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   85 |   void Destroy(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                    [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::Mutable(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:97:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   97 |   ::std::string* Mutable(const ::std::string* default_value, [01;35m[KArena* arena[m[K)
+      |                                                              [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::Release(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:104:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  104 |   ::std::string* Release(const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                              [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::ReleaseNonDefault(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:107:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  107 |   ::std::string* ReleaseNonDefault(const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                                                        [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Set(const string*, google::protobuf::StringPiece, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:117:19:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  117 |            [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |            [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetLite(const string*, google::protobuf::StringPiece, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:122:23:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  122 |                [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |                [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::Set(const string*, const string&, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:130:19:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  130 |            [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |            [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetLite(const string*, const string&, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:135:23:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  135 |                [01;35m[KArena* arena[m[K) GOOGLE_PROTOBUF_ATTRIBUTE_ALWAYS_INLINE {
+      |                [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetAllocated(const string*, std::string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:149:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  149 |                     [01;35m[KArena* arena[m[K) {
+      |                     [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kbool google::protobuf::internal::InlinedStringField::IsDefault(const string*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:162:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  162 |   bool IsDefault([01;35m[Kconst ::std::string* default_value[m[K) {
+      |                  [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::AssignWithDefault(const string*, const google::protobuf::internal::InlinedStringField&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:175:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  175 |     [01;35m[Kconst ::std::string* default_value[m[K, const InlinedStringField& from) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, google::protobuf::StringPiece)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:224:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  224 |     [01;35m[Kconst ::std::string* default_value[m[K, StringPiece value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, const string&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:229:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  229 |     [01;35m[Kconst ::std::string* default_value[m[K, const ::std::string& value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::SetNoArena(const string*, std::string&&)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:235:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdefault_value[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  235 |     [01;35m[Kconst ::std::string* default_value[m[K, ::std::string&& value) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kstd::string* google::protobuf::internal::InlinedStringField::UnsafeArenaRelease(const string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:254:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  254 |     const ::std::string* default_value, [01;35m[KArena* arena[m[K) {
+      |                                         [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::InlinedStringField::UnsafeArenaSetAllocated(const string*, std::string*, google::protobuf::Arena*)[m[K’:
+[01m[K/opt/uto/pilot/plotjuggler/include/google/protobuf/inlined_string_field.h:259:70:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karena[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  259 |     const ::std::string* default_value, ::std::string* value, [01;35m[KArena* arena[m[K) {
+      |                                                               [01;35m[K~~~~~~~^~~~~[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/debug/vis.cpp:10[m[K:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_math.h:[m[K In function ‘[01m[Kstd::vector<Eigen::Matrix<float, 2, 1> > fs::convexHull(std::vector<Eigen::Matrix<float, 2, 1> >&)[m[K’:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_math.h:48:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::vector<Eigen::Matrix<float, 2, 1> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kconst int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+   48 |         while([01;35m[Khull.size() > t[m[K && (Eigen::Vector3f{hull[hull.size() - 2].x(), hull[hull.size() - 2].y(), 0.0f} - Eigen::Vector3f{hull[hull.size() - 1].x(), hull[hull.size() - 1].y(), 0.0f}).cross(point - Eigen::Vector3f{hull[hull.size() - 1].x(), hull[hull.size() - 1].y(), 0.0f}).z() <= 0.f)
+      |               [01;35m[K~~~~~~~~~~~~^~~[m[K
+[01m[K/home/yang/project/freespace/freespace-fusion/src/core/freespace_manager.cpp:[m[K In member function ‘[01m[Kvoid fs::FreespaceManager::setupFisheye2CylinderMap(const uto::proto::CameraFreespace&, fs::SensorId)[m[K’:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/core/freespace_manager.cpp:344:41:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<Eigen::Matrix<float, 2, 1> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  344 |   for(int i = FISHEYE_INVALID_MARGIN; [01;35m[Ki < pointCylinderVec.size() - FISHEYE_INVALID_MARGIN[m[K; ++i)
+      |                                       [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/main.cpp:4[m[K:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:[m[K At global scope:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:149:165:[m[K [01;35m[Kwarning: [m[K‘[01m[Kuto::Subscriber<MessageT, E>::Subscriber(const string&, rclcpp::Node*, std::function<void(std::unique_ptr<_Tp>)>, const rclcpp::QoS&, const SubscriptionOptions&) [with MessageT = sensor_msgs::msg::CompressedImage_<std::allocator<void> >; E = void; std::string = std::__cxx11::basic_string<char>; rclcpp::SubscriptionOptions = rclcpp::SubscriptionOptionsWithAllocator<std::allocator<void> >][m[K’ is deprecated: !!! Please use Subscriber with std::shared_ptr<MessageT> callback [[01;35m[K-Wdeprecated-declarations[m[K]
+  149 |     uto::Subscriber<sensor_msgs::msg::CompressedImage> m_imageCfSub{IMAGE_CF_TOPIC, this, [this](auto&& PH1) { subscribeImageCf(std::forward<decltype(PH1)>(PH1)); }[01;35m[K}[m[K;
+      |                                                                                                                                                                     [01;35m[K^[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:8[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/main.cpp:4[m[K:
+[01m[K/opt/uto/pilot/uto_common_base/include/common/subscriber.h:17:3:[m[K [01;36m[Knote: [m[Kdeclared here
+   17 |   [01;36m[KSubscriber[m[K(const std::string& topic_name, rclcpp::Node* const node,
+      |   [01;36m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/main.cpp:4[m[K:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:173:183:[m[K [01;35m[Kwarning: [m[K‘[01m[Kuto::Subscriber<MessageT, E>::Subscriber(const string&, rclcpp::Node*, std::function<void(std::unique_ptr<_Tp>)>, const rclcpp::QoS&, const SubscriptionOptions&) [with MessageT = sensor_msgs::msg::CompressedImage_<std::allocator<void> >; E = void; std::string = std::__cxx11::basic_string<char>; rclcpp::SubscriptionOptions = rclcpp::SubscriptionOptionsWithAllocator<std::allocator<void> >][m[K’ is deprecated: !!! Please use Subscriber with std::shared_ptr<MessageT> callback [[01;35m[K-Wdeprecated-declarations[m[K]
+  173 |     uto::Subscriber<sensor_msgs::msg::CompressedImage> m_imageFcfSub{IMAGE_FISHEYE_FCF_TOPIC, this, [this](auto&& PH1) { subscribeImageFisheyeFcf(std::forward<decltype(PH1)>(PH1)); }[01;35m[K}[m[K;
+      |                                                                                                                                                                                       [01;35m[K^[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:8[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/main.cpp:4[m[K:
+[01m[K/opt/uto/pilot/uto_common_base/include/common/subscriber.h:17:3:[m[K [01;36m[Knote: [m[Kdeclared here
+   17 |   [01;36m[KSubscriber[m[K(const std::string& topic_name, rclcpp::Node* const node,
+      |   [01;36m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/main.cpp:4[m[K:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:174:183:[m[K [01;35m[Kwarning: [m[K‘[01m[Kuto::Subscriber<MessageT, E>::Subscriber(const string&, rclcpp::Node*, std::function<void(std::unique_ptr<_Tp>)>, const rclcpp::QoS&, const SubscriptionOptions&) [with MessageT = sensor_msgs::msg::CompressedImage_<std::allocator<void> >; E = void; std::string = std::__cxx11::basic_string<char>; rclcpp::SubscriptionOptions = rclcpp::SubscriptionOptionsWithAllocator<std::allocator<void> >][m[K’ is deprecated: !!! Please use Subscriber with std::shared_ptr<MessageT> callback [[01;35m[K-Wdeprecated-declarations[m[K]
+  174 |     uto::Subscriber<sensor_msgs::msg::CompressedImage> m_imageFllSub{IMAGE_FISHEYE_FLL_TOPIC, this, [this](auto&& PH1) { subscribeImageFisheyeFll(std::forward<decltype(PH1)>(PH1)); }[01;35m[K}[m[K;
+      |                                                                                                                                                                                       [01;35m[K^[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:8[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/main.cpp:4[m[K:
+[01m[K/opt/uto/pilot/uto_common_base/include/common/subscriber.h:17:3:[m[K [01;36m[Knote: [m[Kdeclared here
+   17 |   [01;36m[KSubscriber[m[K(const std::string& topic_name, rclcpp::Node* const node,
+      |   [01;36m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/main.cpp:4[m[K:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:175:183:[m[K [01;35m[Kwarning: [m[K‘[01m[Kuto::Subscriber<MessageT, E>::Subscriber(const string&, rclcpp::Node*, std::function<void(std::unique_ptr<_Tp>)>, const rclcpp::QoS&, const SubscriptionOptions&) [with MessageT = sensor_msgs::msg::CompressedImage_<std::allocator<void> >; E = void; std::string = std::__cxx11::basic_string<char>; rclcpp::SubscriptionOptions = rclcpp::SubscriptionOptionsWithAllocator<std::allocator<void> >][m[K’ is deprecated: !!! Please use Subscriber with std::shared_ptr<MessageT> callback [[01;35m[K-Wdeprecated-declarations[m[K]
+  175 |     uto::Subscriber<sensor_msgs::msg::CompressedImage> m_imageFrrSub{IMAGE_FISHEYE_FRR_TOPIC, this, [this](auto&& PH1) { subscribeImageFisheyeFrr(std::forward<decltype(PH1)>(PH1)); }[01;35m[K}[m[K;
+      |                                                                                                                                                                                       [01;35m[K^[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:8[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/main.cpp:4[m[K:
+[01m[K/opt/uto/pilot/uto_common_base/include/common/subscriber.h:17:3:[m[K [01;36m[Knote: [m[Kdeclared here
+   17 |   [01;36m[KSubscriber[m[K(const std::string& topic_name, rclcpp::Node* const node,
+      |   [01;36m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/main.cpp:4[m[K:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:176:183:[m[K [01;35m[Kwarning: [m[K‘[01m[Kuto::Subscriber<MessageT, E>::Subscriber(const string&, rclcpp::Node*, std::function<void(std::unique_ptr<_Tp>)>, const rclcpp::QoS&, const SubscriptionOptions&) [with MessageT = sensor_msgs::msg::CompressedImage_<std::allocator<void> >; E = void; std::string = std::__cxx11::basic_string<char>; rclcpp::SubscriptionOptions = rclcpp::SubscriptionOptionsWithAllocator<std::allocator<void> >][m[K’ is deprecated: !!! Please use Subscriber with std::shared_ptr<MessageT> callback [[01;35m[K-Wdeprecated-declarations[m[K]
+  176 |     uto::Subscriber<sensor_msgs::msg::CompressedImage> m_imageBcbSub{IMAGE_FISHEYE_BCB_TOPIC, this, [this](auto&& PH1) { subscribeImageFisheyeBcb(std::forward<decltype(PH1)>(PH1)); }[01;35m[K}[m[K;
+      |                                                                                                                                                                                       [01;35m[K^[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:8[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/main.cpp:4[m[K:
+[01m[K/opt/uto/pilot/uto_common_base/include/common/subscriber.h:17:3:[m[K [01;36m[Knote: [m[Kdeclared here
+   17 |   [01;36m[KSubscriber[m[K(const std::string& topic_name, rclcpp::Node* const node,
+      |   [01;36m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/main.cpp:4[m[K:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:177:183:[m[K [01;35m[Kwarning: [m[K‘[01m[Kuto::Subscriber<MessageT, E>::Subscriber(const string&, rclcpp::Node*, std::function<void(std::unique_ptr<_Tp>)>, const rclcpp::QoS&, const SubscriptionOptions&) [with MessageT = sensor_msgs::msg::CompressedImage_<std::allocator<void> >; E = void; std::string = std::__cxx11::basic_string<char>; rclcpp::SubscriptionOptions = rclcpp::SubscriptionOptionsWithAllocator<std::allocator<void> >][m[K’ is deprecated: !!! Please use Subscriber with std::shared_ptr<MessageT> callback [[01;35m[K-Wdeprecated-declarations[m[K]
+  177 |     uto::Subscriber<sensor_msgs::msg::CompressedImage> m_imageBllSub{IMAGE_FISHEYE_BLL_TOPIC, this, [this](auto&& PH1) { subscribeImageFisheyeBll(std::forward<decltype(PH1)>(PH1)); }[01;35m[K}[m[K;
+      |                                                                                                                                                                                       [01;35m[K^[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:8[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/main.cpp:4[m[K:
+[01m[K/opt/uto/pilot/uto_common_base/include/common/subscriber.h:17:3:[m[K [01;36m[Knote: [m[Kdeclared here
+   17 |   [01;36m[KSubscriber[m[K(const std::string& topic_name, rclcpp::Node* const node,
+      |   [01;36m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/main.cpp:4[m[K:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:178:183:[m[K [01;35m[Kwarning: [m[K‘[01m[Kuto::Subscriber<MessageT, E>::Subscriber(const string&, rclcpp::Node*, std::function<void(std::unique_ptr<_Tp>)>, const rclcpp::QoS&, const SubscriptionOptions&) [with MessageT = sensor_msgs::msg::CompressedImage_<std::allocator<void> >; E = void; std::string = std::__cxx11::basic_string<char>; rclcpp::SubscriptionOptions = rclcpp::SubscriptionOptionsWithAllocator<std::allocator<void> >][m[K’ is deprecated: !!! Please use Subscriber with std::shared_ptr<MessageT> callback [[01;35m[K-Wdeprecated-declarations[m[K]
+  178 |     uto::Subscriber<sensor_msgs::msg::CompressedImage> m_imageBrrSub{IMAGE_FISHEYE_BRR_TOPIC, this, [this](auto&& PH1) { subscribeImageFisheyeBrr(std::forward<decltype(PH1)>(PH1)); }[01;35m[K}[m[K;
+      |                                                                                                                                                                                       [01;35m[K^[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:8[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/main.cpp:4[m[K:
+[01m[K/opt/uto/pilot/uto_common_base/include/common/subscriber.h:17:3:[m[K [01;36m[Knote: [m[Kdeclared here
+   17 |   [01;36m[KSubscriber[m[K(const std::string& topic_name, rclcpp::Node* const node,
+      |   [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/yang/project/freespace/freespace-fusion/src/debug/vis.cpp:[m[K In static member function ‘[01m[Kstatic void fs::Vis::drawCameraFs(const uto::proto::CameraFreespace&)[m[K’:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/debug/vis.cpp:514:25:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K-Wsign-compare[m[K]
+  514 |     for(size_t k = 0; [01;35m[Kk < m_centerFrontView.channels()[m[K; ++k)
+      |                       [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yang/project/freespace/freespace-fusion/src/debug/vis.cpp:[m[K In static member function ‘[01m[Kstatic void fs::Vis::drawFisheyeFs(const uto::proto::CameraFreespace&, fs::SensorId)[m[K’:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/debug/vis.cpp:573:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K-Wsign-compare[m[K]
+  573 |       for(size_t k = 0; [01;35m[Kk < matPtr->channels()[m[K; ++k)
+      |                         [01;35m[K~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yang/project/freespace/freespace-fusion/src/debug/vis.cpp:[m[K In static member function ‘[01m[Kstatic void fs::Vis::drawGates(const std::vector<fs::Rect>&)[m[K’:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/debug/vis.cpp:623:20:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<fs::Rect>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  623 |   for(int i = 0; [01;35m[Ki < gateRects.size()[m[K; i++)
+      |                  [01;35m[K~~^~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:1[m[K:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:[m[K At global scope:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:149:165:[m[K [01;35m[Kwarning: [m[K‘[01m[Kuto::Subscriber<MessageT, E>::Subscriber(const string&, rclcpp::Node*, std::function<void(std::unique_ptr<_Tp>)>, const rclcpp::QoS&, const SubscriptionOptions&) [with MessageT = sensor_msgs::msg::CompressedImage_<std::allocator<void> >; E = void; std::string = std::__cxx11::basic_string<char>; rclcpp::SubscriptionOptions = rclcpp::SubscriptionOptionsWithAllocator<std::allocator<void> >][m[K’ is deprecated: !!! Please use Subscriber with std::shared_ptr<MessageT> callback [[01;35m[K-Wdeprecated-declarations[m[K]
+  149 |     uto::Subscriber<sensor_msgs::msg::CompressedImage> m_imageCfSub{IMAGE_CF_TOPIC, this, [this](auto&& PH1) { subscribeImageCf(std::forward<decltype(PH1)>(PH1)); }[01;35m[K}[m[K;
+      |                                                                                                                                                                     [01;35m[K^[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:8[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:1[m[K:
+[01m[K/opt/uto/pilot/uto_common_base/include/common/subscriber.h:17:3:[m[K [01;36m[Knote: [m[Kdeclared here
+   17 |   [01;36m[KSubscriber[m[K(const std::string& topic_name, rclcpp::Node* const node,
+      |   [01;36m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:1[m[K:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:173:183:[m[K [01;35m[Kwarning: [m[K‘[01m[Kuto::Subscriber<MessageT, E>::Subscriber(const string&, rclcpp::Node*, std::function<void(std::unique_ptr<_Tp>)>, const rclcpp::QoS&, const SubscriptionOptions&) [with MessageT = sensor_msgs::msg::CompressedImage_<std::allocator<void> >; E = void; std::string = std::__cxx11::basic_string<char>; rclcpp::SubscriptionOptions = rclcpp::SubscriptionOptionsWithAllocator<std::allocator<void> >][m[K’ is deprecated: !!! Please use Subscriber with std::shared_ptr<MessageT> callback [[01;35m[K-Wdeprecated-declarations[m[K]
+  173 |     uto::Subscriber<sensor_msgs::msg::CompressedImage> m_imageFcfSub{IMAGE_FISHEYE_FCF_TOPIC, this, [this](auto&& PH1) { subscribeImageFisheyeFcf(std::forward<decltype(PH1)>(PH1)); }[01;35m[K}[m[K;
+      |                                                                                                                                                                                       [01;35m[K^[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:8[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:1[m[K:
+[01m[K/opt/uto/pilot/uto_common_base/include/common/subscriber.h:17:3:[m[K [01;36m[Knote: [m[Kdeclared here
+   17 |   [01;36m[KSubscriber[m[K(const std::string& topic_name, rclcpp::Node* const node,
+      |   [01;36m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:1[m[K:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:174:183:[m[K [01;35m[Kwarning: [m[K‘[01m[Kuto::Subscriber<MessageT, E>::Subscriber(const string&, rclcpp::Node*, std::function<void(std::unique_ptr<_Tp>)>, const rclcpp::QoS&, const SubscriptionOptions&) [with MessageT = sensor_msgs::msg::CompressedImage_<std::allocator<void> >; E = void; std::string = std::__cxx11::basic_string<char>; rclcpp::SubscriptionOptions = rclcpp::SubscriptionOptionsWithAllocator<std::allocator<void> >][m[K’ is deprecated: !!! Please use Subscriber with std::shared_ptr<MessageT> callback [[01;35m[K-Wdeprecated-declarations[m[K]
+  174 |     uto::Subscriber<sensor_msgs::msg::CompressedImage> m_imageFllSub{IMAGE_FISHEYE_FLL_TOPIC, this, [this](auto&& PH1) { subscribeImageFisheyeFll(std::forward<decltype(PH1)>(PH1)); }[01;35m[K}[m[K;
+      |                                                                                                                                                                                       [01;35m[K^[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:8[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:1[m[K:
+[01m[K/opt/uto/pilot/uto_common_base/include/common/subscriber.h:17:3:[m[K [01;36m[Knote: [m[Kdeclared here
+   17 |   [01;36m[KSubscriber[m[K(const std::string& topic_name, rclcpp::Node* const node,
+      |   [01;36m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:1[m[K:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:175:183:[m[K [01;35m[Kwarning: [m[K‘[01m[Kuto::Subscriber<MessageT, E>::Subscriber(const string&, rclcpp::Node*, std::function<void(std::unique_ptr<_Tp>)>, const rclcpp::QoS&, const SubscriptionOptions&) [with MessageT = sensor_msgs::msg::CompressedImage_<std::allocator<void> >; E = void; std::string = std::__cxx11::basic_string<char>; rclcpp::SubscriptionOptions = rclcpp::SubscriptionOptionsWithAllocator<std::allocator<void> >][m[K’ is deprecated: !!! Please use Subscriber with std::shared_ptr<MessageT> callback [[01;35m[K-Wdeprecated-declarations[m[K]
+  175 |     uto::Subscriber<sensor_msgs::msg::CompressedImage> m_imageFrrSub{IMAGE_FISHEYE_FRR_TOPIC, this, [this](auto&& PH1) { subscribeImageFisheyeFrr(std::forward<decltype(PH1)>(PH1)); }[01;35m[K}[m[K;
+      |                                                                                                                                                                                       [01;35m[K^[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:8[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:1[m[K:
+[01m[K/opt/uto/pilot/uto_common_base/include/common/subscriber.h:17:3:[m[K [01;36m[Knote: [m[Kdeclared here
+   17 |   [01;36m[KSubscriber[m[K(const std::string& topic_name, rclcpp::Node* const node,
+      |   [01;36m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:1[m[K:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:176:183:[m[K [01;35m[Kwarning: [m[K‘[01m[Kuto::Subscriber<MessageT, E>::Subscriber(const string&, rclcpp::Node*, std::function<void(std::unique_ptr<_Tp>)>, const rclcpp::QoS&, const SubscriptionOptions&) [with MessageT = sensor_msgs::msg::CompressedImage_<std::allocator<void> >; E = void; std::string = std::__cxx11::basic_string<char>; rclcpp::SubscriptionOptions = rclcpp::SubscriptionOptionsWithAllocator<std::allocator<void> >][m[K’ is deprecated: !!! Please use Subscriber with std::shared_ptr<MessageT> callback [[01;35m[K-Wdeprecated-declarations[m[K]
+  176 |     uto::Subscriber<sensor_msgs::msg::CompressedImage> m_imageBcbSub{IMAGE_FISHEYE_BCB_TOPIC, this, [this](auto&& PH1) { subscribeImageFisheyeBcb(std::forward<decltype(PH1)>(PH1)); }[01;35m[K}[m[K;
+      |                                                                                                                                                                                       [01;35m[K^[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:8[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:1[m[K:
+[01m[K/opt/uto/pilot/uto_common_base/include/common/subscriber.h:17:3:[m[K [01;36m[Knote: [m[Kdeclared here
+   17 |   [01;36m[KSubscriber[m[K(const std::string& topic_name, rclcpp::Node* const node,
+      |   [01;36m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:1[m[K:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:177:183:[m[K [01;35m[Kwarning: [m[K‘[01m[Kuto::Subscriber<MessageT, E>::Subscriber(const string&, rclcpp::Node*, std::function<void(std::unique_ptr<_Tp>)>, const rclcpp::QoS&, const SubscriptionOptions&) [with MessageT = sensor_msgs::msg::CompressedImage_<std::allocator<void> >; E = void; std::string = std::__cxx11::basic_string<char>; rclcpp::SubscriptionOptions = rclcpp::SubscriptionOptionsWithAllocator<std::allocator<void> >][m[K’ is deprecated: !!! Please use Subscriber with std::shared_ptr<MessageT> callback [[01;35m[K-Wdeprecated-declarations[m[K]
+  177 |     uto::Subscriber<sensor_msgs::msg::CompressedImage> m_imageBllSub{IMAGE_FISHEYE_BLL_TOPIC, this, [this](auto&& PH1) { subscribeImageFisheyeBll(std::forward<decltype(PH1)>(PH1)); }[01;35m[K}[m[K;
+      |                                                                                                                                                                                       [01;35m[K^[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:8[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:1[m[K:
+[01m[K/opt/uto/pilot/uto_common_base/include/common/subscriber.h:17:3:[m[K [01;36m[Knote: [m[Kdeclared here
+   17 |   [01;36m[KSubscriber[m[K(const std::string& topic_name, rclcpp::Node* const node,
+      |   [01;36m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:1[m[K:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:178:183:[m[K [01;35m[Kwarning: [m[K‘[01m[Kuto::Subscriber<MessageT, E>::Subscriber(const string&, rclcpp::Node*, std::function<void(std::unique_ptr<_Tp>)>, const rclcpp::QoS&, const SubscriptionOptions&) [with MessageT = sensor_msgs::msg::CompressedImage_<std::allocator<void> >; E = void; std::string = std::__cxx11::basic_string<char>; rclcpp::SubscriptionOptions = rclcpp::SubscriptionOptionsWithAllocator<std::allocator<void> >][m[K’ is deprecated: !!! Please use Subscriber with std::shared_ptr<MessageT> callback [[01;35m[K-Wdeprecated-declarations[m[K]
+  178 |     uto::Subscriber<sensor_msgs::msg::CompressedImage> m_imageBrrSub{IMAGE_FISHEYE_BRR_TOPIC, this, [this](auto&& PH1) { subscribeImageFisheyeBrr(std::forward<decltype(PH1)>(PH1)); }[01;35m[K}[m[K;
+      |                                                                                                                                                                                       [01;35m[K^[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.h:8[m[K,
+                 from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:1[m[K:
+[01m[K/opt/uto/pilot/uto_common_base/include/common/subscriber.h:17:3:[m[K [01;36m[Knote: [m[Kdeclared here
+   17 |   [01;36m[KSubscriber[m[K(const std::string& topic_name, rclcpp::Node* const node,
+      |   [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:[m[K In member function ‘[01m[Kvoid fs::FsNode::publishVis()[m[K’:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:1011:18:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool sensor_msgs::convertPointCloudToPointCloud2(const PointCloud&, sensor_msgs::msg::PointCloud2&)[m[K’ is deprecated: PointCloud is deprecated as of Foxy in favor of sensor_msgs/PointCloud2. [[01;35m[K-Wdeprecated-declarations[m[K]
+ 1011 |     sensor_msgs::[01;35m[KconvertPointCloudToPointCloud2[m[K(Vis::getLidarPointCloud(), lidarPointCloud2);
+      |                  [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:5[m[K:
+[01m[K/opt/uto/pilot/sensor_msgs/include/sensor_msgs/point_cloud_conversion.hpp:85:20:[m[K [01;36m[Knote: [m[Kdeclared here
+   85 | static inline bool [01;36m[KconvertPointCloudToPointCloud2[m[K(
+      |                    [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:1011:92:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool sensor_msgs::convertPointCloudToPointCloud2(const PointCloud&, sensor_msgs::msg::PointCloud2&)[m[K’ is deprecated: PointCloud is deprecated as of Foxy in favor of sensor_msgs/PointCloud2. [[01;35m[K-Wdeprecated-declarations[m[K]
+ 1011 |     sensor_msgs::convertPointCloudToPointCloud2(Vis::getLidarPointCloud(), lidarPointCloud2[01;35m[K)[m[K;
+      |                                                                                            [01;35m[K^[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:5[m[K:
+[01m[K/opt/uto/pilot/sensor_msgs/include/sensor_msgs/point_cloud_conversion.hpp:85:20:[m[K [01;36m[Knote: [m[Kdeclared here
+   85 | static inline bool [01;36m[KconvertPointCloudToPointCloud2[m[K(
+      |                    [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:1011:92:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool sensor_msgs::convertPointCloudToPointCloud2(const PointCloud&, sensor_msgs::msg::PointCloud2&)[m[K’ is deprecated: PointCloud is deprecated as of Foxy in favor of sensor_msgs/PointCloud2. [[01;35m[K-Wdeprecated-declarations[m[K]
+ 1011 |     sensor_msgs::convertPointCloudToPointCloud2(Vis::getLidarPointCloud(), lidarPointCloud2[01;35m[K)[m[K;
+      |                                                                                            [01;35m[K^[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:5[m[K:
+[01m[K/opt/uto/pilot/sensor_msgs/include/sensor_msgs/point_cloud_conversion.hpp:85:20:[m[K [01;36m[Knote: [m[Kdeclared here
+   85 | static inline bool [01;36m[KconvertPointCloudToPointCloud2[m[K(
+      |                    [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:1012:18:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool sensor_msgs::convertPointCloudToPointCloud2(const PointCloud&, sensor_msgs::msg::PointCloud2&)[m[K’ is deprecated: PointCloud is deprecated as of Foxy in favor of sensor_msgs/PointCloud2. [[01;35m[K-Wdeprecated-declarations[m[K]
+ 1012 |     sensor_msgs::[01;35m[KconvertPointCloudToPointCloud2[m[K(Vis::getFusionPointCloud(), fusionPointCloud2);
+      |                  [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:5[m[K:
+[01m[K/opt/uto/pilot/sensor_msgs/include/sensor_msgs/point_cloud_conversion.hpp:85:20:[m[K [01;36m[Knote: [m[Kdeclared here
+   85 | static inline bool [01;36m[KconvertPointCloudToPointCloud2[m[K(
+      |                    [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:1012:94:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool sensor_msgs::convertPointCloudToPointCloud2(const PointCloud&, sensor_msgs::msg::PointCloud2&)[m[K’ is deprecated: PointCloud is deprecated as of Foxy in favor of sensor_msgs/PointCloud2. [[01;35m[K-Wdeprecated-declarations[m[K]
+ 1012 |     sensor_msgs::convertPointCloudToPointCloud2(Vis::getFusionPointCloud(), fusionPointCloud2[01;35m[K)[m[K;
+      |                                                                                              [01;35m[K^[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:5[m[K:
+[01m[K/opt/uto/pilot/sensor_msgs/include/sensor_msgs/point_cloud_conversion.hpp:85:20:[m[K [01;36m[Knote: [m[Kdeclared here
+   85 | static inline bool [01;36m[KconvertPointCloudToPointCloud2[m[K(
+      |                    [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:1012:94:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool sensor_msgs::convertPointCloudToPointCloud2(const PointCloud&, sensor_msgs::msg::PointCloud2&)[m[K’ is deprecated: PointCloud is deprecated as of Foxy in favor of sensor_msgs/PointCloud2. [[01;35m[K-Wdeprecated-declarations[m[K]
+ 1012 |     sensor_msgs::convertPointCloudToPointCloud2(Vis::getFusionPointCloud(), fusionPointCloud2[01;35m[K)[m[K;
+      |                                                                                              [01;35m[K^[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:5[m[K:
+[01m[K/opt/uto/pilot/sensor_msgs/include/sensor_msgs/point_cloud_conversion.hpp:85:20:[m[K [01;36m[Knote: [m[Kdeclared here
+   85 | static inline bool [01;36m[KconvertPointCloudToPointCloud2[m[K(
+      |                    [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:[m[K In member function ‘[01m[Kvoid fs::FsNode::publishVisPerceptionFreespace(const uto::proto::PerceptionFreespace&)[m[K’:
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:1035:16:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool sensor_msgs::convertPointCloudToPointCloud2(const PointCloud&, sensor_msgs::msg::PointCloud2&)[m[K’ is deprecated: PointCloud is deprecated as of Foxy in favor of sensor_msgs/PointCloud2. [[01;35m[K-Wdeprecated-declarations[m[K]
+ 1035 |   sensor_msgs::[01;35m[KconvertPointCloudToPointCloud2[m[K(Vis::getPerceptionFreespace(), perceptionPointCloud2);
+      |                [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:5[m[K:
+[01m[K/opt/uto/pilot/sensor_msgs/include/sensor_msgs/point_cloud_conversion.hpp:85:20:[m[K [01;36m[Knote: [m[Kdeclared here
+   85 | static inline bool [01;36m[KconvertPointCloudToPointCloud2[m[K(
+      |                    [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:1035:99:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool sensor_msgs::convertPointCloudToPointCloud2(const PointCloud&, sensor_msgs::msg::PointCloud2&)[m[K’ is deprecated: PointCloud is deprecated as of Foxy in favor of sensor_msgs/PointCloud2. [[01;35m[K-Wdeprecated-declarations[m[K]
+ 1035 |   sensor_msgs::convertPointCloudToPointCloud2(Vis::getPerceptionFreespace(), perceptionPointCloud2[01;35m[K)[m[K;
+      |                                                                                                   [01;35m[K^[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:5[m[K:
+[01m[K/opt/uto/pilot/sensor_msgs/include/sensor_msgs/point_cloud_conversion.hpp:85:20:[m[K [01;36m[Knote: [m[Kdeclared here
+   85 | static inline bool [01;36m[KconvertPointCloudToPointCloud2[m[K(
+      |                    [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:1035:99:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool sensor_msgs::convertPointCloudToPointCloud2(const PointCloud&, sensor_msgs::msg::PointCloud2&)[m[K’ is deprecated: PointCloud is deprecated as of Foxy in favor of sensor_msgs/PointCloud2. [[01;35m[K-Wdeprecated-declarations[m[K]
+ 1035 |   sensor_msgs::convertPointCloudToPointCloud2(Vis::getPerceptionFreespace(), perceptionPointCloud2[01;35m[K)[m[K;
+      |                                                                                                   [01;35m[K^[m[K
+In file included from [01m[K/home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp:5[m[K:
+[01m[K/opt/uto/pilot/sensor_msgs/include/sensor_msgs/point_cloud_conversion.hpp:85:20:[m[K [01;36m[Knote: [m[Kdeclared here
+   85 | static inline bool [01;36m[KconvertPointCloudToPointCloud2[m[K(
+      |                    [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[100%] [32m[1mLinking CXX executable uto_per_fs[0m
+[100%] Built target uto_per_fs
+-- Install configuration: "Release"
+-- Installing: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/lib/uto_per_fs/uto_per_fs
+-- Set runtime path of "/home/yang/project/freespace/freespace-fusion/install/uto_per_fs/lib/uto_per_fs/uto_per_fs" to ""
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/launch
+-- Installing: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/launch/uto_per_fs.launch.xml
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/param
+-- Installing: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/param/.gitkeep
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/lib/uto_per_fs/uto_per_fs
+-- Installing: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/ament_index/resource_index/package_run_dependencies/uto_per_fs
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/ament_index/resource_index/parent_prefix_path/uto_per_fs
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/environment/ament_prefix_path.sh
+-- Installing: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/environment/path.sh
+-- Installing: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/environment/path.dsv
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/local_setup.bash
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/local_setup.sh
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/local_setup.zsh
+-- Installing: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/local_setup.dsv
+-- Installing: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/package.dsv
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/ament_index/resource_index/packages/uto_per_fs
+-- Installing: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/cmake/uto_per_fsConfig.cmake
+-- Up-to-date: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/cmake/uto_per_fsConfig-version.cmake
+-- Installing: /home/yang/project/freespace/freespace-fusion/install/uto_per_fs/share/uto_per_fs/package.xml

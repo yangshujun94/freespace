@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion
+CMAKE_SOURCE_DIR = /home/yang/project/freespace/freespace-fusion
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs
+CMAKE_BINARY_DIR = /home/yang/project/freespace/freespace-fusion/build/uto_per_fs
 
 # Include any dependencies generated for this target.
 include CMakeFiles/uto_per_fs.dir/depend.make
@@ -57,340 +57,235 @@ include CMakeFiles/uto_per_fs.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/uto_per_fs.dir/flags.make
 
-CMakeFiles/uto_per_fs.dir/src/core/expand/expand.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
-CMakeFiles/uto_per_fs.dir/src/core/expand/expand.cpp.o: ../../src/core/expand/expand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/uto_per_fs.dir/src/core/expand/expand.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/core/expand/expand.cpp.o -c /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/core/expand/expand.cpp
-
-CMakeFiles/uto_per_fs.dir/src/core/expand/expand.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/core/expand/expand.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/core/expand/expand.cpp > CMakeFiles/uto_per_fs.dir/src/core/expand/expand.cpp.i
-
-CMakeFiles/uto_per_fs.dir/src/core/expand/expand.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/core/expand/expand.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/core/expand/expand.cpp -o CMakeFiles/uto_per_fs.dir/src/core/expand/expand.cpp.s
-
-CMakeFiles/uto_per_fs.dir/src/core/expand/quads_intersect.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
-CMakeFiles/uto_per_fs.dir/src/core/expand/quads_intersect.cpp.o: ../../src/core/expand/quads_intersect.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/uto_per_fs.dir/src/core/expand/quads_intersect.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/core/expand/quads_intersect.cpp.o -c /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/core/expand/quads_intersect.cpp
-
-CMakeFiles/uto_per_fs.dir/src/core/expand/quads_intersect.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/core/expand/quads_intersect.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/core/expand/quads_intersect.cpp > CMakeFiles/uto_per_fs.dir/src/core/expand/quads_intersect.cpp.i
-
-CMakeFiles/uto_per_fs.dir/src/core/expand/quads_intersect.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/core/expand/quads_intersect.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/core/expand/quads_intersect.cpp -o CMakeFiles/uto_per_fs.dir/src/core/expand/quads_intersect.cpp.s
-
 CMakeFiles/uto_per_fs.dir/src/core/freespace_manager.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
 CMakeFiles/uto_per_fs.dir/src/core/freespace_manager.cpp.o: ../../src/core/freespace_manager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/uto_per_fs.dir/src/core/freespace_manager.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/core/freespace_manager.cpp.o -c /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/core/freespace_manager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/uto_per_fs.dir/src/core/freespace_manager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/core/freespace_manager.cpp.o -c /home/yang/project/freespace/freespace-fusion/src/core/freespace_manager.cpp
 
 CMakeFiles/uto_per_fs.dir/src/core/freespace_manager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/core/freespace_manager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/core/freespace_manager.cpp > CMakeFiles/uto_per_fs.dir/src/core/freespace_manager.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion/src/core/freespace_manager.cpp > CMakeFiles/uto_per_fs.dir/src/core/freespace_manager.cpp.i
 
 CMakeFiles/uto_per_fs.dir/src/core/freespace_manager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/core/freespace_manager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/core/freespace_manager.cpp -o CMakeFiles/uto_per_fs.dir/src/core/freespace_manager.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion/src/core/freespace_manager.cpp -o CMakeFiles/uto_per_fs.dir/src/core/freespace_manager.cpp.s
+
+CMakeFiles/uto_per_fs.dir/src/core/grid_line_traversal.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
+CMakeFiles/uto_per_fs.dir/src/core/grid_line_traversal.cpp.o: ../../src/core/grid_line_traversal.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/uto_per_fs.dir/src/core/grid_line_traversal.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/core/grid_line_traversal.cpp.o -c /home/yang/project/freespace/freespace-fusion/src/core/grid_line_traversal.cpp
+
+CMakeFiles/uto_per_fs.dir/src/core/grid_line_traversal.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/core/grid_line_traversal.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion/src/core/grid_line_traversal.cpp > CMakeFiles/uto_per_fs.dir/src/core/grid_line_traversal.cpp.i
+
+CMakeFiles/uto_per_fs.dir/src/core/grid_line_traversal.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/core/grid_line_traversal.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion/src/core/grid_line_traversal.cpp -o CMakeFiles/uto_per_fs.dir/src/core/grid_line_traversal.cpp.s
 
 CMakeFiles/uto_per_fs.dir/src/core/grid_map.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
 CMakeFiles/uto_per_fs.dir/src/core/grid_map.cpp.o: ../../src/core/grid_map.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/uto_per_fs.dir/src/core/grid_map.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/core/grid_map.cpp.o -c /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/core/grid_map.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/uto_per_fs.dir/src/core/grid_map.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/core/grid_map.cpp.o -c /home/yang/project/freespace/freespace-fusion/src/core/grid_map.cpp
 
 CMakeFiles/uto_per_fs.dir/src/core/grid_map.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/core/grid_map.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/core/grid_map.cpp > CMakeFiles/uto_per_fs.dir/src/core/grid_map.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion/src/core/grid_map.cpp > CMakeFiles/uto_per_fs.dir/src/core/grid_map.cpp.i
 
 CMakeFiles/uto_per_fs.dir/src/core/grid_map.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/core/grid_map.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/core/grid_map.cpp -o CMakeFiles/uto_per_fs.dir/src/core/grid_map.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion/src/core/grid_map.cpp -o CMakeFiles/uto_per_fs.dir/src/core/grid_map.cpp.s
+
+CMakeFiles/uto_per_fs.dir/src/core/object.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
+CMakeFiles/uto_per_fs.dir/src/core/object.cpp.o: ../../src/core/object.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/uto_per_fs.dir/src/core/object.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/core/object.cpp.o -c /home/yang/project/freespace/freespace-fusion/src/core/object.cpp
+
+CMakeFiles/uto_per_fs.dir/src/core/object.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/core/object.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion/src/core/object.cpp > CMakeFiles/uto_per_fs.dir/src/core/object.cpp.i
+
+CMakeFiles/uto_per_fs.dir/src/core/object.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/core/object.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion/src/core/object.cpp -o CMakeFiles/uto_per_fs.dir/src/core/object.cpp.s
 
 CMakeFiles/uto_per_fs.dir/src/debug/vis.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
 CMakeFiles/uto_per_fs.dir/src/debug/vis.cpp.o: ../../src/debug/vis.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/uto_per_fs.dir/src/debug/vis.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/debug/vis.cpp.o -c /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/debug/vis.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/uto_per_fs.dir/src/debug/vis.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/debug/vis.cpp.o -c /home/yang/project/freespace/freespace-fusion/src/debug/vis.cpp
 
 CMakeFiles/uto_per_fs.dir/src/debug/vis.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/debug/vis.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/debug/vis.cpp > CMakeFiles/uto_per_fs.dir/src/debug/vis.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion/src/debug/vis.cpp > CMakeFiles/uto_per_fs.dir/src/debug/vis.cpp.i
 
 CMakeFiles/uto_per_fs.dir/src/debug/vis.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/debug/vis.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/debug/vis.cpp -o CMakeFiles/uto_per_fs.dir/src/debug/vis.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion/src/debug/vis.cpp -o CMakeFiles/uto_per_fs.dir/src/debug/vis.cpp.s
 
 CMakeFiles/uto_per_fs.dir/src/debug/vis_helper.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
 CMakeFiles/uto_per_fs.dir/src/debug/vis_helper.cpp.o: ../../src/debug/vis_helper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/uto_per_fs.dir/src/debug/vis_helper.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/debug/vis_helper.cpp.o -c /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/debug/vis_helper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/uto_per_fs.dir/src/debug/vis_helper.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/debug/vis_helper.cpp.o -c /home/yang/project/freespace/freespace-fusion/src/debug/vis_helper.cpp
 
 CMakeFiles/uto_per_fs.dir/src/debug/vis_helper.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/debug/vis_helper.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/debug/vis_helper.cpp > CMakeFiles/uto_per_fs.dir/src/debug/vis_helper.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion/src/debug/vis_helper.cpp > CMakeFiles/uto_per_fs.dir/src/debug/vis_helper.cpp.i
 
 CMakeFiles/uto_per_fs.dir/src/debug/vis_helper.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/debug/vis_helper.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/debug/vis_helper.cpp -o CMakeFiles/uto_per_fs.dir/src/debug/vis_helper.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion/src/debug/vis_helper.cpp -o CMakeFiles/uto_per_fs.dir/src/debug/vis_helper.cpp.s
 
-CMakeFiles/uto_per_fs.dir/src/peripheral/camera/camera_manager.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
-CMakeFiles/uto_per_fs.dir/src/peripheral/camera/camera_manager.cpp.o: ../../src/peripheral/camera/camera_manager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/camera/camera_manager.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/peripheral/camera/camera_manager.cpp.o -c /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/camera/camera_manager.cpp
+CMakeFiles/uto_per_fs.dir/src/peripheral/camera.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
+CMakeFiles/uto_per_fs.dir/src/peripheral/camera.cpp.o: ../../src/peripheral/camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/camera.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/peripheral/camera.cpp.o -c /home/yang/project/freespace/freespace-fusion/src/peripheral/camera.cpp
 
-CMakeFiles/uto_per_fs.dir/src/peripheral/camera/camera_manager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/peripheral/camera/camera_manager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/camera/camera_manager.cpp > CMakeFiles/uto_per_fs.dir/src/peripheral/camera/camera_manager.cpp.i
+CMakeFiles/uto_per_fs.dir/src/peripheral/camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/peripheral/camera.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion/src/peripheral/camera.cpp > CMakeFiles/uto_per_fs.dir/src/peripheral/camera.cpp.i
 
-CMakeFiles/uto_per_fs.dir/src/peripheral/camera/camera_manager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/peripheral/camera/camera_manager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/camera/camera_manager.cpp -o CMakeFiles/uto_per_fs.dir/src/peripheral/camera/camera_manager.cpp.s
+CMakeFiles/uto_per_fs.dir/src/peripheral/camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/peripheral/camera.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion/src/peripheral/camera.cpp -o CMakeFiles/uto_per_fs.dir/src/peripheral/camera.cpp.s
 
-CMakeFiles/uto_per_fs.dir/src/peripheral/camera/fisheye.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
-CMakeFiles/uto_per_fs.dir/src/peripheral/camera/fisheye.cpp.o: ../../src/peripheral/camera/fisheye.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/camera/fisheye.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/peripheral/camera/fisheye.cpp.o -c /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/camera/fisheye.cpp
+CMakeFiles/uto_per_fs.dir/src/peripheral/camera_manager.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
+CMakeFiles/uto_per_fs.dir/src/peripheral/camera_manager.cpp.o: ../../src/peripheral/camera_manager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/camera_manager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/peripheral/camera_manager.cpp.o -c /home/yang/project/freespace/freespace-fusion/src/peripheral/camera_manager.cpp
 
-CMakeFiles/uto_per_fs.dir/src/peripheral/camera/fisheye.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/peripheral/camera/fisheye.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/camera/fisheye.cpp > CMakeFiles/uto_per_fs.dir/src/peripheral/camera/fisheye.cpp.i
+CMakeFiles/uto_per_fs.dir/src/peripheral/camera_manager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/peripheral/camera_manager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion/src/peripheral/camera_manager.cpp > CMakeFiles/uto_per_fs.dir/src/peripheral/camera_manager.cpp.i
 
-CMakeFiles/uto_per_fs.dir/src/peripheral/camera/fisheye.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/peripheral/camera/fisheye.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/camera/fisheye.cpp -o CMakeFiles/uto_per_fs.dir/src/peripheral/camera/fisheye.cpp.s
-
-CMakeFiles/uto_per_fs.dir/src/peripheral/camera/pinhole.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
-CMakeFiles/uto_per_fs.dir/src/peripheral/camera/pinhole.cpp.o: ../../src/peripheral/camera/pinhole.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/camera/pinhole.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/peripheral/camera/pinhole.cpp.o -c /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/camera/pinhole.cpp
-
-CMakeFiles/uto_per_fs.dir/src/peripheral/camera/pinhole.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/peripheral/camera/pinhole.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/camera/pinhole.cpp > CMakeFiles/uto_per_fs.dir/src/peripheral/camera/pinhole.cpp.i
-
-CMakeFiles/uto_per_fs.dir/src/peripheral/camera/pinhole.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/peripheral/camera/pinhole.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/camera/pinhole.cpp -o CMakeFiles/uto_per_fs.dir/src/peripheral/camera/pinhole.cpp.s
+CMakeFiles/uto_per_fs.dir/src/peripheral/camera_manager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/peripheral/camera_manager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion/src/peripheral/camera_manager.cpp -o CMakeFiles/uto_per_fs.dir/src/peripheral/camera_manager.cpp.s
 
 CMakeFiles/uto_per_fs.dir/src/peripheral/diagnoser.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
 CMakeFiles/uto_per_fs.dir/src/peripheral/diagnoser.cpp.o: ../../src/peripheral/diagnoser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/diagnoser.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/peripheral/diagnoser.cpp.o -c /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/diagnoser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/diagnoser.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/peripheral/diagnoser.cpp.o -c /home/yang/project/freespace/freespace-fusion/src/peripheral/diagnoser.cpp
 
 CMakeFiles/uto_per_fs.dir/src/peripheral/diagnoser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/peripheral/diagnoser.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/diagnoser.cpp > CMakeFiles/uto_per_fs.dir/src/peripheral/diagnoser.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion/src/peripheral/diagnoser.cpp > CMakeFiles/uto_per_fs.dir/src/peripheral/diagnoser.cpp.i
 
 CMakeFiles/uto_per_fs.dir/src/peripheral/diagnoser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/peripheral/diagnoser.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/diagnoser.cpp -o CMakeFiles/uto_per_fs.dir/src/peripheral/diagnoser.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion/src/peripheral/diagnoser.cpp -o CMakeFiles/uto_per_fs.dir/src/peripheral/diagnoser.cpp.s
+
+CMakeFiles/uto_per_fs.dir/src/peripheral/fisheye.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
+CMakeFiles/uto_per_fs.dir/src/peripheral/fisheye.cpp.o: ../../src/peripheral/fisheye.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/fisheye.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/peripheral/fisheye.cpp.o -c /home/yang/project/freespace/freespace-fusion/src/peripheral/fisheye.cpp
+
+CMakeFiles/uto_per_fs.dir/src/peripheral/fisheye.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/peripheral/fisheye.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion/src/peripheral/fisheye.cpp > CMakeFiles/uto_per_fs.dir/src/peripheral/fisheye.cpp.i
+
+CMakeFiles/uto_per_fs.dir/src/peripheral/fisheye.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/peripheral/fisheye.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion/src/peripheral/fisheye.cpp -o CMakeFiles/uto_per_fs.dir/src/peripheral/fisheye.cpp.s
 
 CMakeFiles/uto_per_fs.dir/src/peripheral/fs_node.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
 CMakeFiles/uto_per_fs.dir/src/peripheral/fs_node.cpp.o: ../../src/peripheral/fs_node.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/fs_node.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/peripheral/fs_node.cpp.o -c /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/fs_node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/fs_node.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/peripheral/fs_node.cpp.o -c /home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp
 
 CMakeFiles/uto_per_fs.dir/src/peripheral/fs_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/peripheral/fs_node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/fs_node.cpp > CMakeFiles/uto_per_fs.dir/src/peripheral/fs_node.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp > CMakeFiles/uto_per_fs.dir/src/peripheral/fs_node.cpp.i
 
 CMakeFiles/uto_per_fs.dir/src/peripheral/fs_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/peripheral/fs_node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/fs_node.cpp -o CMakeFiles/uto_per_fs.dir/src/peripheral/fs_node.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion/src/peripheral/fs_node.cpp -o CMakeFiles/uto_per_fs.dir/src/peripheral/fs_node.cpp.s
 
 CMakeFiles/uto_per_fs.dir/src/peripheral/main.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
 CMakeFiles/uto_per_fs.dir/src/peripheral/main.cpp.o: ../../src/peripheral/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/peripheral/main.cpp.o -c /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/peripheral/main.cpp.o -c /home/yang/project/freespace/freespace-fusion/src/peripheral/main.cpp
 
 CMakeFiles/uto_per_fs.dir/src/peripheral/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/peripheral/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/main.cpp > CMakeFiles/uto_per_fs.dir/src/peripheral/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion/src/peripheral/main.cpp > CMakeFiles/uto_per_fs.dir/src/peripheral/main.cpp.i
 
 CMakeFiles/uto_per_fs.dir/src/peripheral/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/peripheral/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/main.cpp -o CMakeFiles/uto_per_fs.dir/src/peripheral/main.cpp.s
-
-CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
-CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider.cpp.o: ../../src/peripheral/map_provider/map_provider.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider.cpp.o -c /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/map_provider/map_provider.cpp
-
-CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/map_provider/map_provider.cpp > CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider.cpp.i
-
-CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/map_provider/map_provider.cpp -o CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider.cpp.s
-
-CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_dx.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
-CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_dx.cpp.o: ../../src/peripheral/map_provider/map_provider_dx.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_dx.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_dx.cpp.o -c /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/map_provider/map_provider_dx.cpp
-
-CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_dx.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_dx.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/map_provider/map_provider_dx.cpp > CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_dx.cpp.i
-
-CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_dx.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_dx.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/map_provider/map_provider_dx.cpp -o CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_dx.cpp.s
-
-CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_lj.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
-CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_lj.cpp.o: ../../src/peripheral/map_provider/map_provider_lj.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_lj.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_lj.cpp.o -c /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/map_provider/map_provider_lj.cpp
-
-CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_lj.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_lj.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/map_provider/map_provider_lj.cpp > CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_lj.cpp.i
-
-CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_lj.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_lj.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/map_provider/map_provider_lj.cpp -o CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_lj.cpp.s
-
-CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_qz.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
-CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_qz.cpp.o: ../../src/peripheral/map_provider/map_provider_qz.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_qz.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_qz.cpp.o -c /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/map_provider/map_provider_qz.cpp
-
-CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_qz.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_qz.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/map_provider/map_provider_qz.cpp > CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_qz.cpp.i
-
-CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_qz.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_qz.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/map_provider/map_provider_qz.cpp -o CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_qz.cpp.s
-
-CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_tc.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
-CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_tc.cpp.o: ../../src/peripheral/map_provider/map_provider_tc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_tc.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_tc.cpp.o -c /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/map_provider/map_provider_tc.cpp
-
-CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_tc.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_tc.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/map_provider/map_provider_tc.cpp > CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_tc.cpp.i
-
-CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_tc.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_tc.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/map_provider/map_provider_tc.cpp -o CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_tc.cpp.s
-
-CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_ws.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
-CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_ws.cpp.o: ../../src/peripheral/map_provider/map_provider_ws.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_ws.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_ws.cpp.o -c /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/map_provider/map_provider_ws.cpp
-
-CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_ws.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_ws.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/map_provider/map_provider_ws.cpp > CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_ws.cpp.i
-
-CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_ws.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_ws.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/map_provider/map_provider_ws.cpp -o CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_ws.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion/src/peripheral/main.cpp -o CMakeFiles/uto_per_fs.dir/src/peripheral/main.cpp.s
 
 CMakeFiles/uto_per_fs.dir/src/peripheral/rwlock.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
 CMakeFiles/uto_per_fs.dir/src/peripheral/rwlock.cpp.o: ../../src/peripheral/rwlock.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/rwlock.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/peripheral/rwlock.cpp.o -c /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/rwlock.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/rwlock.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/peripheral/rwlock.cpp.o -c /home/yang/project/freespace/freespace-fusion/src/peripheral/rwlock.cpp
 
 CMakeFiles/uto_per_fs.dir/src/peripheral/rwlock.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/peripheral/rwlock.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/rwlock.cpp > CMakeFiles/uto_per_fs.dir/src/peripheral/rwlock.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion/src/peripheral/rwlock.cpp > CMakeFiles/uto_per_fs.dir/src/peripheral/rwlock.cpp.i
 
 CMakeFiles/uto_per_fs.dir/src/peripheral/rwlock.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/peripheral/rwlock.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/rwlock.cpp -o CMakeFiles/uto_per_fs.dir/src/peripheral/rwlock.cpp.s
-
-CMakeFiles/uto_per_fs.dir/src/peripheral/utils.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
-CMakeFiles/uto_per_fs.dir/src/peripheral/utils.cpp.o: ../../src/peripheral/utils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/utils.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/peripheral/utils.cpp.o -c /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/utils.cpp
-
-CMakeFiles/uto_per_fs.dir/src/peripheral/utils.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/peripheral/utils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/utils.cpp > CMakeFiles/uto_per_fs.dir/src/peripheral/utils.cpp.i
-
-CMakeFiles/uto_per_fs.dir/src/peripheral/utils.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/peripheral/utils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/utils.cpp -o CMakeFiles/uto_per_fs.dir/src/peripheral/utils.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion/src/peripheral/rwlock.cpp -o CMakeFiles/uto_per_fs.dir/src/peripheral/rwlock.cpp.s
 
 CMakeFiles/uto_per_fs.dir/src/peripheral/vehicle.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
 CMakeFiles/uto_per_fs.dir/src/peripheral/vehicle.cpp.o: ../../src/peripheral/vehicle.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/vehicle.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/peripheral/vehicle.cpp.o -c /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/vehicle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/uto_per_fs.dir/src/peripheral/vehicle.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/src/peripheral/vehicle.cpp.o -c /home/yang/project/freespace/freespace-fusion/src/peripheral/vehicle.cpp
 
 CMakeFiles/uto_per_fs.dir/src/peripheral/vehicle.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/src/peripheral/vehicle.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/vehicle.cpp > CMakeFiles/uto_per_fs.dir/src/peripheral/vehicle.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion/src/peripheral/vehicle.cpp > CMakeFiles/uto_per_fs.dir/src/peripheral/vehicle.cpp.i
 
 CMakeFiles/uto_per_fs.dir/src/peripheral/vehicle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/src/peripheral/vehicle.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/src/peripheral/vehicle.cpp -o CMakeFiles/uto_per_fs.dir/src/peripheral/vehicle.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion/src/peripheral/vehicle.cpp -o CMakeFiles/uto_per_fs.dir/src/peripheral/vehicle.cpp.s
 
 CMakeFiles/uto_per_fs.dir/fs_version.cpp.o: CMakeFiles/uto_per_fs.dir/flags.make
 CMakeFiles/uto_per_fs.dir/fs_version.cpp.o: fs_version.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/uto_per_fs.dir/fs_version.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/fs_version.cpp.o -c /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/fs_version.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yang/project/freespace/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/uto_per_fs.dir/fs_version.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uto_per_fs.dir/fs_version.cpp.o -c /home/yang/project/freespace/freespace-fusion/build/uto_per_fs/fs_version.cpp
 
 CMakeFiles/uto_per_fs.dir/fs_version.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uto_per_fs.dir/fs_version.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/fs_version.cpp > CMakeFiles/uto_per_fs.dir/fs_version.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/project/freespace/freespace-fusion/build/uto_per_fs/fs_version.cpp > CMakeFiles/uto_per_fs.dir/fs_version.cpp.i
 
 CMakeFiles/uto_per_fs.dir/fs_version.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uto_per_fs.dir/fs_version.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/fs_version.cpp -o CMakeFiles/uto_per_fs.dir/fs_version.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/project/freespace/freespace-fusion/build/uto_per_fs/fs_version.cpp -o CMakeFiles/uto_per_fs.dir/fs_version.cpp.s
 
 # Object files for target uto_per_fs
 uto_per_fs_OBJECTS = \
-"CMakeFiles/uto_per_fs.dir/src/core/expand/expand.cpp.o" \
-"CMakeFiles/uto_per_fs.dir/src/core/expand/quads_intersect.cpp.o" \
 "CMakeFiles/uto_per_fs.dir/src/core/freespace_manager.cpp.o" \
+"CMakeFiles/uto_per_fs.dir/src/core/grid_line_traversal.cpp.o" \
 "CMakeFiles/uto_per_fs.dir/src/core/grid_map.cpp.o" \
+"CMakeFiles/uto_per_fs.dir/src/core/object.cpp.o" \
 "CMakeFiles/uto_per_fs.dir/src/debug/vis.cpp.o" \
 "CMakeFiles/uto_per_fs.dir/src/debug/vis_helper.cpp.o" \
-"CMakeFiles/uto_per_fs.dir/src/peripheral/camera/camera_manager.cpp.o" \
-"CMakeFiles/uto_per_fs.dir/src/peripheral/camera/fisheye.cpp.o" \
-"CMakeFiles/uto_per_fs.dir/src/peripheral/camera/pinhole.cpp.o" \
+"CMakeFiles/uto_per_fs.dir/src/peripheral/camera.cpp.o" \
+"CMakeFiles/uto_per_fs.dir/src/peripheral/camera_manager.cpp.o" \
 "CMakeFiles/uto_per_fs.dir/src/peripheral/diagnoser.cpp.o" \
+"CMakeFiles/uto_per_fs.dir/src/peripheral/fisheye.cpp.o" \
 "CMakeFiles/uto_per_fs.dir/src/peripheral/fs_node.cpp.o" \
 "CMakeFiles/uto_per_fs.dir/src/peripheral/main.cpp.o" \
-"CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider.cpp.o" \
-"CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_dx.cpp.o" \
-"CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_lj.cpp.o" \
-"CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_qz.cpp.o" \
-"CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_tc.cpp.o" \
-"CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_ws.cpp.o" \
 "CMakeFiles/uto_per_fs.dir/src/peripheral/rwlock.cpp.o" \
-"CMakeFiles/uto_per_fs.dir/src/peripheral/utils.cpp.o" \
 "CMakeFiles/uto_per_fs.dir/src/peripheral/vehicle.cpp.o" \
 "CMakeFiles/uto_per_fs.dir/fs_version.cpp.o"
 
 # External object files for target uto_per_fs
 uto_per_fs_EXTERNAL_OBJECTS =
 
-uto_per_fs: CMakeFiles/uto_per_fs.dir/src/core/expand/expand.cpp.o
-uto_per_fs: CMakeFiles/uto_per_fs.dir/src/core/expand/quads_intersect.cpp.o
 uto_per_fs: CMakeFiles/uto_per_fs.dir/src/core/freespace_manager.cpp.o
+uto_per_fs: CMakeFiles/uto_per_fs.dir/src/core/grid_line_traversal.cpp.o
 uto_per_fs: CMakeFiles/uto_per_fs.dir/src/core/grid_map.cpp.o
+uto_per_fs: CMakeFiles/uto_per_fs.dir/src/core/object.cpp.o
 uto_per_fs: CMakeFiles/uto_per_fs.dir/src/debug/vis.cpp.o
 uto_per_fs: CMakeFiles/uto_per_fs.dir/src/debug/vis_helper.cpp.o
-uto_per_fs: CMakeFiles/uto_per_fs.dir/src/peripheral/camera/camera_manager.cpp.o
-uto_per_fs: CMakeFiles/uto_per_fs.dir/src/peripheral/camera/fisheye.cpp.o
-uto_per_fs: CMakeFiles/uto_per_fs.dir/src/peripheral/camera/pinhole.cpp.o
+uto_per_fs: CMakeFiles/uto_per_fs.dir/src/peripheral/camera.cpp.o
+uto_per_fs: CMakeFiles/uto_per_fs.dir/src/peripheral/camera_manager.cpp.o
 uto_per_fs: CMakeFiles/uto_per_fs.dir/src/peripheral/diagnoser.cpp.o
+uto_per_fs: CMakeFiles/uto_per_fs.dir/src/peripheral/fisheye.cpp.o
 uto_per_fs: CMakeFiles/uto_per_fs.dir/src/peripheral/fs_node.cpp.o
 uto_per_fs: CMakeFiles/uto_per_fs.dir/src/peripheral/main.cpp.o
-uto_per_fs: CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider.cpp.o
-uto_per_fs: CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_dx.cpp.o
-uto_per_fs: CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_lj.cpp.o
-uto_per_fs: CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_qz.cpp.o
-uto_per_fs: CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_tc.cpp.o
-uto_per_fs: CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_ws.cpp.o
 uto_per_fs: CMakeFiles/uto_per_fs.dir/src/peripheral/rwlock.cpp.o
-uto_per_fs: CMakeFiles/uto_per_fs.dir/src/peripheral/utils.cpp.o
 uto_per_fs: CMakeFiles/uto_per_fs.dir/src/peripheral/vehicle.cpp.o
 uto_per_fs: CMakeFiles/uto_per_fs.dir/fs_version.cpp.o
 uto_per_fs: CMakeFiles/uto_per_fs.dir/build.make
@@ -404,10 +299,6 @@ uto_per_fs: /opt/uto/pilot/nav_msgs/lib/libnav_msgs__rosidl_typesupport_c.so
 uto_per_fs: /opt/uto/pilot/nav_msgs/lib/libnav_msgs__rosidl_typesupport_introspection_cpp.so
 uto_per_fs: /opt/uto/pilot/nav_msgs/lib/libnav_msgs__rosidl_typesupport_cpp.so
 uto_per_fs: /opt/uto/pilot/cv_bridge/lib/libcv_bridge.so
-uto_per_fs: /opt/uto/pilot/uto/lib/libuto__rosidl_typesupport_introspection_c.so
-uto_per_fs: /opt/uto/pilot/uto/lib/libuto__rosidl_typesupport_c.so
-uto_per_fs: /opt/uto/pilot/uto/lib/libuto__rosidl_typesupport_introspection_cpp.so
-uto_per_fs: /opt/uto/pilot/uto/lib/libuto__rosidl_typesupport_cpp.so
 uto_per_fs: /opt/uto/pilot/tf2_ros/lib/libtf2_ros.so
 uto_per_fs: /opt/uto/pilot/tf2_ros/lib/libstatic_transform_broadcaster_node.so
 uto_per_fs: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.4.2.0
@@ -439,39 +330,6 @@ uto_per_fs: /usr/lib/x86_64-linux-gnu/libopencv_videostab.so.4.2.0
 uto_per_fs: /usr/lib/x86_64-linux-gnu/libopencv_viz.so.4.2.0
 uto_per_fs: /usr/lib/x86_64-linux-gnu/libopencv_xobjdetect.so.4.2.0
 uto_per_fs: /usr/lib/x86_64-linux-gnu/libopencv_xphoto.so.4.2.0
-uto_per_fs: /opt/uto/pilot/uto_common_base/lib/libuto_common_base.so
-uto_per_fs: /opt/uto/pilot/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_generator_c.so
-uto_per_fs: /opt/uto/pilot/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
-uto_per_fs: /opt/uto/pilot/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
-uto_per_fs: /opt/uto/pilot/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
-uto_per_fs: /opt/uto/pilot/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
-uto_per_fs: /opt/uto/pilot/rosidl_typesupport_introspection_cpp/lib/librosidl_typesupport_introspection_cpp.so
-uto_per_fs: /opt/uto/pilot/rcpputils/lib/librcpputils.so
-uto_per_fs: /opt/uto/pilot/rosidl_typesupport_introspection_c/lib/librosidl_typesupport_introspection_c.so
-uto_per_fs: /opt/uto/pilot/rcutils/lib/librcutils.so
-uto_per_fs: /opt/uto/pilot/rosidl_runtime_c/lib/librosidl_runtime_c.so
-uto_per_fs: /opt/uto/pilot/rosgraph_msgs/lib/librosgraph_msgs__rosidl_generator_c.so
-uto_per_fs: /opt/uto/pilot/rosgraph_msgs/lib/librosgraph_msgs__rosidl_typesupport_introspection_c.so
-uto_per_fs: /opt/uto/pilot/rosgraph_msgs/lib/librosgraph_msgs__rosidl_typesupport_c.so
-uto_per_fs: /opt/uto/pilot/rosgraph_msgs/lib/librosgraph_msgs__rosidl_typesupport_introspection_cpp.so
-uto_per_fs: /opt/uto/pilot/rosgraph_msgs/lib/librosgraph_msgs__rosidl_typesupport_cpp.so
-uto_per_fs: /opt/uto/pilot/rosidl_typesupport_cpp/lib/librosidl_typesupport_cpp.so
-uto_per_fs: /opt/uto/pilot/rosidl_typesupport_c/lib/librosidl_typesupport_c.so
-uto_per_fs: /opt/uto/pilot/rcl_yaml_param_parser/lib/librcl_yaml_param_parser.so
-uto_per_fs: /opt/uto/pilot/statistics_msgs/lib/libstatistics_msgs__rosidl_generator_c.so
-uto_per_fs: /opt/uto/pilot/statistics_msgs/lib/libstatistics_msgs__rosidl_typesupport_introspection_c.so
-uto_per_fs: /opt/uto/pilot/statistics_msgs/lib/libstatistics_msgs__rosidl_typesupport_c.so
-uto_per_fs: /opt/uto/pilot/statistics_msgs/lib/libstatistics_msgs__rosidl_typesupport_introspection_cpp.so
-uto_per_fs: /opt/uto/pilot/statistics_msgs/lib/libstatistics_msgs__rosidl_typesupport_cpp.so
-uto_per_fs: /opt/uto/pilot/tracetools/lib/libtracetools.so
-uto_per_fs: /opt/uto/pilot/rclcpp/lib/librclcpp.so
-uto_per_fs: /opt/uto/pilot/uto/lib/libuto__rosidl_generator_c.so
-uto_per_fs: /opt/uto/pilot/uto/lib/libuto__rosidl_typesupport_introspection_c.so
-uto_per_fs: /opt/uto/pilot/uto/lib/libuto__rosidl_typesupport_c.so
-uto_per_fs: /opt/uto/pilot/uto/lib/libuto__rosidl_typesupport_introspection_cpp.so
-uto_per_fs: /opt/uto/pilot/uto/lib/libuto__rosidl_typesupport_cpp.so
-uto_per_fs: /opt/uto/pilot/uto_common_proto/lib/libuto_common_proto.so
-uto_per_fs: /usr/local/lib/libprotobuf.so
 uto_per_fs: /opt/uto/pilot/rcutils/lib/librcutils.so
 uto_per_fs: /opt/uto/pilot/rosidl_runtime_c/lib/librosidl_runtime_c.so
 uto_per_fs: /opt/uto/pilot/rcutils/lib/librcutils.so
@@ -594,37 +452,10 @@ uto_per_fs: /usr/local/lib/libprotobuf.so
 uto_per_fs: /usr/local/lib/libprotobuf.so
 uto_per_fs: /usr/local/lib/libprotobuf.so
 uto_per_fs: /usr/local/lib/libprotobuf.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libpcl_apps.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libpcl_people.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libboost_system.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libqhull.so
-uto_per_fs: /usr/lib/libOpenNI.so
-uto_per_fs: /usr/lib/libOpenNI2.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkChartsCore-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkInfovisCore-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libfreetype.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libz.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libjpeg.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libpng.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libtiff.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libexpat.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkIOGeometry-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkIOLegacy-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkIOPLY-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkRenderingLOD-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkViewsContext2D-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkViewsCore-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkRenderingContextOpenGL2-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libflann_cpp.so
 uto_per_fs: /usr/lib/x86_64-linux-gnu/libGeographic.so
 uto_per_fs: /opt/uto/pilot/rosbag2_storage/lib/librosbag2_storage.so
 uto_per_fs: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
-uto_per_fs: /usr/local/lib/libyaml-cpp.a
+uto_per_fs: /usr/lib/x86_64-linux-gnu/libyaml-cpp.so.0.6.2
 uto_per_fs: /opt/uto/pilot/visualization_msgs/lib/libvisualization_msgs__rosidl_generator_c.so
 uto_per_fs: /opt/uto/pilot/nav_msgs/lib/libnav_msgs__rosidl_generator_c.so
 uto_per_fs: /opt/uto/pilot/sensor_msgs/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
@@ -701,91 +532,18 @@ uto_per_fs: /opt/uto/pilot/unique_identifier_msgs/lib/libunique_identifier_msgs_
 uto_per_fs: /opt/uto/pilot/unique_identifier_msgs/lib/libunique_identifier_msgs__rosidl_generator_c.so
 uto_per_fs: /opt/uto/pilot/unique_identifier_msgs/lib/libunique_identifier_msgs__rosidl_typesupport_c.so
 uto_per_fs: /opt/uto/pilot/unique_identifier_msgs/lib/libunique_identifier_msgs__rosidl_typesupport_introspection_cpp.so
+uto_per_fs: /opt/uto/pilot/rosidl_typesupport_introspection_cpp/lib/librosidl_typesupport_introspection_cpp.so
+uto_per_fs: /opt/uto/pilot/rosidl_typesupport_introspection_c/lib/librosidl_typesupport_introspection_c.so
 uto_per_fs: /opt/uto/pilot/unique_identifier_msgs/lib/libunique_identifier_msgs__rosidl_typesupport_cpp.so
+uto_per_fs: /opt/uto/pilot/rosidl_typesupport_cpp/lib/librosidl_typesupport_cpp.so
+uto_per_fs: /opt/uto/pilot/rosidl_typesupport_c/lib/librosidl_typesupport_c.so
+uto_per_fs: /opt/uto/pilot/rcpputils/lib/librcpputils.so
 uto_per_fs: /opt/uto/pilot/orocos_kdl/lib/liborocos-kdl.so.1.4.0
-uto_per_fs: /opt/uto/pilot/rosidl_typesupport_introspection_cpp/lib/librosidl_typesupport_introspection_cpp.so
-uto_per_fs: /opt/uto/pilot/rosidl_typesupport_introspection_c/lib/librosidl_typesupport_introspection_c.so
-uto_per_fs: /opt/uto/pilot/rosidl_typesupport_cpp/lib/librosidl_typesupport_cpp.so
-uto_per_fs: /opt/uto/pilot/rosidl_typesupport_c/lib/librosidl_typesupport_c.so
-uto_per_fs: /opt/uto/pilot/rcpputils/lib/librcpputils.so
-uto_per_fs: /opt/uto/pilot/rosidl_runtime_c/lib/librosidl_runtime_c.so
-uto_per_fs: /opt/uto/pilot/rcutils/lib/librcutils.so
 uto_per_fs: /opt/uto/pilot/uto_common_base/lib/libuto_common_base.so
-uto_per_fs: /opt/uto/pilot/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_generator_c.so
-uto_per_fs: /opt/uto/pilot/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
-uto_per_fs: /opt/uto/pilot/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
-uto_per_fs: /opt/uto/pilot/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
-uto_per_fs: /opt/uto/pilot/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
-uto_per_fs: /opt/uto/pilot/rosidl_typesupport_introspection_cpp/lib/librosidl_typesupport_introspection_cpp.so
-uto_per_fs: /opt/uto/pilot/rcpputils/lib/librcpputils.so
-uto_per_fs: /opt/uto/pilot/rosidl_typesupport_introspection_c/lib/librosidl_typesupport_introspection_c.so
-uto_per_fs: /opt/uto/pilot/rcutils/lib/librcutils.so
-uto_per_fs: /opt/uto/pilot/rosidl_runtime_c/lib/librosidl_runtime_c.so
-uto_per_fs: /opt/uto/pilot/rosgraph_msgs/lib/librosgraph_msgs__rosidl_generator_c.so
-uto_per_fs: /opt/uto/pilot/rosgraph_msgs/lib/librosgraph_msgs__rosidl_typesupport_introspection_c.so
-uto_per_fs: /opt/uto/pilot/rosgraph_msgs/lib/librosgraph_msgs__rosidl_typesupport_c.so
-uto_per_fs: /opt/uto/pilot/rosgraph_msgs/lib/librosgraph_msgs__rosidl_typesupport_introspection_cpp.so
-uto_per_fs: /opt/uto/pilot/rosgraph_msgs/lib/librosgraph_msgs__rosidl_typesupport_cpp.so
-uto_per_fs: /opt/uto/pilot/rosidl_typesupport_cpp/lib/librosidl_typesupport_cpp.so
-uto_per_fs: /opt/uto/pilot/rosidl_typesupport_c/lib/librosidl_typesupport_c.so
-uto_per_fs: /opt/uto/pilot/rcl_yaml_param_parser/lib/librcl_yaml_param_parser.so
-uto_per_fs: /opt/uto/pilot/statistics_msgs/lib/libstatistics_msgs__rosidl_generator_c.so
-uto_per_fs: /opt/uto/pilot/statistics_msgs/lib/libstatistics_msgs__rosidl_typesupport_introspection_c.so
-uto_per_fs: /opt/uto/pilot/statistics_msgs/lib/libstatistics_msgs__rosidl_typesupport_c.so
-uto_per_fs: /opt/uto/pilot/statistics_msgs/lib/libstatistics_msgs__rosidl_typesupport_introspection_cpp.so
-uto_per_fs: /opt/uto/pilot/statistics_msgs/lib/libstatistics_msgs__rosidl_typesupport_cpp.so
-uto_per_fs: /opt/uto/pilot/tracetools/lib/libtracetools.so
-uto_per_fs: /opt/uto/pilot/rclcpp/lib/librclcpp.so
-uto_per_fs: /opt/uto/pilot/uto/lib/libuto__rosidl_generator_c.so
-uto_per_fs: /opt/uto/pilot/uto/lib/libuto__rosidl_typesupport_introspection_c.so
-uto_per_fs: /opt/uto/pilot/uto/lib/libuto__rosidl_typesupport_c.so
-uto_per_fs: /opt/uto/pilot/uto/lib/libuto__rosidl_typesupport_introspection_cpp.so
-uto_per_fs: /opt/uto/pilot/uto/lib/libuto__rosidl_typesupport_cpp.so
-uto_per_fs: /opt/uto/pilot/uto_common_base/lib/libuto_common_base.so
-uto_per_fs: /opt/uto/pilot/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_generator_c.so
-uto_per_fs: /opt/uto/pilot/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
-uto_per_fs: /opt/uto/pilot/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
-uto_per_fs: /opt/uto/pilot/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
-uto_per_fs: /opt/uto/pilot/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
-uto_per_fs: /opt/uto/pilot/rosidl_typesupport_introspection_cpp/lib/librosidl_typesupport_introspection_cpp.so
-uto_per_fs: /opt/uto/pilot/rcpputils/lib/librcpputils.so
-uto_per_fs: /opt/uto/pilot/rosidl_typesupport_introspection_c/lib/librosidl_typesupport_introspection_c.so
-uto_per_fs: /opt/uto/pilot/rcutils/lib/librcutils.so
-uto_per_fs: /opt/uto/pilot/rosidl_runtime_c/lib/librosidl_runtime_c.so
-uto_per_fs: /opt/uto/pilot/rosgraph_msgs/lib/librosgraph_msgs__rosidl_generator_c.so
-uto_per_fs: /opt/uto/pilot/rosgraph_msgs/lib/librosgraph_msgs__rosidl_typesupport_introspection_c.so
-uto_per_fs: /opt/uto/pilot/rosgraph_msgs/lib/librosgraph_msgs__rosidl_typesupport_c.so
-uto_per_fs: /opt/uto/pilot/rosgraph_msgs/lib/librosgraph_msgs__rosidl_typesupport_introspection_cpp.so
-uto_per_fs: /opt/uto/pilot/rosgraph_msgs/lib/librosgraph_msgs__rosidl_typesupport_cpp.so
-uto_per_fs: /opt/uto/pilot/rosidl_typesupport_cpp/lib/librosidl_typesupport_cpp.so
-uto_per_fs: /opt/uto/pilot/rosidl_typesupport_c/lib/librosidl_typesupport_c.so
-uto_per_fs: /opt/uto/pilot/rcl_yaml_param_parser/lib/librcl_yaml_param_parser.so
-uto_per_fs: /opt/uto/pilot/statistics_msgs/lib/libstatistics_msgs__rosidl_generator_c.so
-uto_per_fs: /opt/uto/pilot/statistics_msgs/lib/libstatistics_msgs__rosidl_typesupport_introspection_c.so
-uto_per_fs: /opt/uto/pilot/statistics_msgs/lib/libstatistics_msgs__rosidl_typesupport_c.so
-uto_per_fs: /opt/uto/pilot/statistics_msgs/lib/libstatistics_msgs__rosidl_typesupport_introspection_cpp.so
-uto_per_fs: /opt/uto/pilot/statistics_msgs/lib/libstatistics_msgs__rosidl_typesupport_cpp.so
-uto_per_fs: /opt/uto/pilot/tracetools/lib/libtracetools.so
-uto_per_fs: /opt/uto/pilot/rclcpp/lib/librclcpp.so
-uto_per_fs: /opt/uto/pilot/uto/lib/libuto__rosidl_generator_c.so
-uto_per_fs: /opt/uto/pilot/uto/lib/libuto__rosidl_typesupport_introspection_c.so
-uto_per_fs: /opt/uto/pilot/uto/lib/libuto__rosidl_typesupport_c.so
-uto_per_fs: /opt/uto/pilot/uto/lib/libuto__rosidl_typesupport_introspection_cpp.so
-uto_per_fs: /opt/uto/pilot/uto/lib/libuto__rosidl_typesupport_cpp.so
 uto_per_fs: /opt/uto/pilot/uto_common_proto/lib/libuto_common_proto.so
 uto_per_fs: /usr/local/lib/libprotobuf.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libboost_system.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libqhull.so
-uto_per_fs: /usr/lib/libOpenNI.so
-uto_per_fs: /usr/lib/libOpenNI2.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libjpeg.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libpng.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libtiff.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libexpat.so
+uto_per_fs: /opt/uto/pilot/uto_common_proto/lib/libuto_common_proto.so
+uto_per_fs: /usr/local/lib/libprotobuf.so
 uto_per_fs: /usr/lib/x86_64-linux-gnu/libGeographic.so
 uto_per_fs: /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.4.2.0
 uto_per_fs: /usr/lib/x86_64-linux-gnu/libopencv_datasets.so.4.2.0
@@ -806,72 +564,10 @@ uto_per_fs: /usr/lib/x86_64-linux-gnu/libopencv_flann.so.4.2.0
 uto_per_fs: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.4.2.0
 uto_per_fs: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.2.0
 uto_per_fs: /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.2.0
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libpcl_surface.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libpcl_keypoints.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libpcl_recognition.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libpcl_registration.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libpcl_stereo.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libpcl_segmentation.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libpcl_features.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libpcl_filters.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libpcl_ml.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libpcl_visualization.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libpcl_search.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libpcl_io.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libpcl_octree.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libpcl_common.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkInteractionWidgets-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkFiltersModeling-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkInteractionStyle-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkFiltersExtraction-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkFiltersStatistics-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkImagingFourier-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkalglib-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkFiltersHybrid-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkImagingGeneral-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkImagingSources-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkImagingHybrid-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkRenderingAnnotation-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkImagingColor-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkRenderingVolume-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkIOXML-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkIOXMLParser-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkIOCore-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkRenderingContext2D-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkRenderingFreeType-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libfreetype.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkRenderingOpenGL2-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkImagingCore-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkRenderingCore-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkCommonColor-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkFiltersGeometry-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkFiltersSources-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkFiltersGeneral-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkCommonComputationalGeometry-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkFiltersCore-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkIOImage-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkCommonExecutionModel-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkCommonDataModel-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkCommonTransforms-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkCommonMisc-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkCommonMath-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkCommonSystem-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkCommonCore-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtksys-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkDICOMParser-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libvtkmetaio-7.1.so.7.1p.1
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libz.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libGLEW.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libSM.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libICE.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libX11.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libXext.so
-uto_per_fs: /usr/lib/x86_64-linux-gnu/libXt.so
+uto_per_fs: /opt/uto/pilot/rosidl_runtime_c/lib/librosidl_runtime_c.so
+uto_per_fs: /opt/uto/pilot/rcutils/lib/librcutils.so
 uto_per_fs: CMakeFiles/uto_per_fs.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX executable uto_per_fs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yang/project/freespace/freespace-fusion/build/uto_per_fs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable uto_per_fs"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/uto_per_fs.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -884,6 +580,6 @@ CMakeFiles/uto_per_fs.dir/clean:
 .PHONY : CMakeFiles/uto_per_fs.dir/clean
 
 CMakeFiles/uto_per_fs.dir/depend:
-	cd /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles/uto_per_fs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/yang/project/freespace/freespace-fusion/build/uto_per_fs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yang/project/freespace/freespace-fusion /home/yang/project/freespace/freespace-fusion /home/yang/project/freespace/freespace-fusion/build/uto_per_fs /home/yang/project/freespace/freespace-fusion/build/uto_per_fs /home/yang/project/freespace/freespace-fusion/build/uto_per_fs/CMakeFiles/uto_per_fs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uto_per_fs.dir/depend
 

@@ -1,153 +1,147 @@
 #include "grid_map.h"
+#include "peripheral/vehicle.h"
 
 void fs::GridMap::reset()
 {
-  m_yaw = 0.f;
-  m_vecEgo2MapLast << HALF_GRID_MAP_SIZE * GRID_SCALE, HALF_GRID_MAP_SIZE * GRID_SCALE;
-  m_rotEgo2MapLast << std::cos(m_yaw), -std::sin(m_yaw), std::sin(m_yaw), std::cos(m_yaw);
+  m_isToPublish = true;
+  m_gridMapBuffer.pushFrontForce();
 
-  for(int j = 0; j < GRID_MAP_SIZE; ++j)
+  auto& newGrid = m_gridMapBuffer.front();
+  for(int j = 0; j < GRID_MAP_SIZE_ROWS; ++j)
   {
-    for(int i = 0; i < GRID_MAP_SIZE; ++i)
+    for(int i = 0; i < GRID_MAP_SIZE_COLS; ++i)
     {
-      m_grids[j][i] = Grid(0.0f);
+      auto& grid       = newGrid[j][i];
+      grid.logit       = PRIOR_LOGIT;
+      grid.point       = idx2pos(j, i);
+      grid.locked      = false;
+      grid.isFreeInCam = false;
+      grid.isBorder    = true;
+      grid.top         = 0.0f;
+      grid.ground      = 0.0f;
+      grid.bottom      = 0.0f;
+#if FS_CHECK(CFG_DEBUG_GRID)
+      grid.history    = 0;
+      grid.logitPrev  = 0;
+      grid.logitLidar = 0;
+      grid.rowPrev    = 0;
+      grid.colPrev    = 0;
+#endif
     }
   }
 }
 
-void fs::GridMap::updateEgo(const FSVec2f& deltaPos, const FSVec2f& vecEgo2Map, const FSMat2x2& rotEgo2Map)
+void fs::GridMap::updateEgo()
 {
-  if(std::fabs(deltaPos.x()) > GRID_MAP_SIZE * GRID_SCALE || fabs(deltaPos.y()) > GRID_MAP_SIZE * GRID_SCALE)
-  {
-    reset();
-  }
-  else
-  {
-    FSVec2f       delta_pos_map   = m_rotEgo2MapLast * deltaPos;
-    const int     signX           = uto::sgn(delta_pos_map.x());
-    const int     signY           = uto::sgn(delta_pos_map.y());
-    const int32_t new_indexBeginX = std::floor((m_vecEgo2MapLast.x() + 0. + signX * HALF_GRID_MAP_SIZE * GRID_SCALE) * GRID_SCALE_INV);
-    const int32_t new_indexBeginY = std::floor((m_vecEgo2MapLast.y() + 0. + signY * HALF_GRID_MAP_SIZE * GRID_SCALE) * GRID_SCALE_INV);
-    const int32_t new_indexEndX   = std::floor((m_vecEgo2MapLast.x() + delta_pos_map.x() + signX * HALF_GRID_MAP_SIZE * GRID_SCALE) * GRID_SCALE_INV);
-    const int32_t new_indexEndY   = std::floor((m_vecEgo2MapLast.y() + delta_pos_map.y() + signY * HALF_GRID_MAP_SIZE * GRID_SCALE) * GRID_SCALE_INV);
+  m_gridMapBuffer.pushFrontForce();
+  auto& oldGrids = m_gridMapBuffer[1];
+  auto& newGrids = m_gridMapBuffer[0];
 
-    if(uto::sgn(new_indexEndX - new_indexBeginX) == signX)
+  for(int j = 0; j < GRID_MAP_SIZE_ROWS; ++j)
+  {
+    for(int i = 0; i < GRID_MAP_SIZE_COLS; ++i)
     {
-      for(int i = new_indexBeginX; i != new_indexEndX; i += signX)
+      auto& newGrid = newGrids[j][i];
+      newGrid.logit = MIN_LOGIT;
+      newGrid.point = idx2pos(j, i);
+    }
+  }
+
+  const Vehicle& vehicle = Vehicle::getVehicle();
+  const EMatrix2 rot     = vehicle.getRotT1toT0().topLeftCorner<2, 2>();
+  const EVector2 vec     = vehicle.getVecT1toT0().head<2>();
+
+  for(int j = 0; j < GRID_MAP_SIZE_ROWS; ++j)
+  {
+    for(int i = 0; i < GRID_MAP_SIZE_COLS; ++i)
+    {
+      const Grid&          oldGrid  = oldGrids[j][i];
+      const EVector2       pointNew = rot * oldGrid.point + vec;
+      const GridMap::Index idxNew   = pos2idx(pointNew);
+
+      if(idxNew.row < GRID_MAP_SIZE_ROWS && idxNew.col < GRID_MAP_SIZE_COLS && idxNew.row >= 0 && idxNew.col >= 0 && newGrids[idxNew.row][idxNew.col].logit < oldGrid.logit)
       {
-        const int modI = i & 2047;
-        for(int j = 0; j < GRID_MAP_SIZE; ++j)
-        {
-          m_grids[modI][j] = Grid(0.0f);
-        } // -- Grid(0.0f),类内提供初始值
+        auto& newGrid = newGrids[idxNew.row][idxNew.col];
+        newGrid       = oldGrid;
+        newGrid.point = pointNew;
+#if FS_CHECK(CFG_DEBUG_GRID)
+        newGrid.rowPrev = j;
+        newGrid.colPrev = i;
+#endif
       }
     }
-    if(uto::sgn(new_indexEndY - new_indexBeginY) == signY)
+  }
+}
+
+void fs::GridMap::applyPrior()
+{
+  m_isToPublish = true;
+  for(auto& row : m_gridMapBuffer.front())
+  {
+    for(auto& col : row)
     {
-      for(int j = new_indexBeginY; j != new_indexEndY; j += signY)
+#if FS_CHECK(CFG_DEBUG_GRID)
+      col.history   = (col.history * 10) % 100000000UL;
+      col.logitPrev = col.logit;
+#endif
+      col.logit       = std::max(col.logit + PRIOR_LOGIT, MIN_LOGIT);
+      col.locked      = false;
+      col.isFreeInCam = false;
+      col.isBorder    = true;
+    }
+  }
+}
+
+void fs::GridMap::extractBorders()
+{
+  Grids& grids = m_gridMapBuffer.front();
+
+#if FS_CHECK(CFG_PUB_BORDER)
+  memset(m_cells, BorderType::BORDER_TYPE_FREE, sizeof(m_cells));
+
+  for(int j = 0; j < GRID_MAP_SIZE_ROWS; ++j)
+  {
+    const int jCell = j * CELL_SCALE_INV;
+    for(int i = 0; i < GRID_MAP_SIZE_COLS; ++i)
+    {
+      const int iCell = i * CELL_SCALE_INV;
+      if(BorderType::BORDER_TYPE_FREE == m_cells[jCell][iCell] && grids[j][i].logit > LOGIT_OCCUPIED_THRESH)
       {
-        const int modJ = j & 2047;
-        for(int i = 0; i < GRID_MAP_SIZE; ++i)
+        m_cells[jCell][iCell] = BorderType::BORDER_TYPE_OCCUPIED;
+      }
+    }
+  }
+
+  for(int j = 2; j < CELL_ROWS - 2; ++j)
+  {
+    for(int i = 2; i < CELL_COLS - 2; ++i)
+    {
+      if(BorderType::BORDER_TYPE_OCCUPIED == m_cells[j][i])
+      {
+        if((BorderType::BORDER_TYPE_FREE == m_cells[j + 0][i - 2] && BorderType::BORDER_TYPE_FREE == m_cells[j + 0][i - 1]) ||
+           (BorderType::BORDER_TYPE_FREE == m_cells[j + 0][i + 2] && BorderType::BORDER_TYPE_FREE == m_cells[j + 0][i + 1]) ||
+           (BorderType::BORDER_TYPE_FREE == m_cells[j - 2][i + 0] && BorderType::BORDER_TYPE_FREE == m_cells[j - 1][i + 0]) ||
+           (BorderType::BORDER_TYPE_FREE == m_cells[j + 2][i + 0] && BorderType::BORDER_TYPE_FREE == m_cells[j + 1][i + 0]))
         {
-          m_grids[i][modJ] = Grid(0.0f);
+          m_cells[j][i] = BorderType::BORDER_TYPE_CONTOUR;
         }
       }
     }
   }
-  m_vecEgo2MapLast.x() = Utils::mod(vecEgo2Map.x());
-  m_vecEgo2MapLast.y() = Utils::mod(vecEgo2Map.y());
+#endif
 
-  m_vecEgo2MapLastIdx = m_vecEgo2MapLast * GRID_SCALE_INV;
-
-  // -- simplify mod, which cover +%+  -%+
-  mod_flag_x_ = vecEgo2Map.x() > 0 ? -1 : 1;
-  mod_flag_y_ = vecEgo2Map.y() > 0 ? -1 : 1;
-  mod_num_x_  = int(std::fabs(vecEgo2Map.x() - m_vecEgo2MapLast.x())) / (GRID_MAP_SIZE * GRID_SCALE);
-  mod_num_y_  = int(std::fabs(vecEgo2Map.y() - m_vecEgo2MapLast.y())) / (GRID_MAP_SIZE * GRID_SCALE);
-
-  m_rotEgo2MapLast = rotEgo2Map;
-  m_rotMapLast2Ego = m_rotEgo2MapLast.transpose();
-}
-
-fs::GridMap::Index fs::GridMap::pos2ModIdx(const fs::FSVec2f& pointEgo) const
-{
-  const auto pointMap = m_rotEgo2MapLast * pointEgo + m_vecEgo2MapLast;
-
-  return Index{static_cast<int>(std::round(pointMap.x() * GRID_SCALE_INV)) & 2047,
-               static_cast<int>(std::round(pointMap.y() * GRID_SCALE_INV)) & 2047};
-  //  return modN(Index{static_cast<int>(std::round(pointMap.x() * GRID_SCALE_INV)),
-  //                    static_cast<int>(std::round(pointMap.y() * GRID_SCALE_INV))});
-}
-fs::FSVec2f fs::GridMap::pos2World(const fs::FSVec2f& pointEgo) const
-{
-  return m_rotEgo2MapLast * pointEgo + m_vecEgo2MapLast;
-}
-
-fs::FSVec2f fs::GridMap::modIdx2PosCurrent(const fs::GridMap::Index& idx) const
-{
-  const auto& idx_ego_center = modIdx2EgoCenterIdxMap(idx);
-  return m_rotMapLast2Ego * (idx_ego_center * GRID_SCALE);
-}
-
-fs::FSVec2f fs::GridMap::egoCenterIdx2Pos(const fs::FSVec2f& idx_ego_center) const
-{
-  return m_rotMapLast2Ego * (idx_ego_center * GRID_SCALE);
-}
-
-fs::FSVec2f fs::GridMap::modIdx2EgoCenterIdxMap(const fs::GridMap::Index& idx) const
-{
-  FSVec2f grid{idx.row, idx.col};
-  FSVec2f idx_new = grid - m_vecEgo2MapLastIdx;
-
-  if(idx_new.x() > HALF_GRID_MAP_SIZE)
+  for(int j = 0; j < GRID_MAP_SIZE_ROWS; ++j)
   {
-    idx_new.x() -= GRID_MAP_SIZE;
+    const int jCell = j * CELL_SCALE_INV;
+    for(int i = 0; i < GRID_MAP_SIZE_COLS; ++i)
+    {
+      const int iCell = i * CELL_SCALE_INV;
+#if FS_CHECK(CFG_PUB_BORDER)
+      grids[j][i].isBorder = BorderType::BORDER_TYPE_CONTOUR == m_cells[jCell][iCell]
+#else
+      grids[j][i].isBorder = true;
+#endif
+        ;
+    }
   }
-  else if(idx_new.x() < -HALF_GRID_MAP_SIZE)
-  {
-    idx_new.x() += GRID_MAP_SIZE;
-  }
-  else {} // remain the value
-
-  if(idx_new.y() > HALF_GRID_MAP_SIZE)
-  {
-    idx_new.y() -= GRID_MAP_SIZE;
-  }
-  else if(idx_new.y() < -HALF_GRID_MAP_SIZE)
-  {
-    idx_new.y() += GRID_MAP_SIZE;
-  }
-  else {} // remain the value
-
-  // -- current grid is restored，without mod
-  return idx_new;
-}
-
-fs::FSVec2f fs::GridMap::modIdx2EgoCenterIdxCurrent(const fs::GridMap::Index& idx) const
-{
-  FSVec2f grid{idx.row, idx.col};
-  FSVec2f idx_new = grid - m_vecEgo2MapLastIdx;
-
-  if(idx_new.x() > HALF_GRID_MAP_SIZE)
-  {
-    idx_new.x() -= GRID_MAP_SIZE;
-  }
-  else if(idx_new.x() < -HALF_GRID_MAP_SIZE)
-  {
-    idx_new.x() += GRID_MAP_SIZE;
-  }
-  else {} // remain the value
-
-  if(idx_new.y() > HALF_GRID_MAP_SIZE)
-  {
-    idx_new.y() -= GRID_MAP_SIZE;
-  }
-  else if(idx_new.y() < -HALF_GRID_MAP_SIZE)
-  {
-    idx_new.y() += GRID_MAP_SIZE;
-  }
-  else {} // remain the value
-
-  // -- current grid is restored，without mod
-  return m_rotMapLast2Ego * idx_new;
 }

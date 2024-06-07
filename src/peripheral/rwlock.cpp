@@ -1,4 +1,3 @@
-#include <stdexcept>
 #include "rwlock.h"
 
 namespace fs

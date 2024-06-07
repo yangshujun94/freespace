@@ -1,0 +1,62 @@
+[0.309s] Invoking command in '/home/yang/project/freespace/freespace-fusion/build/uto_per_fs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/uto/pilot/rqt_bag_plugins:/opt/uto/pilot/rqt_bag:/opt/uto/pilot/ros2bag:/opt/uto/pilot/tracetools_launch:/opt/uto/pilot/topic_monitor:/opt/uto/pilot/tf2_tools:/opt/uto/pilot/examples_tf2_py:/opt/uto/pilot/tf2_ros_py:/opt/uto/pilot/sros2:/opt/uto/pilot/rqt_topic:/opt/uto/pilot/rqt_top:/opt/uto/pilot/rqt_srv:/opt/uto/pilot/rqt_shell:/opt/uto/pilot/rqt_service_caller:/opt/uto/pilot/rqt_reconfigure:/opt/uto/pilot/rqt_py_console:/opt/uto/pilot/rqt_publisher:/opt/uto/pilot/rqt_plot:/opt/uto/pilot/rqt_action:/opt/uto/pilot/rqt_msg:/opt/uto/pilot/rqt_console:/opt/uto/pilot/rqt:/opt/uto/pilot/rqt_graph:/opt/uto/pilot/rqt_gui_py:/opt/uto/pilot/rqt_gui:/opt/uto/pilot/ros2trace:/opt/uto/pilot/ros2topic:/opt/uto/pilot/ros2test:/opt/uto/pilot/ros2component:/opt/uto/pilot/ros2param:/opt/uto/pilot/ros2lifecycle:/opt/uto/pilot/ros2service:/opt/uto/pilot/ros2run:/opt/uto/pilot/ros2launch:/opt/uto/pilot/ros2pkg:/opt/uto/pilot/ros2node:/opt/uto/pilot/ros2multicast:/opt/uto/pilot/ros2interface:/opt/uto/pilot/ros2doctor:/opt/uto/pilot/ros2action:/opt/uto/pilot/ros2cli:/opt/uto/pilot/quality_of_service_demo_py:/opt/uto/pilot/launch_testing_ros:/opt/uto/pilot/launch_ros:/opt/uto/pilot/examples_rclpy_pointcloud_publisher:/opt/uto/pilot/examples_rclpy_minimal_subscriber:/opt/uto/pilot/examples_rclpy_minimal_service:/opt/uto/pilot/examples_rclpy_minimal_publisher:/opt/uto/pilot/examples_rclpy_minimal_client:/opt/uto/pilot/examples_rclpy_minimal_action_server:/opt/uto/pilot/examples_rclpy_minimal_action_client:/opt/uto/pilot/examples_rclpy_guard_conditions:/opt/uto/pilot/examples_rclpy_executors:/opt/uto/pilot/demo_nodes_py:/opt/uto/pilot/action_tutorials_py:/opt/uto/pilot/ament_uncrustify:/opt/uto/pilot/tracetools_trace:/opt/uto/pilot/tracetools_read:/opt/uto/pilot/test_launch_ros:/opt/uto/pilot/sensor_msgs_py:/opt/uto/pilot/rpyutils:/opt/uto/pilot/rosidl_runtime_py:/opt/uto/pilot/rosidl_cli:/opt/uto/pilot/launch_yaml:/opt/uto/pilot/launch_xml:/opt/uto/pilot/launch_testing:/opt/uto/pilot/launch:/opt/uto/pilot/osrf_pycommon:/opt/uto/pilot/domain_coordinator:/opt/uto/pilot/ament_xmllint:/opt/uto/pilot/ament_pyflakes:/opt/uto/pilot/ament_pycodestyle:/opt/uto/pilot/ament_pep257:/opt/uto/pilot/ament_pclint:/opt/uto/pilot/ament_package:/opt/uto/pilot/ament_mypy:/opt/uto/pilot/ament_lint_cmake:/opt/uto/pilot/ament_flake8:/opt/uto/pilot/ament_copyright:/opt/uto/pilot/ament_lint:/opt/uto/pilot/ament_index_python:/opt/uto/pilot/ament_cpplint:/opt/uto/pilot/ament_cppcheck:/opt/uto/pilot/ament_clang_tidy:/opt/uto/pilot/ament_clang_format:/opt/ros/galactic /usr/bin/cmake /home/yang/project/freespace/freespace-fusion -DPROJECT_BUILD_FLAG=AIV5_ROS -DCMAKE_BUILD_TYPE=Release -DVIS_ENABLE=ON -DLOAD_LOG_ENABLE=OFF -DCMAKE_INSTALL_PREFIX=/home/yang/project/freespace/freespace-fusion/install/uto_per_fs
+[0.381s] -- The C compiler identification is GNU 9.4.0
+[0.457s] -- The CXX compiler identification is GNU 9.4.0
+[0.471s] -- Check for working C compiler: /usr/bin/cc
+[0.557s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.557s] -- Detecting C compiler ABI info
+[0.640s] -- Detecting C compiler ABI info - done
+[0.648s] -- Detecting C compile features
+[0.649s] -- Detecting C compile features - done
+[0.651s] -- Check for working CXX compiler: /usr/bin/c++
+[0.741s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.742s] -- Detecting CXX compiler ABI info
+[0.831s] -- Detecting CXX compiler ABI info - done
+[0.840s] -- Detecting CXX compile features
+[0.841s] -- Detecting CXX compile features - done
+[0.848s] -- Found Git: /usr/bin/git (found version "2.25.1") 
+[0.864s] ==== update git commit SHA    : r3.4.5-4-gbed0acd92f-dirty  feature/tpts_db
+[0.864s] ==== update git commit date   : 2024-02-01 17:19:50 +0800
+[0.864s] ==== update git commit message: remove time
+[0.864s] **** get cicd vehicle_type: 
+[0.864s] **** get cicd target_board: 
+[0.864s] **** get cicd middleware  : 
+[0.864s] ++++ this build project : AIV5_ROS
+[0.864s] ++++ this build type    : Release
+[0.865s] ++++ this build vis     : ON
+[0.865s] ++++ this build load_log: OFF
+[0.865s] ++++ this build cc_build: 
+[0.936s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.936s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.341s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_introspection_c;rosidl_typesupport_fastrtps_c
+[1.367s] -- Found rosidl_adapter: 2.2.2 (/opt/uto/pilot/rosidl_adapter/share/rosidl_adapter/cmake)
+[1.565s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.593s] Invoked command in '/home/yang/project/freespace/freespace-fusion/build/uto_per_fs' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/uto/pilot/rqt_bag_plugins:/opt/uto/pilot/rqt_bag:/opt/uto/pilot/ros2bag:/opt/uto/pilot/tracetools_launch:/opt/uto/pilot/topic_monitor:/opt/uto/pilot/tf2_tools:/opt/uto/pilot/examples_tf2_py:/opt/uto/pilot/tf2_ros_py:/opt/uto/pilot/sros2:/opt/uto/pilot/rqt_topic:/opt/uto/pilot/rqt_top:/opt/uto/pilot/rqt_srv:/opt/uto/pilot/rqt_shell:/opt/uto/pilot/rqt_service_caller:/opt/uto/pilot/rqt_reconfigure:/opt/uto/pilot/rqt_py_console:/opt/uto/pilot/rqt_publisher:/opt/uto/pilot/rqt_plot:/opt/uto/pilot/rqt_action:/opt/uto/pilot/rqt_msg:/opt/uto/pilot/rqt_console:/opt/uto/pilot/rqt:/opt/uto/pilot/rqt_graph:/opt/uto/pilot/rqt_gui_py:/opt/uto/pilot/rqt_gui:/opt/uto/pilot/ros2trace:/opt/uto/pilot/ros2topic:/opt/uto/pilot/ros2test:/opt/uto/pilot/ros2component:/opt/uto/pilot/ros2param:/opt/uto/pilot/ros2lifecycle:/opt/uto/pilot/ros2service:/opt/uto/pilot/ros2run:/opt/uto/pilot/ros2launch:/opt/uto/pilot/ros2pkg:/opt/uto/pilot/ros2node:/opt/uto/pilot/ros2multicast:/opt/uto/pilot/ros2interface:/opt/uto/pilot/ros2doctor:/opt/uto/pilot/ros2action:/opt/uto/pilot/ros2cli:/opt/uto/pilot/quality_of_service_demo_py:/opt/uto/pilot/launch_testing_ros:/opt/uto/pilot/launch_ros:/opt/uto/pilot/examples_rclpy_pointcloud_publisher:/opt/uto/pilot/examples_rclpy_minimal_subscriber:/opt/uto/pilot/examples_rclpy_minimal_service:/opt/uto/pilot/examples_rclpy_minimal_publisher:/opt/uto/pilot/examples_rclpy_minimal_client:/opt/uto/pilot/examples_rclpy_minimal_action_server:/opt/uto/pilot/examples_rclpy_minimal_action_client:/opt/uto/pilot/examples_rclpy_guard_conditions:/opt/uto/pilot/examples_rclpy_executors:/opt/uto/pilot/demo_nodes_py:/opt/uto/pilot/action_tutorials_py:/opt/uto/pilot/ament_uncrustify:/opt/uto/pilot/tracetools_trace:/opt/uto/pilot/tracetools_read:/opt/uto/pilot/test_launch_ros:/opt/uto/pilot/sensor_msgs_py:/opt/uto/pilot/rpyutils:/opt/uto/pilot/rosidl_runtime_py:/opt/uto/pilot/rosidl_cli:/opt/uto/pilot/launch_yaml:/opt/uto/pilot/launch_xml:/opt/uto/pilot/launch_testing:/opt/uto/pilot/launch:/opt/uto/pilot/osrf_pycommon:/opt/uto/pilot/domain_coordinator:/opt/uto/pilot/ament_xmllint:/opt/uto/pilot/ament_pyflakes:/opt/uto/pilot/ament_pycodestyle:/opt/uto/pilot/ament_pep257:/opt/uto/pilot/ament_pclint:/opt/uto/pilot/ament_package:/opt/uto/pilot/ament_mypy:/opt/uto/pilot/ament_lint_cmake:/opt/uto/pilot/ament_flake8:/opt/uto/pilot/ament_copyright:/opt/uto/pilot/ament_lint:/opt/uto/pilot/ament_index_python:/opt/uto/pilot/ament_cpplint:/opt/uto/pilot/ament_cppcheck:/opt/uto/pilot/ament_clang_tidy:/opt/uto/pilot/ament_clang_format:/opt/ros/galactic /usr/bin/cmake /home/yang/project/freespace/freespace-fusion -DPROJECT_BUILD_FLAG=AIV5_ROS -DCMAKE_BUILD_TYPE=Release -DVIS_ENABLE=ON -DLOAD_LOG_ENABLE=OFF -DCMAKE_INSTALL_PREFIX=/home/yang/project/freespace/freespace-fusion/install/uto_per_fs
+[1.605s] Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_parallel_executor/executor/parallel.py", line 75, in execute
+    loop.run_until_complete(future)
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 603, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 570, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 1823, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/usr/lib/python3.8/selectors.py", line 468, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__
+    rc = await self.task(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__
+    return await task_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_cmake/build.py", line 59, in build
+    rc = await extension.build(
+  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/build.py", line 87, in build
+    rc = await self._reconfigure(args, env)
+  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/build.py", line 182, in _reconfigure
+    buildfile = get_buildfile(cmake_cache)
+  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/__init__.py", line 114, in get_buildfile
+    if 'Visual Studio' in generator:
+TypeError: argument of type 'NoneType' is not iterable

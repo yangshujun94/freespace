@@ -1,0 +1,10 @@
+/home/yang/project/freespace/freespace-fusion/cmake-build-releasenew/CMakeFiles/uninstall.dir
+/home/yang/project/freespace/freespace-fusion/cmake-build-releasenew/CMakeFiles/uto_per_fs_uninstall.dir
+/home/yang/project/freespace/freespace-fusion/cmake-build-releasenew/CMakeFiles/uto_per_fs.dir
+/home/yang/project/freespace/freespace-fusion/cmake-build-releasenew/CMakeFiles/test.dir
+/home/yang/project/freespace/freespace-fusion/cmake-build-releasenew/CMakeFiles/edit_cache.dir
+/home/yang/project/freespace/freespace-fusion/cmake-build-releasenew/CMakeFiles/rebuild_cache.dir
+/home/yang/project/freespace/freespace-fusion/cmake-build-releasenew/CMakeFiles/list_install_components.dir
+/home/yang/project/freespace/freespace-fusion/cmake-build-releasenew/CMakeFiles/install.dir
+/home/yang/project/freespace/freespace-fusion/cmake-build-releasenew/CMakeFiles/install/local.dir
+/home/yang/project/freespace/freespace-fusion/cmake-build-releasenew/CMakeFiles/install/strip.dir

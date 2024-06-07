@@ -2,8 +2,8 @@
 #define MAP_PROVIDER_H_
 
 #include <memory>
-#include "../utils.h"
-#include "peripheral/types.h"
+#include <hdmap.h>
+#include "peripheral/defs.h"
 
 namespace fs
 {
@@ -16,7 +16,7 @@ namespace fs
 
     virtual ~MapProvider() = default;
 
-    static void create(const ProjectLocation projectLoc);
+    static void create(const std::string& projectLoc);
 
     static MapProvider& getMapProvider()
     {
@@ -24,25 +24,23 @@ namespace fs
       return *m_mapProviderPtr;
     }
 
-    void                                                    transformLLA2LocalXTM(double init_x, double init_y, double init_z, bool init_flag);
-    bool                                                    isInElectricFence(const FSVec3f& twb) const;
-    inline bool                                             isInit() const { return electronic_fence_init_flag_; }
-    inline const std::vector<std::vector<Eigen::Vector2f>>& getElectircFenceXTM() const { return electronic_fence_xtm_; }
+    bool isMapSdkAvailable() const { return m_loadMapStatus == uto::hdmap::HDMap::Result::SUCCESS; }
 
-    //features
+    virtual Eigen::Vector3d getLtmOrigin() const = 0;
+
+    virtual std::vector<std::vector<Eigen::Vector2d>> getTunnelAreaLtm() const      = 0;
+    virtual std::vector<std::vector<Eigen::Vector2d>> getWeighbridgeAreaLtm() const = 0;
+
+    // features
     virtual bool useLockStationPush() const = 0;
     virtual bool useLaneRemoveGrass() const = 0;
 
-  private:
-    inline void setInit() { electronic_fence_init_flag_ = true; }
-
-    static std::unique_ptr<MapProvider> m_mapProviderPtr;
-
   protected:
-    Eigen::Vector3d                           origin_lla_{};
-    std::vector<std::vector<Eigen::Vector2d>> electronic_fence_lla_{};
-    std::vector<std::vector<Eigen::Vector2f>> electronic_fence_xtm_{};
-    bool                                      electronic_fence_init_flag_ = false;
+    uto::hdmap::HDMap         m_hdMap{};
+    uto::hdmap::HDMap::Result m_loadMapStatus = uto::hdmap::HDMap::Result::FAIL;
+
+  private:
+    static std::unique_ptr<MapProvider> m_mapProviderPtr;
   };
 
 } // namespace fs

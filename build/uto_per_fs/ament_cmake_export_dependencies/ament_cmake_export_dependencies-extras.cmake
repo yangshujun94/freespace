@@ -1,6 +1,6 @@
 # generated from ament_cmake_export_dependencies/cmake/ament_cmake_export_dependencies-extras.cmake.in
 
-set(_exported_dependencies "rclcpp;rosbag2_cpp;std_msgs;visualization_msgs;nav_msgs;sensor_msgs;rclcpp_action;geometry_msgs;cv_bridge;tf2;tf2_ros;tf2_eigen;tf2_geometry_msgs;OpenCV;uto;uto_common_base;uto_common_proto")
+set(_exported_dependencies "rclcpp;rosbag2_cpp;std_msgs;visualization_msgs;nav_msgs;sensor_msgs;rclcpp_action;geometry_msgs;cv_bridge;tf2;tf2_ros;tf2_eigen;tf2_geometry_msgs;OpenCV;Eigen3")
 
 find_package(ament_cmake_libraries QUIET REQUIRED)
 

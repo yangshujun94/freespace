@@ -6,41 +6,36 @@ fs::Diagnoser& fs::Diagnoser::instance()
   return instance;
 }
 
-void fs::Diagnoser::updateCount()
+void fs::Diagnoser::incrementTimeoutCount()
 {
-  ++m_egoMotionCount;
-  ++m_cameraFSCount;
-  ++m_cameraFishSFWCount;
-  ++m_cameraFishSFLCount;
-  ++m_cameraFishSFRCount;
-  ++m_cameraFishSRLCount;
-  ++m_cameraFishSRRCount;
-  ++m_cameraFishSRWCount;
-  ++m_cameraFclCount;
-  ++m_cameraFlCount;
-  ++m_cameraFrCount;
-  ++m_cameraRcCount;
-  ++m_cameraRclCount;
-  ++m_cameraRlCount;
-  ++m_cameraRrCount;
-  ++m_lidarCount;
-  ++m_radarFDACount;
-  ++m_radarFSDACount;
-  ++m_radarRDACount;
-  ++m_trailerCount;
-  ++m_cameraTracked;
-  ++m_BEVFSCount;
-  ++m_VOTCount;
+  ++m_egoMotionTimeoutCount;
+  ++m_odTimeoutCount;
+  ++m_processTimeoutCount;
+
+  for(int i = 0; i < static_cast<int>(SensorId::MAX_SENSOR_NUM); ++i)
+  {
+    ++m_sensorTimeoutCountList[i];
+  }
 }
 
-void fs::Diagnoser::updateVision()
+#if FS_CHECK(CFG_USE_FISHEYE_FS)
+bool fs::Diagnoser::isFisheyeDefect() const
 {
-  m_cameraFSCount  = 0;
-  m_cameraFclCount = 0;
-  m_cameraFlCount  = 0;
-  m_cameraFrCount  = 0;
-  m_cameraRcCount  = 0;
-  m_cameraRclCount = 0;
-  m_cameraRlCount  = 0;
-  m_cameraRrCount  = 0;
+  return isSensorDefect(SensorId::FISHEYE_FCF) ||
+         isSensorDefect(SensorId::FISHEYE_FLL) ||
+         isSensorDefect(SensorId::FISHEYE_FRR) ||
+         isSensorDefect(SensorId::FISHEYE_BCB) ||
+         isSensorDefect(SensorId::FISHEYE_BLL) ||
+         isSensorDefect(SensorId::FISHEYE_BRR);
 }
+
+bool fs::Diagnoser::hasFisheyeOutOfRangeError() const
+{
+  return hasSensorOutOfRangeError(SensorId::FISHEYE_FCF) ||
+         hasSensorOutOfRangeError(SensorId::FISHEYE_FLL) ||
+         hasSensorOutOfRangeError(SensorId::FISHEYE_FRR) ||
+         hasSensorOutOfRangeError(SensorId::FISHEYE_BCB) ||
+         hasSensorOutOfRangeError(SensorId::FISHEYE_BLL) ||
+         hasSensorOutOfRangeError(SensorId::FISHEYE_BRR);
+}
+#endif

@@ -7,7 +7,6 @@ modules:
   - freespace_fusion_hdt_orin
   - freespace_fusion_hdt_a1000
   - freespace_fusion_mifa_orin
-  - freespace_fusion_AIV_1.5
   - freespace_fusion_aiv_orin
   - freespace_fusion_dt
   - freespace_fusion_adt_orin
@@ -36,6 +35,12 @@ stages:
           checkout_dir: uto_common
           meta:
             UTO_TARGET_BOARD: orin
+        - git_url: ssh://git@10.140.104.42/utopilot/maps/umapsdk.git
+          useSSH: yes
+          branch: develop
+          checkout_dir: uto_map_sdk
+          meta:
+            UTO_TARGET_BOARD: orin
     - module: freespace_fusion_hdt_ipc
       when:
         - pre-dev
@@ -58,6 +63,12 @@ stages:
         - git_url: https://gitlab.utopilot.com.cn/utopilot/all/common.git
           branch: develop
           checkout_dir: uto_common
+          meta:
+            UTO_TARGET_BOARD: ipc
+        - git_url: ssh://git@10.140.104.42/utopilot/maps/umapsdk.git
+          useSSH: yes
+          branch: develop
+          checkout_dir: uto_map_sdk
           meta:
             UTO_TARGET_BOARD: ipc
     - module: freespace_fusion_hdt_orin
@@ -84,6 +95,12 @@ stages:
           checkout_dir: uto_common
           meta:
             UTO_TARGET_BOARD: orin
+        - git_url: ssh://git@10.140.104.42/utopilot/maps/umapsdk.git
+          useSSH: yes
+          branch: develop
+          checkout_dir: uto_map_sdk
+          meta:
+            UTO_TARGET_BOARD: orin
     - module: freespace_fusion_adt_orin
       when:
         - pre-dev
@@ -107,6 +124,12 @@ stages:
           checkout_dir: uto_common
           meta:
             UTO_TARGET_BOARD: orin
+        - git_url: ssh://git@10.140.104.42/utopilot/maps/umapsdk.git
+          useSSH: yes
+          branch: develop
+          checkout_dir: uto_map_sdk
+          meta:
+            UTO_TARGET_BOARD: orin
     - module: freespace_fusion_aiv_orin
       when:
         - aiv-2.5
@@ -125,6 +148,12 @@ stages:
         - git_url: https://gitlab.utopilot.com.cn/utopilot/all/common.git
           branch: develop
           checkout_dir: uto_common
+          meta:
+            UTO_TARGET_BOARD: orin
+        - git_url: ssh://git@10.140.104.42/utopilot/maps/umapsdk.git
+          useSSH: yes
+          branch: develop
+          checkout_dir: uto_map_sdk
           meta:
             UTO_TARGET_BOARD: orin
     - module: freespace_fusion_hdt_a1000
@@ -150,6 +179,12 @@ stages:
           checkout_dir: uto_common
           meta:
             UTO_TARGET_BOARD: a1000
+        - git_url: ssh://git@10.140.104.42/utopilot/maps/umapsdk.git
+          useSSH: yes
+          branch: develop
+          checkout_dir: uto_map_sdk
+          meta:
+            UTO_TARGET_BOARD: a1000
     - module: freespace_fusion_aiv_xavier
       when:
         - pre-dev
@@ -172,6 +207,12 @@ stages:
         - git_url: https://gitlab.utopilot.com.cn/utopilot/all/common.git
           branch: develop
           checkout_dir: uto_common
+          meta:
+            UTO_TARGET_BOARD: xavier
+        - git_url: ssh://git@10.140.104.42/utopilot/maps/umapsdk.git
+          useSSH: yes
+          branch: develop
+          checkout_dir: uto_map_sdk
           meta:
             UTO_TARGET_BOARD: xavier
     - module: uto_fusion_mifa_orin
@@ -199,17 +240,12 @@ stages:
           checkout_dir: uto_common
           meta:
             UTO_TARGET_BOARD: orin
-    - module: freespace_fusion_AIV_1.5
-      when:
-        - pre-dev
-        - pre-main
-        - dev
-        - dev-main
-        - release
-      dependency_repo:
-        - git_url: https://gitlab.utopilot.com.cn/utopilot/all/common.git
+        - git_url: ssh://git@10.140.104.42/utopilot/maps/umapsdk.git
+          useSSH: yes
           branch: develop
-          checkout_dir: uto_common
+          checkout_dir: uto_map_sdk
+          meta:
+            UTO_TARGET_BOARD: orin
     - module: freespace_fusion_dt
       when:
         - pre-dev
@@ -229,6 +265,12 @@ stages:
         - git_url: https://gitlab.utopilot.com.cn/utopilot/all/common.git
           branch: develop
           checkout_dir: uto_common
+          meta:
+            UTO_TARGET_BOARD: orin
+        - git_url: ssh://git@10.140.104.42/utopilot/maps/umapsdk.git
+          useSSH: yes
+          branch: develop
+          checkout_dir: uto_map_sdk
           meta:
             UTO_TARGET_BOARD: orin
 
@@ -450,28 +492,6 @@ stages:
           UTO_TARGET_BOARD: orin
         build_type: Release_mifa_orin
         target_board: Orin
-    - module: freespace_fusion_AIV_1.5
-      when:
-        - pre-dev
-        - pre-main
-        - dev
-        - dev-main
-        - release
-      build_type: release
-      type: conan
-      repo: conan-local
-      conan_file_path: perception/AIV/freespace_fusion_aiv.conanfile.py
-      dependency: [ ]
-      build_params:
-        settings:
-          arch: "armv8"
-          arch_build: "armv8"
-          os: "Linux"
-          compiler: "gcc"
-          compiler.version: "9.4"
-          compiler.libcxx: "libstdc++17"
-        build_type: Release
-        target_board: Xavier
     - module: freespace_fusion_dt
       when:
         - pre-dev
@@ -593,18 +613,6 @@ stages:
         - dev-main
         - release
         - dev-aiv
-      generic_package:
-        package_repos:
-          - Perception-GT-generic-local
-        package_content:
-          - "*"
-        add_datestamp: true
-        add_commit_sha: true
-    - module: freespace_fusion_AIV_1.5
-      when:
-        - dev
-        - dev-main
-        - release
       generic_package:
         package_repos:
           - Perception-GT-generic-local

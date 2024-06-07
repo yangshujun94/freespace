@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion
+CMAKE_SOURCE_DIR = /home/yang/project/freespace/freespace-fusion
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs
+CMAKE_BINARY_DIR = /home/yang/project/freespace/freespace-fusion/build/uto_per_fs
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yang/project/freespace/freespace-fusion/build/uto_per_fs/CMakeFiles /home/yang/project/freespace/freespace-fusion/build/uto_per_fs/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yang/project/freespace/freespace-fusion/build/uto_per_fs/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -233,60 +233,6 @@ fs_version.cpp.s:
 	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/fs_version.cpp.s
 .PHONY : fs_version.cpp.s
 
-src/core/expand/expand.o: src/core/expand/expand.cpp.o
-
-.PHONY : src/core/expand/expand.o
-
-# target to build an object file
-src/core/expand/expand.cpp.o:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/core/expand/expand.cpp.o
-.PHONY : src/core/expand/expand.cpp.o
-
-src/core/expand/expand.i: src/core/expand/expand.cpp.i
-
-.PHONY : src/core/expand/expand.i
-
-# target to preprocess a source file
-src/core/expand/expand.cpp.i:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/core/expand/expand.cpp.i
-.PHONY : src/core/expand/expand.cpp.i
-
-src/core/expand/expand.s: src/core/expand/expand.cpp.s
-
-.PHONY : src/core/expand/expand.s
-
-# target to generate assembly for a file
-src/core/expand/expand.cpp.s:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/core/expand/expand.cpp.s
-.PHONY : src/core/expand/expand.cpp.s
-
-src/core/expand/quads_intersect.o: src/core/expand/quads_intersect.cpp.o
-
-.PHONY : src/core/expand/quads_intersect.o
-
-# target to build an object file
-src/core/expand/quads_intersect.cpp.o:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/core/expand/quads_intersect.cpp.o
-.PHONY : src/core/expand/quads_intersect.cpp.o
-
-src/core/expand/quads_intersect.i: src/core/expand/quads_intersect.cpp.i
-
-.PHONY : src/core/expand/quads_intersect.i
-
-# target to preprocess a source file
-src/core/expand/quads_intersect.cpp.i:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/core/expand/quads_intersect.cpp.i
-.PHONY : src/core/expand/quads_intersect.cpp.i
-
-src/core/expand/quads_intersect.s: src/core/expand/quads_intersect.cpp.s
-
-.PHONY : src/core/expand/quads_intersect.s
-
-# target to generate assembly for a file
-src/core/expand/quads_intersect.cpp.s:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/core/expand/quads_intersect.cpp.s
-.PHONY : src/core/expand/quads_intersect.cpp.s
-
 src/core/freespace_manager.o: src/core/freespace_manager.cpp.o
 
 .PHONY : src/core/freespace_manager.o
@@ -314,6 +260,33 @@ src/core/freespace_manager.cpp.s:
 	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/core/freespace_manager.cpp.s
 .PHONY : src/core/freespace_manager.cpp.s
 
+src/core/grid_line_traversal.o: src/core/grid_line_traversal.cpp.o
+
+.PHONY : src/core/grid_line_traversal.o
+
+# target to build an object file
+src/core/grid_line_traversal.cpp.o:
+	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/core/grid_line_traversal.cpp.o
+.PHONY : src/core/grid_line_traversal.cpp.o
+
+src/core/grid_line_traversal.i: src/core/grid_line_traversal.cpp.i
+
+.PHONY : src/core/grid_line_traversal.i
+
+# target to preprocess a source file
+src/core/grid_line_traversal.cpp.i:
+	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/core/grid_line_traversal.cpp.i
+.PHONY : src/core/grid_line_traversal.cpp.i
+
+src/core/grid_line_traversal.s: src/core/grid_line_traversal.cpp.s
+
+.PHONY : src/core/grid_line_traversal.s
+
+# target to generate assembly for a file
+src/core/grid_line_traversal.cpp.s:
+	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/core/grid_line_traversal.cpp.s
+.PHONY : src/core/grid_line_traversal.cpp.s
+
 src/core/grid_map.o: src/core/grid_map.cpp.o
 
 .PHONY : src/core/grid_map.o
@@ -340,6 +313,33 @@ src/core/grid_map.s: src/core/grid_map.cpp.s
 src/core/grid_map.cpp.s:
 	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/core/grid_map.cpp.s
 .PHONY : src/core/grid_map.cpp.s
+
+src/core/object.o: src/core/object.cpp.o
+
+.PHONY : src/core/object.o
+
+# target to build an object file
+src/core/object.cpp.o:
+	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/core/object.cpp.o
+.PHONY : src/core/object.cpp.o
+
+src/core/object.i: src/core/object.cpp.i
+
+.PHONY : src/core/object.i
+
+# target to preprocess a source file
+src/core/object.cpp.i:
+	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/core/object.cpp.i
+.PHONY : src/core/object.cpp.i
+
+src/core/object.s: src/core/object.cpp.s
+
+.PHONY : src/core/object.s
+
+# target to generate assembly for a file
+src/core/object.cpp.s:
+	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/core/object.cpp.s
+.PHONY : src/core/object.cpp.s
 
 src/debug/vis.o: src/debug/vis.cpp.o
 
@@ -395,86 +395,59 @@ src/debug/vis_helper.cpp.s:
 	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/debug/vis_helper.cpp.s
 .PHONY : src/debug/vis_helper.cpp.s
 
-src/peripheral/camera/camera_manager.o: src/peripheral/camera/camera_manager.cpp.o
+src/peripheral/camera.o: src/peripheral/camera.cpp.o
 
-.PHONY : src/peripheral/camera/camera_manager.o
-
-# target to build an object file
-src/peripheral/camera/camera_manager.cpp.o:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/camera/camera_manager.cpp.o
-.PHONY : src/peripheral/camera/camera_manager.cpp.o
-
-src/peripheral/camera/camera_manager.i: src/peripheral/camera/camera_manager.cpp.i
-
-.PHONY : src/peripheral/camera/camera_manager.i
-
-# target to preprocess a source file
-src/peripheral/camera/camera_manager.cpp.i:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/camera/camera_manager.cpp.i
-.PHONY : src/peripheral/camera/camera_manager.cpp.i
-
-src/peripheral/camera/camera_manager.s: src/peripheral/camera/camera_manager.cpp.s
-
-.PHONY : src/peripheral/camera/camera_manager.s
-
-# target to generate assembly for a file
-src/peripheral/camera/camera_manager.cpp.s:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/camera/camera_manager.cpp.s
-.PHONY : src/peripheral/camera/camera_manager.cpp.s
-
-src/peripheral/camera/fisheye.o: src/peripheral/camera/fisheye.cpp.o
-
-.PHONY : src/peripheral/camera/fisheye.o
+.PHONY : src/peripheral/camera.o
 
 # target to build an object file
-src/peripheral/camera/fisheye.cpp.o:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/camera/fisheye.cpp.o
-.PHONY : src/peripheral/camera/fisheye.cpp.o
+src/peripheral/camera.cpp.o:
+	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/camera.cpp.o
+.PHONY : src/peripheral/camera.cpp.o
 
-src/peripheral/camera/fisheye.i: src/peripheral/camera/fisheye.cpp.i
+src/peripheral/camera.i: src/peripheral/camera.cpp.i
 
-.PHONY : src/peripheral/camera/fisheye.i
+.PHONY : src/peripheral/camera.i
 
 # target to preprocess a source file
-src/peripheral/camera/fisheye.cpp.i:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/camera/fisheye.cpp.i
-.PHONY : src/peripheral/camera/fisheye.cpp.i
+src/peripheral/camera.cpp.i:
+	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/camera.cpp.i
+.PHONY : src/peripheral/camera.cpp.i
 
-src/peripheral/camera/fisheye.s: src/peripheral/camera/fisheye.cpp.s
+src/peripheral/camera.s: src/peripheral/camera.cpp.s
 
-.PHONY : src/peripheral/camera/fisheye.s
+.PHONY : src/peripheral/camera.s
 
 # target to generate assembly for a file
-src/peripheral/camera/fisheye.cpp.s:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/camera/fisheye.cpp.s
-.PHONY : src/peripheral/camera/fisheye.cpp.s
+src/peripheral/camera.cpp.s:
+	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/camera.cpp.s
+.PHONY : src/peripheral/camera.cpp.s
 
-src/peripheral/camera/pinhole.o: src/peripheral/camera/pinhole.cpp.o
+src/peripheral/camera_manager.o: src/peripheral/camera_manager.cpp.o
 
-.PHONY : src/peripheral/camera/pinhole.o
+.PHONY : src/peripheral/camera_manager.o
 
 # target to build an object file
-src/peripheral/camera/pinhole.cpp.o:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/camera/pinhole.cpp.o
-.PHONY : src/peripheral/camera/pinhole.cpp.o
+src/peripheral/camera_manager.cpp.o:
+	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/camera_manager.cpp.o
+.PHONY : src/peripheral/camera_manager.cpp.o
 
-src/peripheral/camera/pinhole.i: src/peripheral/camera/pinhole.cpp.i
+src/peripheral/camera_manager.i: src/peripheral/camera_manager.cpp.i
 
-.PHONY : src/peripheral/camera/pinhole.i
+.PHONY : src/peripheral/camera_manager.i
 
 # target to preprocess a source file
-src/peripheral/camera/pinhole.cpp.i:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/camera/pinhole.cpp.i
-.PHONY : src/peripheral/camera/pinhole.cpp.i
+src/peripheral/camera_manager.cpp.i:
+	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/camera_manager.cpp.i
+.PHONY : src/peripheral/camera_manager.cpp.i
 
-src/peripheral/camera/pinhole.s: src/peripheral/camera/pinhole.cpp.s
+src/peripheral/camera_manager.s: src/peripheral/camera_manager.cpp.s
 
-.PHONY : src/peripheral/camera/pinhole.s
+.PHONY : src/peripheral/camera_manager.s
 
 # target to generate assembly for a file
-src/peripheral/camera/pinhole.cpp.s:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/camera/pinhole.cpp.s
-.PHONY : src/peripheral/camera/pinhole.cpp.s
+src/peripheral/camera_manager.cpp.s:
+	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/camera_manager.cpp.s
+.PHONY : src/peripheral/camera_manager.cpp.s
 
 src/peripheral/diagnoser.o: src/peripheral/diagnoser.cpp.o
 
@@ -502,6 +475,33 @@ src/peripheral/diagnoser.s: src/peripheral/diagnoser.cpp.s
 src/peripheral/diagnoser.cpp.s:
 	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/diagnoser.cpp.s
 .PHONY : src/peripheral/diagnoser.cpp.s
+
+src/peripheral/fisheye.o: src/peripheral/fisheye.cpp.o
+
+.PHONY : src/peripheral/fisheye.o
+
+# target to build an object file
+src/peripheral/fisheye.cpp.o:
+	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/fisheye.cpp.o
+.PHONY : src/peripheral/fisheye.cpp.o
+
+src/peripheral/fisheye.i: src/peripheral/fisheye.cpp.i
+
+.PHONY : src/peripheral/fisheye.i
+
+# target to preprocess a source file
+src/peripheral/fisheye.cpp.i:
+	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/fisheye.cpp.i
+.PHONY : src/peripheral/fisheye.cpp.i
+
+src/peripheral/fisheye.s: src/peripheral/fisheye.cpp.s
+
+.PHONY : src/peripheral/fisheye.s
+
+# target to generate assembly for a file
+src/peripheral/fisheye.cpp.s:
+	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/fisheye.cpp.s
+.PHONY : src/peripheral/fisheye.cpp.s
 
 src/peripheral/fs_node.o: src/peripheral/fs_node.cpp.o
 
@@ -557,168 +557,6 @@ src/peripheral/main.cpp.s:
 	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/main.cpp.s
 .PHONY : src/peripheral/main.cpp.s
 
-src/peripheral/map_provider/map_provider.o: src/peripheral/map_provider/map_provider.cpp.o
-
-.PHONY : src/peripheral/map_provider/map_provider.o
-
-# target to build an object file
-src/peripheral/map_provider/map_provider.cpp.o:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider.cpp.o
-.PHONY : src/peripheral/map_provider/map_provider.cpp.o
-
-src/peripheral/map_provider/map_provider.i: src/peripheral/map_provider/map_provider.cpp.i
-
-.PHONY : src/peripheral/map_provider/map_provider.i
-
-# target to preprocess a source file
-src/peripheral/map_provider/map_provider.cpp.i:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider.cpp.i
-.PHONY : src/peripheral/map_provider/map_provider.cpp.i
-
-src/peripheral/map_provider/map_provider.s: src/peripheral/map_provider/map_provider.cpp.s
-
-.PHONY : src/peripheral/map_provider/map_provider.s
-
-# target to generate assembly for a file
-src/peripheral/map_provider/map_provider.cpp.s:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider.cpp.s
-.PHONY : src/peripheral/map_provider/map_provider.cpp.s
-
-src/peripheral/map_provider/map_provider_dx.o: src/peripheral/map_provider/map_provider_dx.cpp.o
-
-.PHONY : src/peripheral/map_provider/map_provider_dx.o
-
-# target to build an object file
-src/peripheral/map_provider/map_provider_dx.cpp.o:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_dx.cpp.o
-.PHONY : src/peripheral/map_provider/map_provider_dx.cpp.o
-
-src/peripheral/map_provider/map_provider_dx.i: src/peripheral/map_provider/map_provider_dx.cpp.i
-
-.PHONY : src/peripheral/map_provider/map_provider_dx.i
-
-# target to preprocess a source file
-src/peripheral/map_provider/map_provider_dx.cpp.i:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_dx.cpp.i
-.PHONY : src/peripheral/map_provider/map_provider_dx.cpp.i
-
-src/peripheral/map_provider/map_provider_dx.s: src/peripheral/map_provider/map_provider_dx.cpp.s
-
-.PHONY : src/peripheral/map_provider/map_provider_dx.s
-
-# target to generate assembly for a file
-src/peripheral/map_provider/map_provider_dx.cpp.s:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_dx.cpp.s
-.PHONY : src/peripheral/map_provider/map_provider_dx.cpp.s
-
-src/peripheral/map_provider/map_provider_lj.o: src/peripheral/map_provider/map_provider_lj.cpp.o
-
-.PHONY : src/peripheral/map_provider/map_provider_lj.o
-
-# target to build an object file
-src/peripheral/map_provider/map_provider_lj.cpp.o:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_lj.cpp.o
-.PHONY : src/peripheral/map_provider/map_provider_lj.cpp.o
-
-src/peripheral/map_provider/map_provider_lj.i: src/peripheral/map_provider/map_provider_lj.cpp.i
-
-.PHONY : src/peripheral/map_provider/map_provider_lj.i
-
-# target to preprocess a source file
-src/peripheral/map_provider/map_provider_lj.cpp.i:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_lj.cpp.i
-.PHONY : src/peripheral/map_provider/map_provider_lj.cpp.i
-
-src/peripheral/map_provider/map_provider_lj.s: src/peripheral/map_provider/map_provider_lj.cpp.s
-
-.PHONY : src/peripheral/map_provider/map_provider_lj.s
-
-# target to generate assembly for a file
-src/peripheral/map_provider/map_provider_lj.cpp.s:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_lj.cpp.s
-.PHONY : src/peripheral/map_provider/map_provider_lj.cpp.s
-
-src/peripheral/map_provider/map_provider_qz.o: src/peripheral/map_provider/map_provider_qz.cpp.o
-
-.PHONY : src/peripheral/map_provider/map_provider_qz.o
-
-# target to build an object file
-src/peripheral/map_provider/map_provider_qz.cpp.o:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_qz.cpp.o
-.PHONY : src/peripheral/map_provider/map_provider_qz.cpp.o
-
-src/peripheral/map_provider/map_provider_qz.i: src/peripheral/map_provider/map_provider_qz.cpp.i
-
-.PHONY : src/peripheral/map_provider/map_provider_qz.i
-
-# target to preprocess a source file
-src/peripheral/map_provider/map_provider_qz.cpp.i:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_qz.cpp.i
-.PHONY : src/peripheral/map_provider/map_provider_qz.cpp.i
-
-src/peripheral/map_provider/map_provider_qz.s: src/peripheral/map_provider/map_provider_qz.cpp.s
-
-.PHONY : src/peripheral/map_provider/map_provider_qz.s
-
-# target to generate assembly for a file
-src/peripheral/map_provider/map_provider_qz.cpp.s:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_qz.cpp.s
-.PHONY : src/peripheral/map_provider/map_provider_qz.cpp.s
-
-src/peripheral/map_provider/map_provider_tc.o: src/peripheral/map_provider/map_provider_tc.cpp.o
-
-.PHONY : src/peripheral/map_provider/map_provider_tc.o
-
-# target to build an object file
-src/peripheral/map_provider/map_provider_tc.cpp.o:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_tc.cpp.o
-.PHONY : src/peripheral/map_provider/map_provider_tc.cpp.o
-
-src/peripheral/map_provider/map_provider_tc.i: src/peripheral/map_provider/map_provider_tc.cpp.i
-
-.PHONY : src/peripheral/map_provider/map_provider_tc.i
-
-# target to preprocess a source file
-src/peripheral/map_provider/map_provider_tc.cpp.i:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_tc.cpp.i
-.PHONY : src/peripheral/map_provider/map_provider_tc.cpp.i
-
-src/peripheral/map_provider/map_provider_tc.s: src/peripheral/map_provider/map_provider_tc.cpp.s
-
-.PHONY : src/peripheral/map_provider/map_provider_tc.s
-
-# target to generate assembly for a file
-src/peripheral/map_provider/map_provider_tc.cpp.s:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_tc.cpp.s
-.PHONY : src/peripheral/map_provider/map_provider_tc.cpp.s
-
-src/peripheral/map_provider/map_provider_ws.o: src/peripheral/map_provider/map_provider_ws.cpp.o
-
-.PHONY : src/peripheral/map_provider/map_provider_ws.o
-
-# target to build an object file
-src/peripheral/map_provider/map_provider_ws.cpp.o:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_ws.cpp.o
-.PHONY : src/peripheral/map_provider/map_provider_ws.cpp.o
-
-src/peripheral/map_provider/map_provider_ws.i: src/peripheral/map_provider/map_provider_ws.cpp.i
-
-.PHONY : src/peripheral/map_provider/map_provider_ws.i
-
-# target to preprocess a source file
-src/peripheral/map_provider/map_provider_ws.cpp.i:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_ws.cpp.i
-.PHONY : src/peripheral/map_provider/map_provider_ws.cpp.i
-
-src/peripheral/map_provider/map_provider_ws.s: src/peripheral/map_provider/map_provider_ws.cpp.s
-
-.PHONY : src/peripheral/map_provider/map_provider_ws.s
-
-# target to generate assembly for a file
-src/peripheral/map_provider/map_provider_ws.cpp.s:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/map_provider/map_provider_ws.cpp.s
-.PHONY : src/peripheral/map_provider/map_provider_ws.cpp.s
-
 src/peripheral/rwlock.o: src/peripheral/rwlock.cpp.o
 
 .PHONY : src/peripheral/rwlock.o
@@ -745,33 +583,6 @@ src/peripheral/rwlock.s: src/peripheral/rwlock.cpp.s
 src/peripheral/rwlock.cpp.s:
 	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/rwlock.cpp.s
 .PHONY : src/peripheral/rwlock.cpp.s
-
-src/peripheral/utils.o: src/peripheral/utils.cpp.o
-
-.PHONY : src/peripheral/utils.o
-
-# target to build an object file
-src/peripheral/utils.cpp.o:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/utils.cpp.o
-.PHONY : src/peripheral/utils.cpp.o
-
-src/peripheral/utils.i: src/peripheral/utils.cpp.i
-
-.PHONY : src/peripheral/utils.i
-
-# target to preprocess a source file
-src/peripheral/utils.cpp.i:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/utils.cpp.i
-.PHONY : src/peripheral/utils.cpp.i
-
-src/peripheral/utils.s: src/peripheral/utils.cpp.s
-
-.PHONY : src/peripheral/utils.s
-
-# target to generate assembly for a file
-src/peripheral/utils.cpp.s:
-	$(MAKE) -f CMakeFiles/uto_per_fs.dir/build.make CMakeFiles/uto_per_fs.dir/src/peripheral/utils.cpp.s
-.PHONY : src/peripheral/utils.cpp.s
 
 src/peripheral/vehicle.o: src/peripheral/vehicle.cpp.o
 
@@ -819,66 +630,45 @@ help:
 	@echo "... fs_version.o"
 	@echo "... fs_version.i"
 	@echo "... fs_version.s"
-	@echo "... src/core/expand/expand.o"
-	@echo "... src/core/expand/expand.i"
-	@echo "... src/core/expand/expand.s"
-	@echo "... src/core/expand/quads_intersect.o"
-	@echo "... src/core/expand/quads_intersect.i"
-	@echo "... src/core/expand/quads_intersect.s"
 	@echo "... src/core/freespace_manager.o"
 	@echo "... src/core/freespace_manager.i"
 	@echo "... src/core/freespace_manager.s"
+	@echo "... src/core/grid_line_traversal.o"
+	@echo "... src/core/grid_line_traversal.i"
+	@echo "... src/core/grid_line_traversal.s"
 	@echo "... src/core/grid_map.o"
 	@echo "... src/core/grid_map.i"
 	@echo "... src/core/grid_map.s"
+	@echo "... src/core/object.o"
+	@echo "... src/core/object.i"
+	@echo "... src/core/object.s"
 	@echo "... src/debug/vis.o"
 	@echo "... src/debug/vis.i"
 	@echo "... src/debug/vis.s"
 	@echo "... src/debug/vis_helper.o"
 	@echo "... src/debug/vis_helper.i"
 	@echo "... src/debug/vis_helper.s"
-	@echo "... src/peripheral/camera/camera_manager.o"
-	@echo "... src/peripheral/camera/camera_manager.i"
-	@echo "... src/peripheral/camera/camera_manager.s"
-	@echo "... src/peripheral/camera/fisheye.o"
-	@echo "... src/peripheral/camera/fisheye.i"
-	@echo "... src/peripheral/camera/fisheye.s"
-	@echo "... src/peripheral/camera/pinhole.o"
-	@echo "... src/peripheral/camera/pinhole.i"
-	@echo "... src/peripheral/camera/pinhole.s"
+	@echo "... src/peripheral/camera.o"
+	@echo "... src/peripheral/camera.i"
+	@echo "... src/peripheral/camera.s"
+	@echo "... src/peripheral/camera_manager.o"
+	@echo "... src/peripheral/camera_manager.i"
+	@echo "... src/peripheral/camera_manager.s"
 	@echo "... src/peripheral/diagnoser.o"
 	@echo "... src/peripheral/diagnoser.i"
 	@echo "... src/peripheral/diagnoser.s"
+	@echo "... src/peripheral/fisheye.o"
+	@echo "... src/peripheral/fisheye.i"
+	@echo "... src/peripheral/fisheye.s"
 	@echo "... src/peripheral/fs_node.o"
 	@echo "... src/peripheral/fs_node.i"
 	@echo "... src/peripheral/fs_node.s"
 	@echo "... src/peripheral/main.o"
 	@echo "... src/peripheral/main.i"
 	@echo "... src/peripheral/main.s"
-	@echo "... src/peripheral/map_provider/map_provider.o"
-	@echo "... src/peripheral/map_provider/map_provider.i"
-	@echo "... src/peripheral/map_provider/map_provider.s"
-	@echo "... src/peripheral/map_provider/map_provider_dx.o"
-	@echo "... src/peripheral/map_provider/map_provider_dx.i"
-	@echo "... src/peripheral/map_provider/map_provider_dx.s"
-	@echo "... src/peripheral/map_provider/map_provider_lj.o"
-	@echo "... src/peripheral/map_provider/map_provider_lj.i"
-	@echo "... src/peripheral/map_provider/map_provider_lj.s"
-	@echo "... src/peripheral/map_provider/map_provider_qz.o"
-	@echo "... src/peripheral/map_provider/map_provider_qz.i"
-	@echo "... src/peripheral/map_provider/map_provider_qz.s"
-	@echo "... src/peripheral/map_provider/map_provider_tc.o"
-	@echo "... src/peripheral/map_provider/map_provider_tc.i"
-	@echo "... src/peripheral/map_provider/map_provider_tc.s"
-	@echo "... src/peripheral/map_provider/map_provider_ws.o"
-	@echo "... src/peripheral/map_provider/map_provider_ws.i"
-	@echo "... src/peripheral/map_provider/map_provider_ws.s"
 	@echo "... src/peripheral/rwlock.o"
 	@echo "... src/peripheral/rwlock.i"
 	@echo "... src/peripheral/rwlock.s"
-	@echo "... src/peripheral/utils.o"
-	@echo "... src/peripheral/utils.i"
-	@echo "... src/peripheral/utils.s"
 	@echo "... src/peripheral/vehicle.o"
 	@echo "... src/peripheral/vehicle.i"
 	@echo "... src/peripheral/vehicle.s"

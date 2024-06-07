@@ -1,118 +1,91 @@
-#pragma once
+#ifndef DIAGNOSER_H
+#define DIAGNOSER_H
 
 #include "macro.h"
+#include "defs.h"
 
 namespace fs
 {
-  static constexpr int MONITOR_COUNT_THRESH = 10; ///< Monitor count value
-
   class Diagnoser
   {
   public:
-    DISALLOW_COPY_AND_ASSIGN(Diagnoser);
+    DISALLOW_COPY_MOVE_AND_ASSIGN(Diagnoser);
 
     static Diagnoser& instance();
 
     static const Diagnoser& getDiagnoser() { return instance(); }
 
-    bool isEgoMotionInvalid() const { return m_egoMotionCount > MONITOR_COUNT_THRESH; }
-    bool isCameraFSInvalid() const { return m_cameraFSCount > MONITOR_COUNT_THRESH; }
-    bool isCameraFishInvalid() const
+    //Sensor Defect
+#if FS_CHECK(CFG_USE_FISHEYE_FS)
+    bool isFisheyeDefect() const;
+#endif
+    bool isSensorDefect(SensorId sensorId) const
     {
-      return m_cameraFishSFWCount > MONITOR_COUNT_THRESH ||
-             m_cameraFishSFLCount > MONITOR_COUNT_THRESH ||
-             m_cameraFishSFRCount > MONITOR_COUNT_THRESH ||
-             m_cameraFishSRLCount > MONITOR_COUNT_THRESH ||
-             m_cameraFishSRRCount > MONITOR_COUNT_THRESH ||
-             m_cameraFishSRWCount > MONITOR_COUNT_THRESH;
+      return m_sensorTimeoutCountList[static_cast<int>(sensorId)] > diag::INPUT_TIMEOUT_ERROR_COUNT_THRESH;
     }
-    bool isCameraFclInvalid() const { return m_cameraFclCount > MONITOR_COUNT_THRESH; }
-    bool isCameraFlInvalid() const { return m_cameraFlCount > MONITOR_COUNT_THRESH; }
-    bool isCameraFrInvalid() const { return m_cameraFrCount > MONITOR_COUNT_THRESH; }
-    bool isCameraRcInvalid() const { return m_cameraRcCount > MONITOR_COUNT_THRESH; }
-    bool isCameraRclInvalid() const { return m_cameraRclCount > MONITOR_COUNT_THRESH; }
-    bool isCameraRlInvalid() const { return m_cameraRlCount > MONITOR_COUNT_THRESH; }
-    bool isCameraRrInvalid() const { return m_cameraRrCount > MONITOR_COUNT_THRESH; }
-    bool isLidarInvalid() const { return m_lidarCount > MONITOR_COUNT_THRESH; }
-    bool isRadarFDAInvalid() const { return m_radarFDACount > MONITOR_COUNT_THRESH; }
-    bool isRadarFSDAInvalid() const { return m_radarFSDACount > MONITOR_COUNT_THRESH; }
-    bool isRadarRDAInvalid() const { return m_radarRDACount > MONITOR_COUNT_THRESH; }
-    bool isTrailerInvalid() const { return m_trailerCount > MONITOR_COUNT_THRESH; }
-    bool isCameraTrackedInvalid() const { return m_cameraTracked > MONITOR_COUNT_THRESH; }
-    bool isBEVFSInvalid() const { return m_BEVFSCount > MONITOR_COUNT_THRESH; }
-    bool isVOTInvalid() const { return m_VOTCount > MONITOR_COUNT_THRESH; }
+    bool isEgoMotionDefect() const { return m_egoMotionTimeoutCount > diag::INPUT_TIMEOUT_ERROR_COUNT_THRESH; }
+    bool isOdDefect() const { return m_odTimeoutCount > diag::INPUT_TIMEOUT_ERROR_COUNT_THRESH; }
+    void incrementTimeoutCount();
+    void healSensorTimeoutCount(SensorId sensorId) { m_sensorTimeoutCountList[static_cast<int>(sensorId)] = 0; }
+    void healEgoMotionTimeoutCount() { m_egoMotionTimeoutCount = 0; }
+    void healOdTimeoutCount() { m_odTimeoutCount = 0; }
 
-    bool isEgoMotionReceived() const { return m_egoMotionCount == 0; }
-    bool isCameraFcReceived() const { return m_cameraFSCount == 0; }
-    bool isCameraFclReceived() const { return m_cameraFclCount == 0; }
-    bool isCameraFlReceived() const { return m_cameraFlCount == 0; }
-    bool isCameraFrReceived() const { return m_cameraFrCount == 0; }
-    bool isCameraRcReceived() const { return m_cameraRcCount == 0; }
-    bool isCameraRclReceived() const { return m_cameraRclCount == 0; }
-    bool isCameraRlReceived() const { return m_cameraRlCount == 0; }
-    bool isCameraRrReceived() const { return m_cameraRrCount == 0; }
-    bool isLidarReceived() const { return m_lidarCount == 0; }
-    bool isRadarFDAReceived() const { return m_radarFDACount == 0; }
-    bool isRadarFSDAReceived() const { return m_radarFSDACount == 0; }
-    bool isRadarRDAReceived() const { return m_radarRDACount == 0; }
-    bool isTrailerReceived() const { return m_trailerCount == 0; }
-    bool isCameraTrackedReceived() const { return m_cameraTracked == 0; }
-    bool isBEVCount() const { return m_BEVFSCount == 0; }
-    bool isVOTCount() const { return m_VOTCount == 0; }
+    //sensor timestamp out of range
+#if FS_CHECK(CFG_USE_FISHEYE_FS)
+    bool hasFisheyeOutOfRangeError() const;
+#endif
+    bool hasSensorOutOfRangeError(SensorId sensorId) const
+    {
+      return m_sensorOutOfRangeCountList[static_cast<int>(sensorId)] > diag::INPUT_DELAY_ERROR_COUNT_THRESH;
+    }
+    void incrementSensorOutOfRangeCount(SensorId sensorId) { ++m_sensorOutOfRangeCountList[static_cast<int>(sensorId)]; }
+    void healSensorOutOfRangeCount(SensorId sensorId) { m_sensorOutOfRangeCountList[static_cast<int>(sensorId)] = 0; }
 
-    void updateCount();
+    // od out of range
+    void healOdOutOfRangeCount() { m_odOutOfRangeCount = 0; }
+    void incrementOdOutOfRangeCount() { ++m_odOutOfRangeCount; }
+    bool hasOdOutOfRangeError() const { return m_odOutOfRangeCount > diag::INPUT_DELAY_ERROR_COUNT_THRESH; }
 
-    void updateVision();
-    void updateEgoMotion() { m_egoMotionCount = 0; }
-    void updateCameraFS() { m_cameraFSCount = 0; }
-    void updateCameraFishSFW() { m_cameraFishSFWCount = 0; }
-    void updateCameraFishSFL() { m_cameraFishSFLCount = 0; }
-    void updateCameraFishSFR() { m_cameraFishSFRCount = 0; }
-    void updateCameraFishSRL() { m_cameraFishSRLCount = 0; }
-    void updateCameraFishSRR() { m_cameraFishSRRCount = 0; }
-    void updateCameraFishSRW() { m_cameraFishSRWCount = 0; }
-    void updateCameraFcl() { m_cameraFclCount = 0; }
-    void updateCameraFl() { m_cameraFlCount = 0; }
-    void updateCameraFr() { m_cameraFrCount = 0; }
-    void updateCameraRc() { m_cameraRcCount = 0; }
-    void updateCameraRcl() { m_cameraRclCount = 0; }
-    void updateCameraRl() { m_cameraRlCount = 0; }
-    void updateCameraRr() { m_cameraRrCount = 0; }
-    void updateLidar() { m_lidarCount = 0; }
-    void updateRadarFDA() { m_radarFDACount = 0; }
-    void updateRadarFSDA() { m_radarFSDACount = 0; }
-    void updateRadarRDA() { m_radarRDACount = 0; }
-    void updateTrailer() { m_trailerCount = 0; }
-    void updateCameraTracked() { m_cameraTracked = 0; }
-    void updateBEVCount() { m_BEVFSCount = 0; }
-    void updateVOTCount() { m_VOTCount = 0; }
+    //ego motion pose
+    bool hasPoseInvalid() const { return m_hasPoseInvalid; }
+    void healPoseInvalid() { m_hasPoseInvalid = false; }
+    void setPoseInvalid() { m_hasPoseInvalid = true; }
+
+    //calib error
+    bool hasCalibError() const { return m_calibReadCount > diag::INPUT_TIMEOUT_ERROR_COUNT_THRESH; }
+    void healCalibCount() { m_calibReadCount = 0; }
+    void incrementCalibCount() { ++m_calibReadCount; }
+
+    //map error
+    bool hasMapError() const { return m_hasMapInvalid; }
+    void healMapInvalid() { m_hasMapInvalid = false; }
+    void setMapInvalid() { m_hasMapInvalid = true; }
+
+    //process error
+    void healProcessTimeoutCount() { m_processTimeoutCount = 0; }
+    bool hasProcessError() const { return m_processTimeoutCount > diag::PROCESS_TIMEOUT_ERROR_COUNT_THRESH; }
 
   private:
-    Diagnoser() = default;
+    Diagnoser()
+    {
+      m_sensorTimeoutCountList.fill(0);
+      m_sensorOutOfRangeCountList.fill(0);
+    }
 
-    int m_cameraFSCount      = 0;
-    int m_cameraFishSFWCount = 0;
-    int m_cameraFishSFLCount = 0;
-    int m_cameraFishSFRCount = 0;
-    int m_cameraFishSRLCount = 0;
-    int m_cameraFishSRRCount = 0;
-    int m_cameraFishSRWCount = 0;
-    int m_cameraFclCount     = 0;
-    int m_cameraFlCount      = 0;
-    int m_cameraFrCount      = 0;
-    int m_cameraRcCount      = 0;
-    int m_cameraRclCount     = 0;
-    int m_cameraRlCount      = 0;
-    int m_cameraRrCount      = 0;
-    int m_lidarCount         = 0;
-    int m_radarRDACount      = 0;
-    int m_radarFDACount      = 0;
-    int m_radarFSDACount     = 0;
-    int m_trailerCount       = 0;
-    int m_egoMotionCount     = 0;
-    int m_cameraTracked      = 0;
-    int m_BEVFSCount         = 0;
-    int m_VOTCount           = 0;
+    //timeout count
+    int m_egoMotionTimeoutCount = 0;
+    int m_odTimeoutCount        = 0;
+
+    std::array<int, static_cast<int>(SensorId::MAX_SENSOR_NUM)> m_sensorTimeoutCountList{};    ///< time out
+    std::array<int, static_cast<int>(SensorId::MAX_SENSOR_NUM)> m_sensorOutOfRangeCountList{}; ///< out of range
+
+    int  m_odOutOfRangeCount   = 0;     ///< od out of range count
+    int  m_calibReadCount      = 0;     ///< calib count
+    int  m_processTimeoutCount = 0;     ///< process count
+    bool m_hasPoseInvalid      = false; ///< ego motion pose state
+    bool m_hasMapInvalid       = false; ///< mapsdk state
   };
 
 } // namespace fs
+
+#endif

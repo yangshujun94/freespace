@@ -7,7 +7,7 @@ project(uto_per_fs)
 #set(CMAKE_BUILD_TYPE "Release") #Release Debug
 #set(VIS_ENABLE OFF) #OFF ON
 #set(LOAD_LOG_ENABLE OFF) #OFF ON
-#set(CC_BUILD OFF) #OFF ON
+
 #------------------------------------------------------------------------------------------
 # compiler settings
 IF (CMAKE_BUILD_TYPE MATCHES "Debug")
@@ -26,6 +26,10 @@ ENDIF ()
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_FLAGS "-std=c++17 -Werror=return-type -Wno-enum-compare -Wno-narrowing") #-w close all warnings
 set(CMAKE_CXX_FLAGS_RELEASE "-DNDEBUG -O2")
+
+if (UTO_SIMULATION)
+    set(CMAKE_CXX_FLAGS "-std=c++17 -rdynamic -fPIC")
+endif ()
 
 set(CUDA_USE_STATIC_CUDA_RUNTIME OFF)
 
@@ -77,25 +81,11 @@ message("**** get cicd middleware  : $ENV{UTO_TARGET_MIDDLEWARE}")
 
 IF ("$ENV{UTO_TARGET_VEHICLE_TYPE}" STREQUAL "hdt")       #hdt
     set(PROJECT_BUILD_FLAG "HDT")
-ELSEIF ("$ENV{UTO_TARGET_VEHICLE_TYPE}" STREQUAL "dt")    #dt
-    set(PROJECT_BUILD_FLAG "DT")
-ELSEIF ("$ENV{UTO_TARGET_VEHICLE_TYPE}" STREQUAL "bt")    #bt
-    set(PROJECT_BUILD_FLAG "BT")
 ELSEIF ("$ENV{UTO_TARGET_VEHICLE_TYPE}" STREQUAL "aiv")
     IF ("$ENV{UTO_TARGET_BOARD}" STREQUAL "xavier")
-        IF ("$ENV{UTO_TARGET_MIDDLEWARE}" STREQUAL "lcm") #aiv + xavier + lcm = aiv3_lcm, need cc_build
-            set(PROJECT_BUILD_FLAG "AIV3_LCM")
-            set(CC_BUILD ON)
-        ELSE ()                                         #aiv + xavier + ros = aiv3_ros
-            set(PROJECT_BUILD_FLAG "AIV3_ROS")
-        ENDIF ()
-    ELSE ()
-        IF ("$ENV{UTO_TARGET_MIDDLEWARE}" STREQUAL "lcm") #aiv + orin + lcm = aiv5_lcm, need cc_build
-            set(PROJECT_BUILD_FLAG "AIV5_LCM")
-            set(CC_BUILD ON)
-        ELSE ()                                         #aiv + orin + ros = aiv5_ros
-            set(PROJECT_BUILD_FLAG "AIV5_ROS")
-        ENDIF ()
+        set(PROJECT_BUILD_FLAG "AIV3")
+    ELSEIF ("$ENV{UTO_TARGET_BOARD}" STREQUAL "orin")
+        set(PROJECT_BUILD_FLAG "AIV5")
     ENDIF ()
 ENDIF ()
 
@@ -110,31 +100,10 @@ configure_file("${CMAKE_CURRENT_SOURCE_DIR}/fs_version.cpp.in" ${AUTO_GEN_CMAKE_
 # project settings
 IF ("${PROJECT_BUILD_FLAG}" STREQUAL "HDT")
     include_directories(${PROJECT_SOURCE_DIR}/src/project/hdt)
-ELSEIF ("${PROJECT_BUILD_FLAG}" STREQUAL "DT")
-    include_directories(${PROJECT_SOURCE_DIR}/src/project/dt)
-ELSEIF ("${PROJECT_BUILD_FLAG}" STREQUAL "BT")
-    include_directories(${PROJECT_SOURCE_DIR}/src/project/bt)
-ELSEIF ("${PROJECT_BUILD_FLAG}" STREQUAL "AIV5_ROS")
-    include_directories(${PROJECT_SOURCE_DIR}/src/project/aiv5_ros)
-ELSEIF ("${PROJECT_BUILD_FLAG}" STREQUAL "AIV3_ROS")
-    include_directories(${PROJECT_SOURCE_DIR}/src/project/aiv3_ros)
-ELSEIF ("${PROJECT_BUILD_FLAG}" STREQUAL "AIV5_LCM")
-    include_directories(${PROJECT_SOURCE_DIR}/src/project/aiv5_lcm)
-    file(GLOB_RECURSE PROTO_SOURCE_FILES ${PROJECT_SOURCE_DIR}/msgs/protobuf/3.6.1/proto/*.cc)
-    IF (CC_BUILD)
-        include(${PROJECT_SOURCE_DIR}/aiv_cc_iecu3.1.cmake)
-    ELSE ()
-        include("${CMAKE_CURRENT_LIST_DIR}/cmake/lcm.cmake")
-    ENDIF ()
-ELSEIF ("${PROJECT_BUILD_FLAG}" STREQUAL "AIV3_LCM")
-    include_directories(${PROJECT_SOURCE_DIR}/src/project/aiv3_lcm)
-    IF (CC_BUILD)
-        file(GLOB_RECURSE PROTO_SOURCE_FILES ${PROJECT_SOURCE_DIR}/msgs/protobuf/3.3.0/proto/*.cc)
-        include(${PROJECT_SOURCE_DIR}/aiv_cc_iecu2.0.cmake)
-    ELSE ()
-        file(GLOB_RECURSE PROTO_SOURCE_FILES ${PROJECT_SOURCE_DIR}/msgs/protobuf/3.6.1/proto/*.cc)
-        include("${CMAKE_CURRENT_LIST_DIR}/cmake/lcm.cmake")
-    ENDIF ()
+ELSEIF ("${PROJECT_BUILD_FLAG}" STREQUAL "AIV5")
+    include_directories(${PROJECT_SOURCE_DIR}/src/project/aiv5)
+ELSEIF ("${PROJECT_BUILD_FLAG}" STREQUAL "AIV3")
+    include_directories(${PROJECT_SOURCE_DIR}/src/project/aiv3)
 ELSE ()
     include_directories(${PROJECT_SOURCE_DIR}/src/project/hdt)
 ENDIF ()
@@ -145,77 +114,72 @@ message("++++ this build project : ${PROJECT_BUILD_FLAG}")
 message("++++ this build type    : ${CMAKE_BUILD_TYPE}")
 message("++++ this build vis     : ${VIS_ENABLE}")
 message("++++ this build load_log: ${LOAD_LOG_ENABLE}")
-message("++++ this build cc_build: ${CC_BUILD}")
 
 #------------------------------------------------------------------------------------------
-IF (NOT CC_BUILD)
-    # find packages
-    find_package(uto QUIET)
-    find_package(uto_common_base QUIET)
-    find_package(uto_common_proto QUIET)
-    find_package(ament_cmake_auto REQUIRED)
-    find_package(PCL 1.10 QUIET)
-    add_definitions(${PCL_DEFINITIONS})
+# find packages
+find_package(uto QUIET)
+find_package(uto_common_base QUIET)
+find_package(uto_common_proto QUIET)
+find_package(uto_map_sdk QUIET)
+find_package(ament_cmake_auto REQUIRED)
+ament_auto_find_build_dependencies()
 
-    ament_auto_find_build_dependencies()
+include_directories(
+        ${uto_INCLUDE_DIRS}
+        ${uto_common_base_INCLUDE_DIRS}
+        ${uto_common_proto_INCLUDE_DIRS}
+        ${uto_map_sdk_INCLUDE_DIRS})
 
-    include_directories(
-            ${uto_INCLUDE_DIRS}
-            ${uto_common_base_INCLUDE_DIRS}
-            ${uto_common_proto_INCLUDE_DIRS}
-            ${PCL_INCLUDE_DIRS})
+list(APPEND ALL_LIBRARIES
+        ${uto_LIBRARIES}
+        ${uto_common_base_LIBRARIES}
+        ${uto_common_proto_LIBRARIES}
+        ${uto_map_sdk_LIBRARIES})
 
-    list(APPEND ALL_LIBRARIES
-            ${uto_LIBRARIES}
-            ${uto_common_base_LIBRARIES}
-            ${uto_common_proto_LIBRARIES}
-            ${PCL_LIBRARIES})
+# common compiler settings
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${uto_common_base_INCLUDE_DIRS})
+include(UtoCommonOptimizeOption)
 
-    # common compiler settings
-    set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${uto_common_base_INCLUDE_DIRS})
-    include(UtoCommonOptimizeOption)
+# --------------------------------
+# install geographic lib by 'sudo apt install libgeographic-dev'
+include("${uto_common_base_DIR}/../../../cmake/FindGeographicLib.cmake")
 
-    # --------------------------------
-    # install geographic lib by 'sudo apt install libgeographic-dev'
-    include("${uto_common_base_DIR}/../../../cmake/FindGeographicLib.cmake")
+# --------------------------------
+if (BUILD_TESTING)
+    find_package(ament_lint_auto REQUIRED)
+    ament_lint_auto_find_test_dependencies()
+endif ()
 
-    # --------------------------------
-    if (BUILD_TESTING)
-        find_package(ament_lint_auto REQUIRED)
-        ament_lint_auto_find_test_dependencies()
-    endif ()
+# include paths
+include_directories(${PROJECT_SOURCE_DIR}/src/)
 
-    # include paths
-    include_directories(
-            ${PROJECT_SOURCE_DIR}/src/
-            ${PROJECT_SOURCE_DIR}/msgs/
-            ${PROJECT_SOURCE_DIR}/msgs/protobuf/3.6.1/
-    )
+# add source files
+file(GLOB_RECURSE SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/*.cpp)
+list(APPEND SOURCE_FILES ${PROTO_SOURCE_FILES} ${AUTO_GEN_CMAKE_INFO_FILE})
 
-    # add source files
-    file(GLOB_RECURSE SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/*.cpp)
-    list(APPEND SOURCE_FILES ${PROTO_SOURCE_FILES} ${AUTO_GEN_CMAKE_INFO_FILE})
-
-    # add executable
+# add executable
+if (UTO_SIMULATION)
+    ament_auto_add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})
+else ()
     ament_auto_add_executable(${PROJECT_NAME} ${SOURCE_FILES})
+endif ()
 
-    # dependency
-    ament_target_dependencies(${PROJECT_NAME})
+# dependency
+ament_target_dependencies(${PROJECT_NAME})
 
-    list(APPEND ALL_LIBRARIES ${GeographicLib_LIBRARIES})
+list(APPEND ALL_LIBRARIES ${GeographicLib_LIBRARIES})
 
-    target_link_libraries(${PROJECT_NAME} ${ALL_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} ${ALL_LIBRARIES})
 
-    # install
-    install(TARGETS
-            ${PROJECT_NAME}
-            DESTINATION lib/${PROJECT_NAME})
+# install
+install(TARGETS
+        ${PROJECT_NAME}
+        DESTINATION lib/${PROJECT_NAME})
 
-    install(DIRECTORY launch
-            DESTINATION share/${PROJECT_NAME})
+install(DIRECTORY launch
+        DESTINATION share/${PROJECT_NAME})
 
-    install(DIRECTORY param
-            DESTINATION share/${PROJECT_NAME})
+install(DIRECTORY param
+        DESTINATION share/${PROJECT_NAME})
 
-    ament_auto_package()
-ENDIF ()
+ament_auto_package()

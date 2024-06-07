@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion
+CMAKE_SOURCE_DIR = /home/yang/project/freespace/freespace-fusion
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs
+CMAKE_BINARY_DIR = /home/yang/project/freespace/freespace-fusion/build/uto_per_fs
 
 # Utility rule file for uto_per_fs_uninstall.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/yang/project/freespace/freespace-fusion0117_打印以�
 include CMakeFiles/uto_per_fs_uninstall.dir/progress.make
 
 CMakeFiles/uto_per_fs_uninstall:
-	/usr/bin/cmake -P /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/yang/project/freespace/freespace-fusion/build/uto_per_fs/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 uto_per_fs_uninstall: CMakeFiles/uto_per_fs_uninstall
 uto_per_fs_uninstall: CMakeFiles/uto_per_fs_uninstall.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/uto_per_fs_uninstall.dir/clean:
 .PHONY : CMakeFiles/uto_per_fs_uninstall.dir/clean
 
 CMakeFiles/uto_per_fs_uninstall.dir/depend:
-	cd /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs /home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles/uto_per_fs_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/yang/project/freespace/freespace-fusion/build/uto_per_fs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yang/project/freespace/freespace-fusion /home/yang/project/freespace/freespace-fusion /home/yang/project/freespace/freespace-fusion/build/uto_per_fs /home/yang/project/freespace/freespace-fusion/build/uto_per_fs /home/yang/project/freespace/freespace-fusion/build/uto_per_fs/CMakeFiles/uto_per_fs_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uto_per_fs_uninstall.dir/depend
 
