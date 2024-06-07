@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<camera_name>FC28</camera_name>
+<calibration_time>"2021-03-02 20:59:28"</calibration_time>
+<camIntrinsicMat type_id="opencv-matrix">
+  <rows>3</rows>
+  <cols>3</cols>
+  <dt>d</dt>
+  <data>
+    9.9223369863565972e+02 0. 9.6512313512950846e+02 0.
+    9.9244597817581393e+02 6.1975550482323058e+02 0. 0. 1.</data></camIntrinsicMat>
+<distortion_coefficients type_id="opencv-matrix">
+  <rows>5</rows>
+  <cols>1</cols>
+  <dt>d</dt>
+  <data>
+    -3.2871089340318677e-01 1.1557029495933559e-01
+    -9.9633605057492707e-04 3.0822282959739613e-04
+    -1.9493339488109537e-02</data></distortion_coefficients>
+<undistort_roi>
+  0 0 0 0</undistort_roi>
+<camIntriMatrix type_id="opencv-matrix">
+  <rows>3</rows>
+  <cols>4</cols>
+  <dt>d</dt>
+  <data>
+    9.9223369863565972e+02 0. 9.6512313512950846e+02 0. 0.
+    9.9244597817581393e+02 6.1975550482323058e+02 0. 0. 0. 1. 0.</data></camIntriMatrix>
+<avg_reprojection_error>8.2975305517767073e-01</avg_reprojection_error>
+</opencv_storage>

@@ -1,0 +1,15 @@
+if (USE_CC_IECU2.0)
+  message(STATUS "================  -] building IECU2.0 [-  ================")
+  set(JSONCPP_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/3rdparty/jsoncpp-1.7.2/iecu2.0/include)
+  include_directories(${JSONCPP_INCLUDE_DIR})
+  file(GLOB JSONCPP_LIBS ${PROJECT_SOURCE_DIR}/3rdparty/jsoncpp-1.7.2/iecu2.0/lib/*.so)
+  list(APPEND ALL_LIBRARIES ${JSONCPP_LIBS})
+
+else ()
+  message(STATUS "================  -] building x86-64 [-  ================")
+  set(JSONCPP_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/3rdparty/jsoncpp/include)
+  include_directories(${JSONCPP_INCLUDE_DIR})
+  file(GLOB JSONCPP_LIBS ${PROJECT_SOURCE_DIR}/3rdparty/jsoncpp/lib/*.so)
+  list(APPEND ALL_LIBRARIES ${JSONCPP_LIBS})
+
+endif()

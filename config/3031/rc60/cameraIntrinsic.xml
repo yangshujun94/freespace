@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<camera_name>RC</camera_name>
+<camera_model>PINHOLE</camera_model>
+<calibration_time>"2022-09-08 21:19:27"</calibration_time>
+<camIntrinsicMat type_id="opencv-matrix">
+  <rows>3</rows>
+  <cols>3</cols>
+  <dt>d</dt>
+  <data>
+    1.9434525802046958e+03 0. 9.7221266487807986e+02 0.
+    1.9385621239191032e+03 6.5220250688013778e+02 0. 0. 1.</data></camIntrinsicMat>
+<distortion_coefficients type_id="opencv-matrix">
+  <rows>1</rows>
+  <cols>5</cols>
+  <dt>d</dt>
+  <data>
+    -4.8445649841010502e-01 1.9326923191938167e-01
+    -7.8214769816297072e-03 -1.5484727919630042e-03
+    2.3152770848587183e-02</data></distortion_coefficients>
+<camIntriMatrix type_id="opencv-matrix">
+  <rows>3</rows>
+  <cols>4</cols>
+  <dt>d</dt>
+  <data>
+    1.9434525802046958e+03 0. 9.7221266487807986e+02 0. 0.
+    1.9385621239191032e+03 6.5220250688013778e+02 0. 0. 0. 1. 0.</data></camIntriMatrix>
+<avg_reprojection_error>2.3685403987837170e-01</avg_reprojection_error>
+</opencv_storage>

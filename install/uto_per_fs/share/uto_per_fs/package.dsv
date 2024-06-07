@@ -1,0 +1,8 @@
+source;share/uto_per_fs/hook/cmake_prefix_path.ps1
+source;share/uto_per_fs/hook/cmake_prefix_path.dsv
+source;share/uto_per_fs/hook/cmake_prefix_path.sh
+source;share/uto_per_fs/local_setup.bash
+source;share/uto_per_fs/local_setup.dsv
+source;share/uto_per_fs/local_setup.ps1
+source;share/uto_per_fs/local_setup.sh
+source;share/uto_per_fs/local_setup.zsh

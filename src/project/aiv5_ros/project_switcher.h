@@ -1,0 +1,20 @@
+#ifndef PROJECT_AIV5_ROS_SWITCHER_H_
+#define PROJECT_AIV5_ROS_SWITCHER_H_
+
+#define CFG_ROS2                     FS_SWITCH(1)
+#define CFG_USE_LIGHT_COMMON         FS_SWITCH(0)
+#define CFG_MULTITHREAD              FS_SWITCH(0)
+#define CFG_EXPAND_TABLE             FS_SWITCH(1) // -- 1:AIV  2:HDT
+#define CFG_AIV_LOCK_STATION_PUSH    FS_SWITCH(0)
+#define CFG_AIV_ELECTRIC_FENCE       FS_SWITCH(0)
+#define CFG_PUB_CONTOUR              FS_SWITCH(0)
+#define CFG_HDT_DT_BT_REMOVE_GRASS   FS_SWITCH(0)
+#define CFG_USE_CAM_FW_FS            FS_SWITCH(0) // -- 0: DONT USE FW FS  1: USE FW FS
+#define CFG_USE_CAM_FISH_FS          FS_SWITCH(1) // -- 0: DONT USE FISH FS  1: USE FISH FS
+#define CFG_CAM_FW_DENOISING_BACKEND FS_SWITCH(0) // -- 0: FRONT  1: BACKEND
+#define CFG_AIV5_LCM_CALIBRATION     FS_SWITCH(0)
+#define CFG_AIV5_BEV_FS              FS_SWITCH(0) // -- 0: DONT USE BEV FS  1: USE BEV FS
+#define CFG_PUB_ENU_FS               FS_SWITCH(0) // -- 0: EGO  1: ENU
+#define CFG_USE_ROAD_MODEL           FS_SWITCH(0) // -- 0: DONT USE ROAD MODEL  1: USE ROAD MODEL
+#define CFG_USE_SVC                  FS_SWITCH(1)
+#endif //PROJECT_AIV5_ROS_SWITCHER_H_

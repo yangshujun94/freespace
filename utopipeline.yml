@@ -1,0 +1,647 @@
+name: freespace_fusion
+org: perception
+modules:
+  - freespace_fusion_hdt_orin_coverity
+  - freespace_fusion_hdt_ipc
+  - freespace_fusion_aiv_xavier
+  - freespace_fusion_hdt_orin
+  - freespace_fusion_hdt_a1000
+  - freespace_fusion_mifa_orin
+  - freespace_fusion_AIV_1.5
+  - freespace_fusion_aiv_orin
+  - freespace_fusion_dt
+  - freespace_fusion_adt_orin
+
+stages:
+  jiraCheck: true
+  checkout:
+    - module: freespace_fusion_hdt_orin_coverity
+      when:
+        - pre-dev
+        - dev
+        - release
+      dependency_repo:
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/infra/ipc/uto_ros2_galactic_src.git
+          branch: v0.2.0
+          checkout_dir: ros_src
+          meta:
+            UTO_TARGET_BOARD: orin
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/infra/ros2_3rd/uto-ros2-galactic-3rdparty.git
+          branch: main
+          checkout_dir: uto_ros2_3rdparty
+          meta:
+            UTO_TARGET_BOARD: orin
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/all/common.git
+          branch: develop
+          checkout_dir: uto_common
+          meta:
+            UTO_TARGET_BOARD: orin
+    - module: freespace_fusion_hdt_ipc
+      when:
+        - pre-dev
+        - pre-main
+        - dev
+        - dev-main
+        - release
+        - dev-hh2.0
+      dependency_repo:
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/infra/ipc/uto_ros2_galactic_src.git
+          branch: v0.2.0
+          checkout_dir: ros_src
+          meta:
+            UTO_TARGET_BOARD: ipc
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/infra/ros2_3rd/uto-ros2-galactic-3rdparty.git
+          branch: main
+          checkout_dir: uto_ros2_3rdparty
+          meta:
+            UTO_TARGET_BOARD: ipc
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/all/common.git
+          branch: develop
+          checkout_dir: uto_common
+          meta:
+            UTO_TARGET_BOARD: ipc
+    - module: freespace_fusion_hdt_orin
+      when:
+        - pre-dev
+        - pre-main
+        - dev
+        - dev-main
+        - release
+        - dev-hh2.5
+      dependency_repo:
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/infra/ipc/uto_ros2_galactic_src.git
+          branch: v0.2.0
+          checkout_dir: ros_src
+          meta:
+            UTO_TARGET_BOARD: orin
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/infra/ros2_3rd/uto-ros2-galactic-3rdparty.git
+          branch: main
+          checkout_dir: uto_ros2_3rdparty
+          meta:
+            UTO_TARGET_BOARD: orin
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/all/common.git
+          branch: develop
+          checkout_dir: uto_common
+          meta:
+            UTO_TARGET_BOARD: orin
+    - module: freespace_fusion_adt_orin
+      when:
+        - pre-dev
+        - pre-main
+        - dev
+        - dev-main
+        - release
+      dependency_repo:
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/infra/ipc/uto_ros2_galactic_src.git
+          branch: v0.2.0
+          checkout_dir: ros_src
+          meta:
+            UTO_TARGET_BOARD: orin
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/infra/ros2_3rd/uto-ros2-galactic-3rdparty.git
+          branch: main
+          checkout_dir: uto_ros2_3rdparty
+          meta:
+            UTO_TARGET_BOARD: orin
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/all/common.git
+          branch: develop
+          checkout_dir: uto_common
+          meta:
+            UTO_TARGET_BOARD: orin
+    - module: freespace_fusion_aiv_orin
+      when:
+        - aiv-2.5
+        - release
+      dependency_repo:
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/infra/ipc/uto_ros2_galactic_src.git
+          branch: v0.2.0
+          checkout_dir: ros_src
+          meta:
+            UTO_TARGET_BOARD: orin
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/infra/ros2_3rd/uto-ros2-galactic-3rdparty.git
+          branch: main
+          checkout_dir: uto_ros2_3rdparty
+          meta:
+            UTO_TARGET_BOARD: orin
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/all/common.git
+          branch: develop
+          checkout_dir: uto_common
+          meta:
+            UTO_TARGET_BOARD: orin
+    - module: freespace_fusion_hdt_a1000
+      when:
+        - pre-dev
+        - pre-main
+        - dev
+        - dev-main
+        - release
+      dependency_repo:
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/infra/ipc/uto_ros2_galactic_src.git
+          branch: v0.2.0
+          checkout_dir: ros_src
+          meta:
+            UTO_TARGET_BOARD: a1000
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/infra/ros2_3rd/uto-ros2-galactic-3rdparty.git
+          branch: main
+          checkout_dir: uto_ros2_3rdparty
+          meta:
+            UTO_TARGET_BOARD: a1000
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/all/common.git
+          branch: develop
+          checkout_dir: uto_common
+          meta:
+            UTO_TARGET_BOARD: a1000
+    - module: freespace_fusion_aiv_xavier
+      when:
+        - pre-dev
+        - pre-main
+        - dev
+        - dev-main
+        - release
+        - dev-aiv
+      dependency_repo:
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/infra/ipc/uto_ros2_galactic_src.git
+          branch: v0.2.0
+          checkout_dir: ros_src
+          meta:
+            UTO_TARGET_BOARD: xavier
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/infra/ros2_3rd/uto-ros2-galactic-3rdparty.git
+          branch: main
+          checkout_dir: uto_ros2_3rdparty
+          meta:
+            UTO_TARGET_BOARD: xavier
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/all/common.git
+          branch: develop
+          checkout_dir: uto_common
+          meta:
+            UTO_TARGET_BOARD: xavier
+    - module: uto_fusion_mifa_orin
+      when:
+        - pre-dev-citest
+        - pre-dev
+        - pre-main
+        - dev
+        - dev-main
+        - dev-citest
+        - release
+      dependency_repo:
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/infra/ipc/uto_ros2_galactic_src.git
+          branch: v0.2.0
+          checkout_dir: ros_src
+          meta:
+            UTO_TARGET_BOARD: orin
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/infra/ros2_3rd/uto-ros2-galactic-3rdparty.git
+          branch: main
+          checkout_dir: uto_ros2_3rdparty
+          meta:
+            UTO_TARGET_BOARD: orin
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/all/common.git
+          branch: develop
+          checkout_dir: uto_common
+          meta:
+            UTO_TARGET_BOARD: orin
+    - module: freespace_fusion_AIV_1.5
+      when:
+        - pre-dev
+        - pre-main
+        - dev
+        - dev-main
+        - release
+      dependency_repo:
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/all/common.git
+          branch: develop
+          checkout_dir: uto_common
+    - module: freespace_fusion_dt
+      when:
+        - pre-dev
+        - dev
+        - release
+      dependency_repo:
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/infra/ipc/uto_ros2_galactic_src.git
+          branch: v0.2.0
+          checkout_dir: ros_src
+          meta:
+            UTO_TARGET_BOARD: orin
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/infra/ros2_3rd/uto-ros2-galactic-3rdparty.git
+          branch: main
+          checkout_dir: uto_ros2_3rdparty
+          meta:
+            UTO_TARGET_BOARD: orin
+        - git_url: https://gitlab.utopilot.com.cn/utopilot/all/common.git
+          branch: develop
+          checkout_dir: uto_common
+          meta:
+            UTO_TARGET_BOARD: orin
+
+  build:
+    - module: freespace_fusion_hdt_orin_coverity
+      when:
+        - pre-dev
+        - dev
+        - release
+      build_type: release
+      type: conan
+      repo: conan-local
+      conan_file_path: perception/HDT_ORIN/freespace_fusion_hdt_orin_coverity.conanfile.py
+      dependency: [ ]
+      build_params:
+        settings:
+          arch: "x86_64"
+          arch_build: "x86_64"
+          os: "Linux"
+          compiler: "gcc"
+          compiler.version: "9.4"
+          compiler.libcxx: "libstdc++17"
+        env_vars:
+          UTO_OPTIMIZE_MARCH: skylake
+          UTO_TARGET_VEHICLE_TYPE: hdt
+          UTO_TARGET_BOARD: orin
+          UTO_TARGET_MIDDLEWARE: ros2
+        build_type: Release
+        target_board: orin
+    - module: freespace_fusion_hdt_ipc
+      when:
+        - pre-dev
+        - pre-main
+        - dev
+        - dev-main
+        - release
+        - dev-hh2.0
+      build_type: release
+      type: conan
+      repo: conan-local
+      conan_file_path: perception/HDT_IPC/freespace_fusion_hdt_ipc.conanfile.py
+      dependency: [ ]
+      build_params:
+        settings:
+          arch: "x86_64"
+          arch_build: "x86_64"
+          os: "Linux"
+          compiler: "gcc"
+          compiler.version: "9.4"
+          compiler.libcxx: "libstdc++17"
+        env_vars:
+          UTO_OPTIMIZE_MARCH: skylake
+          UTO_TARGET_VEHICLE_TYPE: hdt
+          UTO_TARGET_BOARD: ipc
+          UTO_TARGET_MIDDLEWARE: ros2
+        build_type: Release
+        target_board: Nuvo-8208GC-Series
+    - module: freespace_fusion_hdt_orin
+      when:
+        - pre-dev
+        - pre-main
+        - dev
+        - dev-main
+        - release
+        - dev-hh2.5
+      build_type: release
+      type: conan
+      repo: conan-local
+      conan_file_path: perception/HDT_ORIN/freespace_fusion_hdt_orin.conanfile.py
+      dependency: [ ]
+      build_params:
+        settings:
+          arch: "armv8"
+          arch_build: "armv8"
+          os: "Linux"
+          compiler: "gcc"
+          compiler.version: "9.4"
+          compiler.libcxx: "libstdc++17"
+        env_vars:
+          UTO_OPTIMIZE_MARCH: skylake
+          UTO_TARGET_VEHICLE_TYPE: hdt
+          UTO_TARGET_BOARD: orin
+          UTO_TARGET_MIDDLEWARE: ros2
+        build_type: Release_hdt_orin
+        target_board: Orin
+    - module: freespace_fusion_adt_orin
+      when:
+        - pre-dev
+        - pre-main
+        - dev
+        - dev-main
+        - release
+      build_type: release
+      type: conan
+      repo: conan-local
+      conan_file_path: perception/ADT_ORIN/freespace_fusion_adt_orin.conanfile.py
+      dependency: [ ]
+      build_params:
+        settings:
+          arch: "armv8"
+          arch_build: "armv8"
+          os: "Linux"
+          compiler: "gcc"
+          compiler.version: "9.4"
+          compiler.libcxx: "libstdc++17"
+        env_vars:
+          UTO_OPTIMIZE_MARCH: skylake
+          UTO_TARGET_VEHICLE_TYPE: adt
+          UTO_TARGET_BOARD: orin
+          UTO_TARGET_MIDDLEWARE: ros2
+        build_type: Release_hdt_orin
+        target_board: Orin
+
+    - module: freespace_fusion_aiv_orin
+      when:
+        - aiv-2.5
+        - release
+      build_type: release
+      type: conan
+      repo: conan-local
+      conan_file_path: perception/AIV_ORIN/freespace_fusion_aiv_orin.conanfile.py
+      dependency: [ ]
+      build_params:
+        settings:
+          arch: "armv8"
+          arch_build: "armv8"
+          os: "Linux"
+          compiler: "gcc"
+          compiler.version: "9.4"
+          compiler.libcxx: "libstdc++17"
+        env_vars:
+          UTO_OPTIMIZE_MARCH: skylake
+          UTO_TARGET_VEHICLE_TYPE: aiv
+          UTO_TARGET_BOARD: orin
+          UTO_TARGET_MIDDLEWARE: ros2
+        build_type: Release_hdt_orin
+        target_board: Orin
+
+    - module: freespace_fusion_hdt_a1000
+      when:
+        - pre-dev
+        - pre-main
+        - dev
+        - dev-main
+        - release
+      build_type: release
+      type: conan
+      repo: conan-local
+      conan_file_path: perception/HDT_A1000/freespace_fusion_hdt_a1000.conanfile.py
+      dependency: [ ]
+      build_params:
+        settings:
+          arch: "armv8"
+          arch_build: "armv8"
+          os: "Linux"
+          compiler: "gcc"
+          compiler.version: "9.4"
+          compiler.libcxx: "libstdc++17"
+        env_vars:
+          UTO_OPTIMIZE_MARCH: skylake
+          UTO_TARGET_VEHICLE_TYPE: hdt
+          UTO_TARGET_BOARD: a1000
+          UTO_TARGET_MIDDLEWARE: ros2
+        build_type: Release_hdt_a1000
+        target_board: a1000
+    - module: freespace_fusion_aiv_xavier
+      when:
+        - pre-dev
+        - pre-main
+        - dev
+        - dev-main
+        - release
+        - dev-aiv
+      build_type: release
+      type: conan
+      repo: conan-local
+      conan_file_path: perception/AIV_XAVIER/freespace_fusion_aiv_xavier.conanfile.py
+      dependency: [ ]
+      build_params:
+        settings:
+          arch: "armv8"
+          arch_build: "armv8"
+          os: "Linux"
+          compiler: "gcc"
+          compiler.version: "9.4"
+          compiler.libcxx: "libstdc++17"
+        env_vars:
+          UTO_OPTIMIZE_MARCH: skylake
+          UTO_TARGET_VEHICLE_TYPE: aiv
+          UTO_TARGET_BOARD: xavier
+          UTO_TARGET_MIDDLEWARE: ros2
+        build_type: Release_aiv_xavier
+        target_board: Xavier
+    - module: uto_fusion_mifa_orin
+      when:
+        - pre-dev
+        - pre-main
+        - dev
+        - dev-main
+        - pre-dev-citest
+        - dev-citest
+        - release
+      build_type: release
+      type: conan
+      repo: conan-local
+      conan_file_path: perception/MIFA_ORIN/uto_fusion.conanfile.py
+      dependency: [ ]
+      build_params:
+        settings:
+          arch: "armv8"
+          arch_build: "armv8"
+          os: "Linux"
+          compiler: "gcc"
+          compiler.version: "9.4"
+          compiler.libcxx: "libstdc++17"
+        env_vars:
+          UTO_OPTIMIZE_MARCH: skylake
+          UTO_TARGET_VEHICLE_TYPE: mifa
+          UTO_TARGET_BOARD: orin
+        build_type: Release_mifa_orin
+        target_board: Orin
+    - module: freespace_fusion_AIV_1.5
+      when:
+        - pre-dev
+        - pre-main
+        - dev
+        - dev-main
+        - release
+      build_type: release
+      type: conan
+      repo: conan-local
+      conan_file_path: perception/AIV/freespace_fusion_aiv.conanfile.py
+      dependency: [ ]
+      build_params:
+        settings:
+          arch: "armv8"
+          arch_build: "armv8"
+          os: "Linux"
+          compiler: "gcc"
+          compiler.version: "9.4"
+          compiler.libcxx: "libstdc++17"
+        build_type: Release
+        target_board: Xavier
+    - module: freespace_fusion_dt
+      when:
+        - pre-dev
+        - dev
+        - release
+      build_type: release
+      type: conan
+      repo: conan-local
+      conan_file_path: perception/DT_ORIN/freespace_fusion_dt_orin.conanfile.py
+      dependency: [ ]
+      build_params:
+        settings:
+          arch: "armv8"
+          arch_build: "armv8"
+          os: "Linux"
+          compiler: "gcc"
+          compiler.version: "9.4"
+          compiler.libcxx: "libstdc++17"
+        env_vars:
+          UTO_OPTIMIZE_MARCH: skylake
+          UTO_TARGET_VEHICLE_TYPE: dt
+          UTO_TARGET_BOARD: orin
+          UTO_TARGET_MIDDLEWARE: ros2
+        build_type: Release_dt_orin
+        target_board: Orin
+
+
+  package:
+    - module: freespace_fusion_hdt_ipc
+      meta:
+        UTO_TARGET_BOARD: ipc
+        UTO_TARGET_MIDDLEWARE: ros2
+        url: utopilot/perception/freespace-fusion
+      when:
+        - dev
+        - dev-main
+        - release
+        - dev-hh2.0
+      generic_package:
+        package_repos:
+          - Perception-GT-generic-local
+        package_content:
+          - "*"
+        add_datestamp: true
+        add_commit_sha: true
+    - module: freespace_fusion_hdt_orin
+      meta:
+        UTO_TARGET_BOARD: orin
+        UTO_TARGET_MIDDLEWARE: ros2
+        url: utopilot/perception/freespace-fusion
+      when:
+        - dev
+        - dev-main
+        - release
+        - dev-hh2.5
+      generic_package:
+        package_repos:
+          - Perception-GT-generic-local
+        package_content:
+          - "*"
+        add_datestamp: true
+        add_commit_sha: true
+    - module: freespace_fusion_adt_orin
+      meta:
+        UTO_TARGET_BOARD: orin
+        UTO_TARGET_MIDDLEWARE: ros2
+        url: utopilot/perception/freespace-fusion
+      when:
+        - dev
+        - dev-main
+        - release
+      generic_package:
+        package_repos:
+          - Perception-GT-generic-local
+        package_content:
+          - "*"
+        add_datestamp: true
+        add_commit_sha: true
+
+    - module: freespace_fusion_aiv_orin
+      meta:
+        UTO_TARGET_BOARD: orin
+        UTO_TARGET_MIDDLEWARE: ros2
+        url: utopilot/perception/freespace-fusion
+      when:
+        - aiv-2.5
+        - release
+      generic_package:
+        package_repos:
+          - Perception-GT-generic-local
+        package_content:
+          - "*"
+        add_datestamp: true
+        add_commit_sha: true
+
+    - module: freespace_fusion_hdt_a1000
+      meta:
+        UTO_TARGET_BOARD: a1000
+        UTO_TARGET_MIDDLEWARE: ros2
+        url: utopilot/perception/freespace-fusion
+      when:
+        - dev
+        - dev-main
+        - release
+      generic_package:
+        package_repos:
+          - Perception-GT-generic-local
+        package_content:
+          - "*"
+        add_datestamp: true
+        add_commit_sha: true
+    - module: freespace_fusion_aiv_xavier
+      meta:
+        UTO_TARGET_BOARD: xavier
+        UTO_TARGET_MIDDLEWARE: ros2
+        url: utopilot/perception/freespace-fusion
+      when:
+        - dev
+        - dev-main
+        - release
+        - dev-aiv
+      generic_package:
+        package_repos:
+          - Perception-GT-generic-local
+        package_content:
+          - "*"
+        add_datestamp: true
+        add_commit_sha: true
+    - module: freespace_fusion_AIV_1.5
+      when:
+        - dev
+        - dev-main
+        - release
+      generic_package:
+        package_repos:
+          - Perception-GT-generic-local
+        package_content:
+          - "*"
+        add_datestamp: true
+        add_commit_sha: true
+    - module: uto_fusion_mifa_orin
+      meta:
+        UTO_TARGET_BOARD: orin
+        UTO_TARGET_MIDDLEWARE: ros2
+        url: utopilot/perception/freespace-fusion
+      when:
+        - dev
+        - dev-main
+        - dev-citest
+        - release
+      generic_package:
+        package_repos:
+          - Perception-GT-generic-local
+        package_content:
+          - "*"
+        add_datestamp: true
+        add_commit_sha: true
+    - module: freespace_fusion_dt
+      meta:
+        UTO_TARGET_BOARD: orin
+        UTO_TARGET_MIDDLEWARE: ros2
+        url: utopilot/perception/freespace-fusion
+      when:
+        - dev
+        - release
+      generic_package:
+        package_repos:
+          - Perception-GT-generic-local
+        package_content:
+          - "*"
+        add_datestamp: true
+        add_commit_sha: true
+

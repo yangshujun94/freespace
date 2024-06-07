@@ -1,0 +1,26 @@
+vehicle_type: AIV
+vehicle_id: 5021
+calibration_time: "2023-08-03 13:31:13"
+intrinsic {
+  fx: 290.515533
+  fy: 290.294098
+  cx: 641.39032
+  cy: 478.851196
+}
+fisheye_coeffs {
+  k1: 0.140848
+  k2: 0.0037564158
+  k3: -0.0165549256
+  k4: 0.00222256407
+}
+distortion_model: EQUIDISTANT
+translation {
+  x: 5.48
+  y: -1.35
+  z: 1.24
+}
+rotation_rpy_deg {
+  x: -126.51
+  y: -0.53
+  z: 178.3
+}

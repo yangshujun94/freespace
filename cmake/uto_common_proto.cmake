@@ -1,0 +1,6 @@
+message(STATUS "================  -] building x86-64 [-  ================")
+set(UTO_COMMON_PROTO_INCLUDE ${CMAKE_CURRENT_LIST_DIR}/../3rdparty/uto_common_proto/include)
+set(UTO_COMMON_PROTO_LIBRARIES ${CMAKE_CURRENT_LIST_DIR}/../3rdparty/uto_common_proto/lib/libuto_common_proto.so)
+# message("------------------------")
+include_directories(${UTO_COMMON_PROTO_INCLUDE})
+list(APPEND ALL_LIBRARIES ${UTO_COMMON_PROTO_LIBRARIES})

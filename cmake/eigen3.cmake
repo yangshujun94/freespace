@@ -1,0 +1,12 @@
+if(USE_CC_IECU2.0)
+    message(STATUS "================  -] building IECU2.0 [-  ================")
+    find_package(Eigen3 REQUIRED)
+    include_directories(${EIGEN3_INCLUDE_DIR})
+    list(APPEND ALL_LIBRARIES Eigen3::Eigen )
+else ()
+    message(STATUS "================  -] building x86-64 [-  ================")
+    find_package(Eigen3 REQUIRED)
+    include_directories(${EIGEN3_INCLUDE_DIR})
+    list(APPEND ALL_LIBRARIES Eigen3::Eigen )
+endif()
+

@@ -1,0 +1,41 @@
+vehicle_type: AIV
+vehicle_id: 5022
+calibration_time: "2023-08-24 16:04:28"
+hfov: 97
+vfov: 65
+intrinsic {
+  fx: 1678.99426
+  fy: 1678.48303
+  cx: 1924.54089
+  cy: 1075.7373
+}
+fisheye_coeffs {
+  k1: -0.027014507
+  k2: -0.00973185897
+  k3: 0.00210901396
+  k4: 0.000408388238
+}
+distortion_model: EQUIDISTANT
+translation {
+  x: 7.24
+  y: 0.03
+  z: 1.45
+}
+rotation_rpy_deg {
+  x: -87.56
+  y: -0.34
+  z: -90.99
+}
+intrinsic_raw {
+  fx: 1908.19189
+  fy: 1907.61084
+  cx: 1921.81946
+  cy: 1076.94849
+}
+intrinsic_hal {
+  fx: 1678.99426
+  fy: 1678.48303
+  cx: 1924.54089
+  cy: 1075.7373
+}
+undistortion_hal: true

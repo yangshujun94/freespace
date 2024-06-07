@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<camera_name>FC120</camera_name>
+<calibration_time>"2022-10-12 06:51:17"</calibration_time>
+<undistort>1</undistort>
+<rotationMatrix type_id="opencv-matrix">
+  <rows>3</rows>
+  <cols>3</cols>
+  <dt>d</dt>
+  <data>
+    9.9992816797594286e-01 -1.1206734718814863e-02
+    -4.2506452706454886e-03 -4.2987113432119712e-03
+    -4.2684408538530925e-03 -9.9998165057838184e-01
+    1.1188385453786084e-02 9.9992809216944156e-01
+    -4.3163087607631292e-03</data></rotationMatrix>
+<offsetMatrix type_id="opencv-matrix">
+  <rows>3</rows>
+  <cols>1</cols>
+  <dt>d</dt>
+  <data>
+    -1.8315534373240218e+03 1.4326739484991735e+03
+    3.3137026573073895e+03</data></offsetMatrix>
+<deltaXY>
+  1845. -3260.</deltaXY>
+<headLocation>
+  1845. -3260.</headLocation>
+<pointA>
+  4.2626083686363961e+02 1.0256338111789501e+03</pointA>
+<pointB>
+  1.4944908412571233e+03 1.0159403523514532e+03</pointB>
+<pointV>
+  9.5610095214843750e+02 5.9871923828125000e+02</pointV>
+<cameraLocation>
+  1.8005054931640625e+03 -3.3278747558593750e+03 1.4391652832031250e+03</cameraLocation>
+<extrinsicMatrix type_id="opencv-matrix">
+  <rows>4</rows>
+  <cols>4</cols>
+  <dt>d</dt>
+  <data>
+    9.9992816797594286e-01 -1.1206734718814863e-02
+    -4.2506452706454886e-03 -1.8315534373240218e+03
+    -4.2987113432119712e-03 -4.2684408538530925e-03
+    -9.9998165057838184e-01 1.4326739484991735e+03
+    1.1188385453786084e-02 9.9992809216944156e-01
+    -4.3163087607631292e-03 3.3137026573073895e+03 0. 0. 0. 1.</data></extrinsicMatrix>
+ <!-- resumed -->
+
+<yaw_z>6.4211787662138753e-01</yaw_z>
+<pitch_x>9.0244564257899640e+01</pitch_x>
+<roll_z>0.</roll_z>
+</opencv_storage>

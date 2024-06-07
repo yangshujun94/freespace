@@ -1,0 +1,15 @@
+vehicle_type: AIV
+vehicle_id: 5022
+calibration_time: "2023-08-07 16:33:05"
+sensor_id: 35
+sensor_type: AT128
+rotation_rpy_deg {
+  x: -1.56347251
+  y: -0.615723372
+  z: -148.89502
+}
+translation {
+  x: -7.10275888
+  y: 1.12119472
+  z: 0.605361164
+}

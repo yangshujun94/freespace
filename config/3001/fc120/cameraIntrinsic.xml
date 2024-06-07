@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<camera_name>FC120</camera_name>
+<camera_model>PINHOLE</camera_model>
+<calibration_time>"2021-12-16 23:58:55"</calibration_time>
+<camIntrinsicMat type_id="opencv-matrix">
+  <rows>3</rows>
+  <cols>3</cols>
+  <dt>d</dt>
+  <data>
+    1.0001133244459209e+03 0. 9.6539198822610263e+02 0.
+    1.0002523206825506e+03 6.1906694268020601e+02 0. 0. 1.</data></camIntrinsicMat>
+<distortion_coefficients type_id="opencv-matrix">
+  <rows>1</rows>
+  <cols>5</cols>
+  <dt>d</dt>
+  <data>
+    -3.2244556534117519e-01 1.0294359246815919e-01
+    -5.3061680803996667e-04 -1.3078991569658651e-04
+    -1.4356323791428411e-02</data></distortion_coefficients>
+<camIntriMatrix type_id="opencv-matrix">
+  <rows>3</rows>
+  <cols>4</cols>
+  <dt>d</dt>
+  <data>
+    1.0001133244459209e+03 0. 9.6539198822610263e+02 0. 0.
+    1.0002523206825506e+03 6.1906694268020601e+02 0. 0. 0. 1. 0.</data></camIntriMatrix>
+<avg_reprojection_error>1.5139416344863272e+00</avg_reprojection_error>
+</opencv_storage>

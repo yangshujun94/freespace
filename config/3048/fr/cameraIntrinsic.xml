@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<camera_name>FR</camera_name>
+<camera_model>FISHEYE</camera_model>
+<calibration_time>"2022-12-25 18:13:20"</calibration_time>
+<camIntrinsicMat type_id="opencv-matrix">
+  <rows>3</rows>
+  <cols>3</cols>
+  <dt>d</dt>
+  <data>
+    1143.6229030709608 0. 950.01786918974813 0.
+    1143.7433296999634 595.88902896043408 0. 0. 1.</data></camIntrinsicMat>
+<distortion_coefficients type_id="opencv-matrix">
+  <rows>4</rows>
+  <cols>1</cols>
+  <dt>d</dt>
+  <data>
+    -0.021101552804355491 -0.038794415238071388
+    0.017744573888967181 0.0053913981039670862</data></distortion_coefficients>
+<camIntriMatrix type_id="opencv-matrix">
+  <rows>3</rows>
+  <cols>4</cols>
+  <dt>d</dt>
+  <data>
+    1143.6229030709608 0. 950.01786918974813 0. 0.
+    1143.7433296999634 595.88902896043408 0. 0. 0. 1. 0.</data></camIntriMatrix>
+<avg_reprojection_error>3.1081958201349685e-01</avg_reprojection_error>
+</opencv_storage>

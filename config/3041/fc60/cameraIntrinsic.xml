@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<camera_name>FC60</camera_name>
+<camera_model>PINHOLE</camera_model>
+<calibration_time>"2022-12-21 14:19:33"</calibration_time>
+<camIntrinsicMat type_id="opencv-matrix">
+  <rows>3</rows>
+  <cols>3</cols>
+  <dt>d</dt>
+  <data>
+    1932.2977046756134 0. 961.16330113341553 0.
+    1931.6710979787886 625.20671794219561 0. 0. 1.</data></camIntrinsicMat>
+<distortion_coefficients type_id="opencv-matrix">
+  <rows>1</rows>
+  <cols>5</cols>
+  <dt>d</dt>
+  <data>
+   -0.50456422008714041 0.25709964772870114
+    -0.0018700085205969152 0.00051234928295766017
+    0</data></distortion_coefficients>
+<camIntriMatrix type_id="opencv-matrix">
+  <rows>3</rows>
+  <cols>4</cols>
+  <dt>d</dt>
+  <data>
+    1932.2977046756134 0. 961.16330113341553 0. 0.
+    1931.6710979787886 625.20671794219561 0. 0. 0. 1. 0.</data></camIntriMatrix>
+<avg_reprojection_error>2.2241281001904609e-01</avg_reprojection_error>
+</opencv_storage>

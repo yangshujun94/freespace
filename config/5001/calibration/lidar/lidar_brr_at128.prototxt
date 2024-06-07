@@ -1,0 +1,13 @@
+vehicle_type: AIV
+vehicle_id: 5001
+calibration_time: "2023-07-22 21:09:19"
+rotation_rpy_deg {
+  x: -1.50923316
+  y: 0.778733087
+  z: -54.9516106
+}
+translation {
+  x: -7.19299555
+  y: -1.20358682
+  z: 0.557446094
+}

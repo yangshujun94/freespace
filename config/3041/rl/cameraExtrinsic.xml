@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<camera_name>RL</camera_name>
+<calibration_time>"2022-12-21 14:58:38"</calibration_time>
+<undistort>1</undistort>
+<rotationMatrix type_id="opencv-matrix">
+  <rows>3</rows>
+  <cols>3</cols>
+  <dt>d</dt>
+  <data>
+    7.1008795077233233e-01 7.0357105457558844e-01 2.7620161682079425e-02
+    1.7957839736860159e-03 3.7417132100943107e-02
+    -9.9929812037512633e-01 -7.0411069962603867e-01
+    7.0963915435151614e-01 2.5305993033180152e-02</data></rotationMatrix>
+<offsetMatrix type_id="opencv-matrix">
+  <rows>3</rows>
+  <cols>1</cols>
+  <dt>d</dt>
+  <data>
+    7.5939967389750163e+03 1.5924605877563586e+03 5.7532486417221544e+03</data></offsetMatrix>
+<deltaXY>
+  0. 0.</deltaXY>
+<headLocation>
+  0. 0.</headLocation>
+<pointA>
+  0. 0.</pointA>
+<pointB>
+  0. 0.</pointB>
+<pointV>
+  0. 0.</pointV>
+<cameraLocation>
+  -1.3443414306640625e+03 -9.4852324218750000e+03 1.2360037841796875e+03</cameraLocation>
+<extrinsicMatrix type_id="opencv-matrix">
+  <rows>4</rows>
+  <cols>4</cols>
+  <dt>d</dt>
+  <data>
+    7.1008795077233233e-01 7.0357105457558844e-01 2.7620161682079425e-02
+    7.5939967389750163e+03 1.7957839736860159e-03 3.7417132100943107e-02
+    -9.9929812037512633e-01 1.5924605877563586e+03
+    -7.0411069962603867e-01 7.0963915435151614e-01
+    2.5305993033180152e-02 5.7532486417221544e+03 0. 0. 0. 1.</data></extrinsicMatrix>
+ <!-- resumed -->
+
+<bsd_deltaXY>
+  -3145. -6640.</bsd_deltaXY>
+<yaw>4.4757743589953463e+01</yaw>
+<pitch>8.7957676868037566e+01</pitch>
+<roll>1.4489842159341071e-01</roll>
+<avg_reprojection_error>4.6112519502639771e-01</avg_reprojection_error>
+</opencv_storage>

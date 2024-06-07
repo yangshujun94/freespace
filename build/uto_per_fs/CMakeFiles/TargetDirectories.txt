@@ -1,0 +1,10 @@
+/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles/install/strip.dir
+/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles/install/local.dir
+/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles/install.dir
+/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles/list_install_components.dir
+/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles/rebuild_cache.dir
+/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles/edit_cache.dir
+/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles/test.dir
+/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles/uto_per_fs.dir
+/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles/uto_per_fs_uninstall.dir
+/home/yang/project/freespace/freespace-fusion0117_打印以及修改同步/freespace-fusion/build/uto_per_fs/CMakeFiles/uninstall.dir
