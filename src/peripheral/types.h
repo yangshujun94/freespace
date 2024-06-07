@@ -64,9 +64,6 @@ namespace fs
     bool     locked      = false;
     bool     isBorder    = true;
     bool     isFreeInCam = false;
-    float    top         = 0.0f;
-    float    ground      = 0.0f;
-    float    bottom      = 0.0f;
 
 #if FS_CHECK(CFG_DEBUG_GRID)
     int      logitPrev  = 0;

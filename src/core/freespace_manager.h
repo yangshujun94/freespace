@@ -10,7 +10,6 @@
 #include "grid_map.h"
 #include "peripheral/types.h"
 #include "object.h"
-#include <perception_road_model.pb.h>
 
 namespace fs
 {
@@ -33,7 +32,6 @@ namespace fs
                        const uto::proto::CameraFreespace*     fsFisheyeBcbPtr,
                        const uto::proto::CameraFreespace*     fsFisheyeBllPtr,
                        const uto::proto::CameraFreespace*     fsFisheyeBrrPtr,
-                       const uto::proto::RoadModel*           roadModelPtr,
                        const uto::proto::PerceptionObstacles* odPtr,
                        const uto::proto::PerceptionGates*     gatePtr);
 
@@ -51,8 +49,6 @@ namespace fs
     void fuseFisheyeFreespace(Grid& grid, const uto::proto::CameraFreespace& fisheyeFreespace, const fs::SensorId sensorId, const std::vector<EVector2>& fsPointsCylinder) const;
     void setupFisheye2CylinderMap(const uto::proto::CameraFreespace& fisheyeFs, const SensorId sensorId);
     void processDrivingBoundary(const uto::proto::PerceptionFreespace& fsLidar);
-    void refineRoadModel(const uto::proto::RoadModel* roadModelPtr, const uto::proto::PerceptionFreespace& refineRoadModel);
-    void processTunnelGeoFence();
 
     /// @brief Enter the Weighbridge area.
     /// If you open the "CFG_USE_WEIGHBRIDGE" macro, only output points whose attributes are the RoadEdge;

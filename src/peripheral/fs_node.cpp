@@ -302,13 +302,6 @@ void fs::FsNode::loadBag()
         CameraManager::instance().updateConfigInfo(*msgPtr);
       }
 
-      if(message->topic_name == ROAD_MODEL_TOPIC)
-      {
-        auto msgPtr = Utils::deserializeIdlMessage<uto::proto::RoadModel>(*message);
-        auto guard  = m_rwLock.write_guard();
-        m_roadmodelBuffer.pushBackForce(std::move(msgPtr));
-      }
-
 #if FS_CHECK(CFG_VIS_DRAW_PERCEPTION_FREESPACE)
       if(message->topic_name == FUSION_FS_TOPIC)
       {
@@ -430,12 +423,6 @@ void fs::FsNode::subscribeSensorTable(std::unique_ptr<uto::proto::SensorTable> m
 {
   auto guard = m_rwLock.write_guard();
   CameraManager::instance().updateConfigInfo(*msgPtr);
-}
-
-void fs::FsNode::subscribeRoadModel(std::unique_ptr<uto::proto::RoadModel> msgPtr)
-{
-  auto guard = m_rwLock.write_guard();
-  m_roadmodelBuffer.pushBackForce(std::move(msgPtr));
 }
 
 #if FS_CHECK(CFG_VIS_DRAW_PERCEPTION_FREESPACE)
@@ -614,8 +601,7 @@ bool fs::FsNode::getAlignedInputs(std::unique_ptr<uto::proto::PerceptionFreespac
                                   std::unique_ptr<sensor_msgs::msg::CompressedImage>& imageFisheyeBcbPtr,
                                   std::unique_ptr<sensor_msgs::msg::CompressedImage>& imageFisheyeBllPtr,
                                   std::unique_ptr<sensor_msgs::msg::CompressedImage>& imageFisheyeBrrPtr,
-                                  std::unique_ptr<EgoMotion>&                         egoMotionPtr,
-                                  std::unique_ptr<uto::proto::RoadModel>&             roadModelPtr)
+                                  std::unique_ptr<EgoMotion>&                         egoMotionPtr)
 {
   auto           guard     = m_rwLock.read_guard();
   const Vehicle& vehicle   = Vehicle::instance();
@@ -714,9 +700,6 @@ bool fs::FsNode::getAlignedInputs(std::unique_ptr<uto::proto::PerceptionFreespac
           auto fsFisheyeBrrIter = std::find_if(m_fsFisheyeBrrBuffer.cbegin(), m_fsFisheyeBrrBuffer.cend(), [this](const std::unique_ptr<uto::proto::CameraFreespace>& ptr) { return ptr->header().time_meas() > m_fusionTimestampNs - 50 * INT_1E6 && ptr->header().time_meas() < m_fusionTimestampNs + 50 * INT_1E6; });
           auto fsFisheyeBcbIter = std::find_if(m_fsFisheyeBcbBuffer.cbegin(), m_fsFisheyeBcbBuffer.cend(), [this](const std::unique_ptr<uto::proto::CameraFreespace>& ptr) { return ptr->header().time_meas() > m_fusionTimestampNs - 50 * INT_1E6 && ptr->header().time_meas() < m_fusionTimestampNs + 50 * INT_1E6; });
 #endif
-#if FS_CHECK(CFG_USE_ROAD_MODEL)
-          auto roadModelIter = std::find_if(m_roadmodelBuffer.cbegin(), m_roadmodelBuffer.cend(), [this](const std::unique_ptr<uto::proto::RoadModel>& ptr) { return ptr->header().time_meas() > m_fusionTimestampNs - 50 * INT_1E6 && ptr->header().time_meas() < m_fusionTimestampNs + 50 * INT_1E6; });
-#endif
 
           if(fsLidarIter != m_lidarFsBuffer.cend())
           {
@@ -790,19 +773,6 @@ bool fs::FsNode::getAlignedInputs(std::unique_ptr<uto::proto::PerceptionFreespac
             while(m_fsFisheyeBcbBuffer.cbegin() < fsFisheyeBcbIter + 1)
             {
               m_fsFisheyeBcbBuffer.popFront();
-            }
-          }
-#endif
-
-#if FS_CHECK(CFG_USE_ROAD_MODEL)
-          // roadModelPtr = std::move(m_roadModelBuffer.front());
-          // m_roadModelBuffer.popFront();
-          if(roadModelIter != m_roadmodelBuffer.cend())
-          {
-            roadModelPtr = std::move(*roadModelIter);
-            while(m_roadmodelBuffer.cbegin() < roadModelIter + 1)
-            {
-              m_roadmodelBuffer.popFront();
             }
           }
 #endif
@@ -914,7 +884,6 @@ void fs::FsNode::process()
   std::unique_ptr<sensor_msgs::msg::CompressedImage> imageFisheyeBllPtr = nullptr;
   std::unique_ptr<sensor_msgs::msg::CompressedImage> imageFisheyeBrrPtr = nullptr;
   std::unique_ptr<EgoMotion>                         egoMotionPtr       = nullptr;
-  std::unique_ptr<uto::proto::RoadModel>             roadModelPtr       = nullptr;
 
   const bool validAligned = getAlignedInputs(lidarFsPtr,
                                              cfFsPtr,
@@ -931,8 +900,7 @@ void fs::FsNode::process()
                                              imageFisheyeBcbPtr,
                                              imageFisheyeBllPtr,
                                              imageFisheyeBrrPtr,
-                                             egoMotionPtr,
-                                             roadModelPtr);
+                                             egoMotionPtr);
 
   publishDiagnosisMsg();
 
@@ -966,11 +934,9 @@ void fs::FsNode::process()
 
     const auto odIter   = std::find_if(m_odBuffer.crbegin(), m_odBuffer.crend(), [this](const std::unique_ptr<uto::proto::PerceptionObstacles>& ptr) { return ptr->header().time_meas() >= m_fusionTimestampNs - 1 * INT_1E9 && ptr->header().time_meas() <= m_fusionTimestampNs; });
     const auto gateIter = std::find_if(m_gatesBuffer.crbegin(), m_gatesBuffer.crend(), [this](const std::unique_ptr<uto::proto::PerceptionGates>& ptr) { return ptr->header().time_meas() >= m_fusionTimestampNs - 1 * INT_1E9 && ptr->header().time_meas() <= m_fusionTimestampNs; });
-    // const auto roadModelIter = std::find_if(m_roadModelBuffer.crbegin(), m_roadModelBuffer.crend(), [this](const std::unique_ptr<uto::proto::RoadModel>& ptr) { return ptr->header().time_meas() >= m_fusionTimestampNs - 1 * INT_1E9 && ptr->header().time_meas() <= m_fusionTimestampNs; });
 
     const uto::proto::PerceptionObstacles* const odPtr   = m_odBuffer.crend() == odIter ? nullptr : odIter->get();
     const uto::proto::PerceptionGates* const     gatePtr = m_gatesBuffer.crend() == gateIter ? nullptr : gateIter->get();
-    // const uto::proto::RoadModel* const           roadModelPtr = roadModelIter.crend() == roadModelIter ? nullptr : roadModelIter->get();
 
     if(diagnoser.isEgoMotionDefect() || diagnoser.hasPoseInvalid() || diagnoser.hasSensorOutOfRangeError(SensorId::LIDAR))
     {
@@ -1000,7 +966,6 @@ void fs::FsNode::process()
                                        fsFisheyeBcbPtr.get(),
                                        fsFisheyeBllPtr.get(),
                                        fsFisheyeBrrPtr.get(),
-                                       roadModelPtr.get(),
                                        odPtr,
                                        gatePtr);
     }
@@ -1019,7 +984,6 @@ void fs::FsNode::process()
                                        fsFisheyeBcbPtr.get(),
                                        fsFisheyeBllPtr.get(),
                                        fsFisheyeBrrPtr.get(),
-                                       roadModelPtr.get(),
                                        odPtr,
                                        gatePtr);
     }
@@ -1027,7 +991,6 @@ void fs::FsNode::process()
 #if FS_CHECK(CFG_VIS_ENABLE)
     Vis::drawLidarPointCloud(*lidarFsPtr);
     Vis::drawFusionPointCloud(m_freespaceManager.getGridMap(), m_freespaceManager.getPassThroughPoints());
-    Vis::drawRoadModelPointCloud(roadModelPtr.get());
 #endif
 
 #if !FS_CHECK(CFG_VIS_DRAW_PERCEPTION_FREESPACE)
@@ -1201,11 +1164,9 @@ void fs::FsNode::publishVis()
     sensor_msgs::msg::PointCloud2 lidarPointCloud2;
     sensor_msgs::msg::PointCloud2 fusionPointCloud2;
     sensor_msgs::msg::PointCloud2 passThroughPointCloud2;
-    sensor_msgs::msg::PointCloud2 roadModelPointCloud2;
     sensor_msgs::convertPointCloudToPointCloud2(Vis::getLidarPointCloud(), lidarPointCloud2);
     sensor_msgs::convertPointCloudToPointCloud2(Vis::getFusionPointCloud(), fusionPointCloud2);
     sensor_msgs::convertPointCloudToPointCloud2(Vis::getPassThroughPointCloud(), passThroughPointCloud2);
-    sensor_msgs::convertPointCloudToPointCloud2(Vis::getRoadModelPointCloud(), roadModelPointCloud2);
 
     m_rosWriterPtr->write(Vis::getMarkerArray(), VIS_MARKER_TOPIC, header.stamp);
     m_rosWriterPtr->write(lidarPointCloud2, VIS_LIDAR_POINT_CLOUD_TOPIC, header.stamp);
@@ -1213,9 +1174,6 @@ void fs::FsNode::publishVis()
     m_rosWriterPtr->write(passThroughPointCloud2, VIS_PASS_THROUGH_POINT_CLOUD_TOPIC, header.stamp);
 #if FS_CHECK(CFG_USE_CF_FS)
     m_rosWriterPtr->write(*cv_bridge::CvImage(header, "bgr8", Vis::getCenterFrontView()).toCompressedImageMsg(), VIS_FRONT_VIEW_TOPIC, header.stamp);
-#endif
-#if FS_CHECK(CFG_USE_ROAD_MODEL)
-    m_rosWriterPtr->write(roadModelPointCloud2, VIS_ROAD_MODEL_TOPIC, header.stamp);
 #endif
 #if FS_CHECK(CFG_USE_FISHEYE_FS)
     m_rosWriterPtr->write(*cv_bridge::CvImage(header, "bgr8", Vis::getFisheyeFcfView()).toCompressedImageMsg(), VIS_FISHEYE_FCF_VIEW_TOPIC, header.stamp);

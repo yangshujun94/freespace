@@ -17,9 +17,6 @@ void fs::GridMap::reset()
       grid.locked      = false;
       grid.isFreeInCam = false;
       grid.isBorder    = true;
-      grid.top         = 0.0f;
-      grid.ground      = 0.0f;
-      grid.bottom      = 0.0f;
 #if FS_CHECK(CFG_DEBUG_GRID)
       grid.history    = 0;
       grid.logitPrev  = 0;

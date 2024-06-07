@@ -93,7 +93,6 @@ namespace fs
   static constexpr char SENSOR_TABLE_TOPIC[]    = "/sensor_table/sensor_table";
   static constexpr char OD_TOPIC[]              = "/perception/fused_objects"; ///< 融合OD输出结果
   static constexpr char MONITOR_TOPIC[]         = "/perception/fusion_fs_status";
-  static constexpr char ROAD_MODEL_TOPIC[]      = "/perception/lidar_road_model";
 
   // vis topics
   static constexpr char VIS_FRONT_VIEW_TOPIC[]               = "/fs/vis/front_view_canvas";
@@ -108,7 +107,6 @@ namespace fs
   static constexpr char VIS_PASS_THROUGH_POINT_CLOUD_TOPIC[] = "/fs/vis/pass_through_point_cloud";
   static constexpr char VIS_PERCEPTION_FREESPACE_TOPIC[]     = "/fs/vis/perception_freespace";
   static constexpr char VIS_MARKER_TOPIC[]                   = "/fs/vis/marker_array_canvas";
-  static constexpr char VIS_ROAD_MODEL_TOPIC[]               = "fs/vis/road_model_point_cloud";
 
   // tuning parameters
   static constexpr int PRIOR_LOGIT          = -2;

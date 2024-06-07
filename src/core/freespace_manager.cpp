@@ -4,8 +4,6 @@
 #include "debug/fs_log.h"
 #include "peripheral/camera.h"
 #include "peripheral/camera_manager.h"
-#include <numeric>
-#include "peripheral/utils.h"
 #include "peripheral/map_provider/map_provider.h"
 
 void fs::FreespaceManager::fuseFreespace(const int64_t                          timestampNs,
@@ -17,7 +15,6 @@ void fs::FreespaceManager::fuseFreespace(const int64_t                          
                                          const uto::proto::CameraFreespace*     fsFisheyeBcbPtr,
                                          const uto::proto::CameraFreespace*     fsFisheyeBllPtr,
                                          const uto::proto::CameraFreespace*     fsFisheyeBrrPtr,
-                                         const uto::proto::RoadModel*           roadModelPtr,
                                          const uto::proto::PerceptionObstacles* odPtr,
                                          const uto::proto::PerceptionGates*     gatePtr)
 {
@@ -27,7 +24,6 @@ void fs::FreespaceManager::fuseFreespace(const int64_t                          
 
   m_gridMap.updateEgo();
   m_gridMap.applyPrior();
-  refineRoadModel(roadModelPtr, fsLidar);
 
   m_objectList.clear();
   if(nullptr != odPtr)
@@ -68,8 +64,6 @@ void fs::FreespaceManager::fuseFreespace(const int64_t                          
       Grid& grid     = m_gridMap.at(idx.row, idx.col);
       grid.point.x() = lidarPoint.position().x();
       grid.point.y() = lidarPoint.position().y();
-      grid.top       = lidarPoint.top();
-      grid.bottom    = lidarPoint.bottom();
       grid.locked    = true;
 
       if(uto::proto::PerceptionGrid_Label_UNKNOWN == lidarPoint.label())
@@ -137,7 +131,6 @@ void fs::FreespaceManager::fuseFreespace(const int64_t                          
 
   assignObjectProperty();
   m_gridMap.extractBorders();
-  processTunnelGeoFence();
 
 #if FS_CHECK(CFG_USE_PASS_THROUGH_REGION)
   processPassThroughRegion(fsLidar);
@@ -511,91 +504,4 @@ void fs::FreespaceManager::processDrivingBoundary(const uto::proto::PerceptionFr
       }
     }
   }
-}
-
-void fs::FreespaceManager::processTunnelGeoFence()
-{
-  const Vehicle& vehicle = Vehicle::getVehicle();
-  if(vehicle.isInGeofence(MapProvider::getMapProvider().getTunnelAreaLtm()))
-  {
-    m_gridMap.setNoPublish();
-    for(int row = 0; row < GRID_MAP_SIZE_ROWS; row++)
-    {
-      for(int col = 0; col < GRID_MAP_SIZE_COLS; col++)
-      {
-        Grid& grid = m_gridMap.at(row, col);
-        if(grid.isBorder && grid.bottom - grid.ground < vehicle.getVehicleHeight() + 0.5)
-        {
-          m_passThroughPoints.emplace_back(grid.point.x(), grid.point.y());
-        }
-      }
-    }
-  }
-}
-
-void fs::FreespaceManager::refineRoadModel(const uto::proto::RoadModel* roadModelPtr, const uto::proto::PerceptionFreespace& fsLidar)
-{
-  if(roadModelPtr == nullptr)
-  {
-    return;
-  }
-
-  // 解析roadmodel 存为MAP映射, key为roadmodel点位置(整型), value是对应的高度值, 用于后续快速查找
-  std::map<std::pair<int, int>, float> RoadModelPointMap;
-  for(int i = 0; i < roadModelPtr->grids().size();)
-  {
-    int RoadmodelGridPosX = EGO_INDEX_ROW - (roadModelPtr->grids()[i] - roadModelPtr->ego_x_index()) * roadModelPtr->grid_resolution(); // 地面模型点在自车移动栅格中的位置
-    int RoadmodelGridPosy = EGO_INDEX_COL - (-roadModelPtr->grids()[i + 1] + roadModelPtr->ego_y_index()) * roadModelPtr->grid_resolution();
-
-    RoadModelPointMap[std::pair<int, int>(RoadmodelGridPosX, RoadmodelGridPosy)] = roadModelPtr->grids()[i + 2] * roadModelPtr->height_resolution();
-    i += 3;
-  }
-
-  // 查找当前栅格位置8个点(将栅格位置强行转为int)对应的roadmodel点,储存对应的高度值
-  std::vector<std::pair<int, int>> res;
-
-  auto searchInNeighbor = [&RoadModelPointMap, &res](const std::pair<int, int>& GridPos) {
-    for(int i = -1; i <= 1; ++i)
-    {
-      for(int j = -1; j <= 1; ++j)
-      {
-        if(RoadModelPointMap.find(std::pair<int, int>(GridPos.first + i, GridPos.second + j)) != RoadModelPointMap.end())
-        {
-          res.emplace_back(GridPos.first + i, GridPos.second + j);
-        }
-      }
-    }
-    return res.empty();
-  };
-
-  // 遍历要发出去的栅格, 完成每个栅格的ground赋值
-  for(int row = PUB_MIN_ROW; row < PUB_MAX_ROW; row++)
-  {
-    for(int col = PUB_MIN_COL; col < PUB_MAX_COL; col++)
-    {
-      Grid& grid = m_gridMap.at(row, col);
-      if(grid.isBorder && grid.logit > LOGIT_OCCUPIED_THRESH)
-      {
-        const EVector2 gridposVec = GridMap::idx2pos(row, col);
-        res.clear();
-
-        // 得到当前栅格的邻居结果
-        searchInNeighbor(std::pair<int, int>(gridposVec.x(), gridposVec.y()));
-
-        // 如果找到的有对应的地面点
-        if(!res.empty())
-        {
-          float sum   = std::accumulate(res.begin(), res.end(), 0.0f, [&RoadModelPointMap](float acc, const std::pair<int, int>& gridpos) {
-            return acc + RoadModelPointMap[gridpos];
-          });
-          grid.ground = sum / static_cast<float>(res.size());
-        }
-        else
-        {
-          grid.ground = std::min(0.0f, grid.bottom);
-        }
-      }
-    }
-  }
-  return;
 }

@@ -25,7 +25,6 @@ sensor_msgs::msg::PointCloud         fs::Vis::m_fusionPointCloud{};
 sensor_msgs::msg::PointCloud         fs::Vis::m_passThroughPointCloud{};
 sensor_msgs::msg::PointCloud         fs::Vis::m_lidarPointCloud{};
 sensor_msgs::msg::PointCloud         fs::Vis::m_perceptionFreespace{};
-sensor_msgs::msg::PointCloud         fs::Vis::m_roadModelPointCloud{};
 
 void fs::Vis::prepare(const int64_t                            timestamp,
                       const sensor_msgs::msg::CompressedImage* imageFcPtr,
@@ -383,27 +382,6 @@ void fs::Vis::drawLidarPointCloud(const uto::proto::PerceptionFreespace& fsLidar
   }
 }
 
-void fs::Vis::drawRoadModelPointCloud(const uto::proto::RoadModel* RoadModelPoints)
-{
-  if(RoadModelPoints == nullptr)
-  {
-    return;
-  }
-  m_roadModelPointCloud.header.frame_id = "ego";
-  m_roadModelPointCloud.points.clear();
-  m_roadModelPointCloud.points.reserve(RoadModelPoints->grids().size());
-
-  for(int i = 0; i < RoadModelPoints->grids().size();)
-  {
-    geometry_msgs::msg::Point32& point = m_roadModelPointCloud.points.emplace_back();
-    point.x                            = (RoadModelPoints->grids()[i] - RoadModelPoints->ego_x_index()) * RoadModelPoints->grid_resolution();
-    point.y                            = (-RoadModelPoints->grids()[i + 1] + RoadModelPoints->ego_y_index()) * RoadModelPoints->grid_resolution();
-    point.z                            = RoadModelPoints->grids()[i + 2] * RoadModelPoints->height_resolution();
-    i += 3;
-  }
-  return;
-}
-
 void fs::Vis::drawLidarPointImage(const uto::proto::PerceptionFreespace& fsLidar)
 {
   const Camera& camera = CameraManager::getCamera(SensorId::CAMERA_CENTER_FRONT);
@@ -727,31 +705,6 @@ void fs::Vis::drawGeoFence()
     marker.id = ++id;
 
     for(const auto& pointLtm : area)
-    {
-      EVector3 pointEgo = vehicle.transformLtm2Ego(Eigen::Vector3d(pointLtm.x(), pointLtm.y(), 0));
-      marker.points.push_back(VisHelper::convertPoint(EVector2{pointEgo.x(), pointEgo.y()}));
-    }
-    marker.points.push_back(marker.points[0]);
-    m_markers.markers.push_back(marker);
-  }
-
-  for(const auto& pointLtms : mapProvider.getTunnelAreaLtm())
-  {
-    visualization_msgs::msg::Marker marker;
-    marker.header.frame_id = "ego";
-    marker.ns              = "tunnel fence";
-    marker.type            = visualization_msgs::msg::Marker::LINE_STRIP;
-    marker.action          = visualization_msgs::msg::Marker::ADD;
-    marker.lifetime        = rclcpp::Duration(0, 0);
-    marker.pose            = VisHelper::getIdentityPose();
-    marker.scale           = VisHelper::getScale(RvizScale::SMALL);
-    marker.scale.y         = 0.f;
-    marker.scale.z         = 0.f;
-    marker.color           = VisHelper::getColor(RvizColor::GREEN);
-    marker.points.clear();
-    marker.id = ++id;
-
-    for(const auto& pointLtm : pointLtms)
     {
       EVector3 pointEgo = vehicle.transformLtm2Ego(Eigen::Vector3d(pointLtm.x(), pointLtm.y(), 0));
       marker.points.push_back(VisHelper::convertPoint(EVector2{pointEgo.x(), pointEgo.y()}));

@@ -10,7 +10,6 @@
 #include <perception_camera.pb.h>
 #include "peripheral/switcher.h"
 #include "peripheral/types.h"
-#include <perception_road_model.pb.h>
 
 #define CFG_VIS_DRAW_PERCEPTION_FREESPACE FS_SWITCH(0 && FS_CHECK(CFG_VIS_ENABLE))
 
@@ -36,7 +35,6 @@ namespace fs
     static const sensor_msgs::msg::PointCloud&         getPassThroughPointCloud() { return m_passThroughPointCloud; }
     static const sensor_msgs::msg::PointCloud&         getLidarPointCloud() { return m_lidarPointCloud; }
     static const sensor_msgs::msg::PointCloud&         getPerceptionFreespace() { return m_perceptionFreespace; }
-    static const sensor_msgs::msg::PointCloud&         getRoadModelPointCloud() { return m_roadModelPointCloud; }
 
     static void prepare(const int64_t                            timestamp,
                         const sensor_msgs::msg::CompressedImage* imageFcPtr,
@@ -58,7 +56,6 @@ namespace fs
     static void drawFisheyeFs(const uto::proto::CameraFreespace& fisheyeFs, const SensorId sensorId);
     static void drawGeoFence();
     static void drawDrivingBoundary(const uto::proto::PerceptionFreespace& lidarFs);
-    static void drawRoadModelPointCloud(const uto::proto::RoadModel* RoadModelPoints);
 
   private:
     static void drawEgo();
@@ -85,7 +82,6 @@ namespace fs
     static sensor_msgs::msg::PointCloud         m_passThroughPointCloud;
     static sensor_msgs::msg::PointCloud         m_lidarPointCloud;
     static sensor_msgs::msg::PointCloud         m_perceptionFreespace;
-    static sensor_msgs::msg::PointCloud         m_roadModelPointCloud;
   };
 } // namespace fs
 

@@ -56,7 +56,6 @@ namespace fs
     float     getEgoWidth() const { return m_vehicleWidth; }
     EgoStatus getEgoMotion(EgoMotion& egoMotion, const int64_t timestampUs) const;
     bool      isInGeofence(const std::vector<std::vector<Eigen::Vector2d>>& geoFencesLtm) const;
-    float     getVehicleHeight() const { return m_vehicleHeight; }
 
     std::tuple<EMatrix3, EVector3> calcRotAndVecTitoT0(const int64_t timestampUs) const;
 

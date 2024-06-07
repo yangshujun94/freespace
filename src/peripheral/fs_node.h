@@ -16,7 +16,6 @@
 #include <visualization_msgs/msg/marker_array.hpp>
 #include <error_code.pb.h>
 #include <rosbag2_cpp/writer.hpp>
-#include <perception_road_model.pb.h>
 
 #include "rwlock.h"
 #include "debug/vis.h"
@@ -72,7 +71,6 @@ namespace fs
     void subscribeGates(std::unique_ptr<uto::proto::PerceptionGates> msgPtr);
     void subscribeMechanicalInfo(std::unique_ptr<uto::proto::MechanicalInfo> msgPtr);
     void subscribeSensorTable(std::unique_ptr<uto::proto::SensorTable> msgPtr);
-    void subscribeRoadModel(std::unique_ptr<uto::proto::RoadModel> msgPtr);
     void subscribePerceptionFreespace(std::unique_ptr<uto::proto::PerceptionFreespace> msgPtr);
     // clang-format on
 
@@ -97,8 +95,7 @@ namespace fs
                           std::unique_ptr<sensor_msgs::msg::CompressedImage>& imageFisheyeBcbPtr,
                           std::unique_ptr<sensor_msgs::msg::CompressedImage>& imageFisheyeBllPtr,
                           std::unique_ptr<sensor_msgs::msg::CompressedImage>& imageFisheyeBrrPtr,
-                          std::unique_ptr<EgoMotion>&                         egoMotionPtr,
-                          std::unique_ptr<uto::proto::RoadModel>&             roadModelPtr);
+                          std::unique_ptr<EgoMotion>&                         egoMotionPtr);
 
     void broadcastTF();
     void publishFusionFreespace(const uto::proto::PerceptionFreespace& lidarFsPtr);
@@ -138,7 +135,6 @@ namespace fs
     fs::RingBuffer<std::unique_ptr<uto::proto::CameraFreespace>, MSG_BUFFER_SIZE>       m_fsFisheyeBllBuffer;
     fs::RingBuffer<std::unique_ptr<uto::proto::CameraFreespace>, MSG_BUFFER_SIZE>       m_fsFisheyeBrrBuffer;
     fs::RingBuffer<std::unique_ptr<uto::proto::PerceptionObstacles>, MSG_BUFFER_SIZE>   m_odBuffer;
-    fs::RingBuffer<std::unique_ptr<uto::proto::RoadModel>, MSG_BUFFER_SIZE>             m_roadmodelBuffer;
 
     // subscribers
     uto::Subscriber<uto::proto::VehiclePose>           m_vehiclePoseSub{VEHICLE_POSE_TOPIC, this, [this](auto&& PH1) { subscribeVehiclePose(std::forward<decltype(PH1)>(PH1)); }};
@@ -148,7 +144,6 @@ namespace fs
     uto::Subscriber<uto::proto::PerceptionGates>       m_gatesSub{GATES_TOPIC, this, [this](auto&& PH1) { subscribeGates(std::forward<decltype(PH1)>(PH1)); }};
     uto::Subscriber<uto::proto::MechanicalInfo>        m_mechanicalInfoSub{MECHANICAL_INFO_TOPIC, this, [this](auto&& PH1) { subscribeMechanicalInfo(std::forward<decltype(PH1)>(PH1)); }};
     uto::Subscriber<uto::proto::SensorTable>           m_sensorTableSub{SENSOR_TABLE_TOPIC, this, [this](auto&& PH1) { subscribeSensorTable(std::forward<decltype(PH1)>(PH1)); }};
-    uto::Subscriber<uto::proto::RoadModel>             m_roadModelSub{ROAD_MODEL_TOPIC, this, [this](auto&& PH1) { subscribeRoadModel(std::forward<decltype(PH1)>(PH1)); }};
 
 #if FS_CHECK(CFG_USE_CF_FS)
     uto::Subscriber<uto::proto::CameraFreespace> m_cameraFsSub{FS_CF_TOPIC, this, [this](auto&& PH1) { subscribeCameraFs(std::forward<decltype(PH1)>(PH1)); }};
